@@ -1,0 +1,21 @@
+.text-description {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #202020;
+    white-space: pre-line;
+}
+
+.brand-sub-title {
+    font-size: 18px;
+    padding-bottom: 5px; 
+}
+
+.brand-edit + label {
+    background: #376789 url('../../images/theme-dark/icons/editWhite.svg') 8px 50% no-repeat;
+    padding: 2px 8px 2px 30px;
+}
+
+.brand-edit {
+    background: #376789 url('../../images/theme-dark/icons/editWhite.svg') 8px 50% no-repeat;
+    background-color: rgb(55, 103, 137);
+}

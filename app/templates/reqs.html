@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automation Portal
+  </title>
+  <link rel="stylesheet" href="../static/css/reqs.css">
+  <script>
+    token = window.sessionStorage.getItem('token');
+      if (token === null){
+        window.open("/", "_self");
+    }
+  </script>
+  
+</head>
+<h1 class="h3 mb-3 font-weight-normal" id="titleheader"></h1>
+<body id="mainBody">
+  <!-- <script>
+    token = window.sessionStorage.getItem('token');
+    
+    window.onload=function()
+    {
+        
+        console.log("Here is the token: "+token);
+        if (token == null) 
+        { 
+            window.open("/", "_self");
+        }
+    };
+  </script>   -->
+    
+    <div id="navbar">
+      <a href="http://testorchestrate.com" target="_blank">
+      <img src="../static/css/TestOrchestrate_black.jpg" title="logo" id="logo" height="85" width="200"/>
+      </a>
+      <div id="navbar-right"><br>
+        <div id="status_message"></div>
+        
+        <!-- <h5 id="settings">Settings</h5> -->
+        
+        
+        <!-- <a class="active" href="index.html">Home</a>
+        <a class="active" href="#">Profile</a> -->
+        <!-- <h5>Welcome</h5> -->
+       
+      </div>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a id="db" href="#" onclick="dashboard();return false;">DASHBOARD</a>
+      <a id="db" href="#" onclick="requirements();return false;">TEST REQUIREMENTS</a>
+      <a id="tc" href="#" onclick="testcases();return false;">TEST CASES</a>
+      <a id="exe" href="#" onclick="execute();return false;">RUN TEST CASES</a>
+      <a id="exe" href="#" onclick="defects();return false;">DEFECTS</a>
+      <a id="res" href="#" onclick="results();return false;">REPORTS</a>
+      <a id="out" href="#" onclick="logout();return false;">SIGN OFF</a>
+      </div>
+    <div id="mainContainer" class="reqs">
+              <div>
+                <span><a href="#">Home ></a><a href="#"> Requirements ></a></span><label id="project_title">Project Name</label>
+              </div></p>
+                <!-- <div class="severity-1"> -->
+                  <div id="top-menu">
+                  <select name="coverage_filter" id="coverage_filter"  onchange="filter_table()">
+                    <option value="All">Coverage-all</option>
+                      <option value="Covered">Covered</option>
+                      <option value="Not Covered">Not Covered</option>
+                  </select>
+                  <select name="severity" id="severity" onchange="filter_table()">
+                      <option value="All">Priority-all</option>
+                      <option value="Critical">Critical</option>
+                      <option value="High">High</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Low">Low</option>
+                  </select>
+                  <select name="type" id="type" onchange="filter_table()">
+                      <option value="All">Type-all</option>
+                      <option value="Functional">Functional</option>
+                      <option value="No Functional">Non Functional</option>
+                  </select>
+                <!-- </div> -->
+                <!-- <div class="button-1"> -->
+                  <button id="add" onclick="add_req()">Add</button>
+                  <button id="delete" onclick="delete_req1()">Delete</button>
+                  <button id="edit" onclick="edit_req()">Edit</button>
+                <!-- </div> -->
+              </div>
+
+              <div id="myModal" class="modal">
+                  
+                    <!-- Modal content -->
+                <div class="modal-content" id="modal-content">
+                    <div id="modal-header" class="modal-header">
+                        <span class="close">&times;</span>
+                        <lable id = "modal-title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 16px;">New Test Requirement</lable>
+                    </div>
+                  
+                    <label>Name:</label>
+                    <input type="text" class="text" id="name"> </p>
+
+                    <label>Priority:</label>
+                    <select name="severity" id="modal-severity">
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option> 
+                    </select> </p>
+
+                    <label>Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select name="type" id="modal-type">
+                            <option value="functional">Functional</option>
+                            <option value="non_functional">Non Functional</option>
+                        </select> </p></p>
+
+                        <label>Coverage:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="coverage" class="coverage" placeholder="Search and Add Test Cases">
+                        <button id="search">Search</button></p>
+                        
+
+                        <label>Tests Covered:</label></br>
+                        <!-- <select id="tests" size="7" multiple="multiple">
+                          <option value="352"></option>
+                          <option value="355"></option>
+                          <option value="372"></option> 
+                        </select></p> -->
+                        <textarea id="tests" name="tests" rows="6" cols="50"></textarea>
+                        
+
+                        <div id="modal-footer" class="modal-footer">
+                          <button id="save" class="save" onclick="save_requirement()">Save</button>
+                          <button id="cancel" class="cancel" onclick="cancel()">Cancel</button>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div id="modal-container">
+
+                    <div id="confirm" class="modal">
+                
+                    <!-- Modal content -->
+                      <div class="confirm-content">
+                        <div class="confirm-header">
+                        <span class="close_confirm">&times;</span>
+                        <h2>Delete the selected Requirements?</h2>
+                      </div>
+                      <div class="confirm-body">
+                        
+                        <Label id="delete_req">Hello</Label><br><br>
+                        <input type="text" id = "confirm_delete" placeholder="Type 'delete all' here"></input><br><br>
+                        <button id="submit" onclick="submit_confirm()">Ok</button>
+                        <button id="submit" onclick="cancel_confirm()">Cancel</button>
+                       <br><br>
+                        <!-- <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p> -->
+                      </div>
+                      <div class="confirm-footer">
+                        <h6>TestOrchestrate@All rights reserved.</h6>
+                      </div>
+                    </div>
+                  
+                    </div>
+                  </div>
+                
+
+            <div id="main_table">
+                <table id="table">
+                    <thead>
+                    
+                    <tr>
+                        <th><input type="checkbox" id="check"></th>
+                        <th>Req Id</th>
+                        <th>Test Requirement Name</th>
+                        <th>Type</th>
+                        <th>Priority</th>
+                        <th>Test Coverage</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <!-- <tr>
+                        <td><input type="checkbox" id="check"></td>
+                        <td>Name of the Test here....</td>
+                        <td>Medium</td>
+                        <td>Functional</td>
+                        <td>Not Available</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check"></td>
+                        <td>Name of the Test here....</td>
+                        <td>Medium</td>
+                        <td>Functional</td>
+                        <td>Not Available</td>
+                    </tr> -->
+                    </tbody>
+                </table>
+
+                
+                
+            </div>
+
+            
+        
+
+    </div>
+ 
+    <!-- <div id="myModal" class="modal"> -->
+
+        <!-- Modal content -->
+        <!-- <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
+      </div> -->
+ <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+ </script>
+ <script>
+  var data = [];
+  var status = '';
+  window.onload=function()
+    {
+        token = window.sessionStorage.getItem('token');
+        if (token === null){
+          window.open("/", "_self");
+        }
+        console.log("Here is the token: "+token);
+        const jwtPayload = JSON.parse(window.atob(token.split('.')[1]))
+        console.log(jwtPayload);
+        console.log('token issued time: '+ jwtPayload.iat);
+        console.log('token expiry time: '+jwtPayload.exp);
+        console.log('current time: '+Date.now());
+        const isExpired = Date.now() >= jwtPayload.exp * 1000;
+        console.log(isExpired);
+        document.getElementById("status_message").innerHTML = "Welcome " + jwtPayload.userid
+        if (isExpired){
+          window.sessionStorage.removeItem('token');
+          window.open("/", "_self");
+        }
+        // const selectProject = document.getElementById("project");
+        // const projectName = document.createElement('option');
+        var projectName = window.sessionStorage.getItem("project_name");
+        document.getElementById('project_title').innerHTML = projectName;
+        // selectProject.add(projectName);
+        document.getElementById("edit").disabled = true;
+        document.getElementById("delete").disabled = true;
+        // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+        requirements_onload();
+    };
+    
+    function requirements_onload(){
+      console.log('inside requirements_onload');
+      project_id = window.sessionStorage.getItem("project_id");
+      project_name = window.sessionStorage.getItem("project_name");
+      console.log(project_id, project_name);
+      params = {
+          "project_id" : project_id,
+          "project_name" : project_name          
+        };
+        console.log(params);
+
+        if (data && status === 'success'){
+          console.log('Data exist');
+
+        }
+        else{
+          console.log(data);
+          console.log(status);
+        }
+        $.post( "/load_reqs", {
+            jdata: params
+        },
+        function(data, status){
+          data = data;
+          status = status;
+          console.log(data);
+          console.log(status);
+          var table = document.getElementById('tbody');
+          for (let i = 0; i < data.length; i++) {
+              // console.log("++++"+ data[i][0]);
+
+            var table = document.getElementById("tbody");
+            var row = table.insertRow();
+            row.addEventListener('click', view_requirement, false);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            // cell3.addEventListener('click', view_test, false);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+
+            cell1.innerHTML = '<input type="checkbox" id="check">';
+            cell2.innerHTML = data[i][1];
+            cell2.setAttribute('data_id',data[i][1]);
+            cell3.innerHTML = data[i][2];
+            cell4.innerHTML = data[i][3];
+            cell5.innerHTML = data[i][4];
+            cell6.innerHTML = 'Not Covered';
+            
+            
+            
+
+           
+
+              
+              // tr1=document.createElement("tr");
+              // tr1.addEventListener('click', view_requirement, false);
+              // // a = document.createElement("a");
+              // // a.setAttribute('href', "#");
+              
+              // td1 = document.createElement("td");
+              // td2 = document.createElement("td");
+              // td2.setAttribute('data-id', data[i][0]);
+              // td3 = document.createElement("td");
+              // td4 = document.createElement("td");
+              // td5 = document.createElement("td");
+              
+              
+              // cb = document.createElement("INPUT");
+              // cb.setAttribute("type", "checkbox");
+              // cb.setAttribute("name", "cb");
+              // cb.setAttribute("id", "check");
+              
+            
+              // td1.append(cb);
+              // // a.append(td2);
+              
+              // // td2.innerHTML = "RC-"+data[i][0]+"  "+data[i][1];
+              // td2.innerHTML = data[i][1]+ "   -  "+data[i][2];
+              // td3.innerHTML = data[i][4];
+              // td4.innerHTML = data[i][3];
+              // td5.innerHTML = "Not Available";
+              
+
+              // tr1.append(td1);
+              // tr1.append(td2);
+              // tr1.append(td3);
+              // tr1.append(td4);
+              // tr1.append(td5);
+              // tbody.append(tr1);
+            }
+        });
+        // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+        return;
+    }
+
+    function view_requirement(){
+      // alert('inside view reqs');
+          // Get the values from the clicked row
+      var span = document.getElementsByClassName("close")[0];
+      var tests = document.getElementById('tests');
+      var field1 = this.cells[0].textContent;
+      var Name = this.cells[2].textContent;
+      var Severity = this.cells[4].textContent;
+      var Type = this.cells[3].textContent;
+      var TestCovered = this.cells[5].textContent;
+      document.getElementById("modal-title").innerHTML = 'View Requirement';
+      document.getElementById("name").value = Name;
+      document.getElementById("name").readOnly = true;
+      $('#modal-severity').val(Severity.toLowerCase()).change();
+      $('#modal-type').val(Type.toLowerCase()).change();
+      document.getElementById('tests').innerHTML = TestCovered;
+      document.getElementById('tests').readOnly = true;
+      document.getElementById('modal-type').readOnly = true;
+      document.getElementById('search').disabled = true;
+      document.getElementById('save').disabled = true;
+      document.getElementById("myModal").style.display = "block";
+      // $('#top-menu').find('input, textarea, button, select').attr('disabled','disabled');
+      span.onclick = function() {
+        document.getElementById("myModal").style.display = "none";
+        
+      }
+
+    }
+
+    function dashboard(){
+      window.open("/dashboard", "_self");
+    }
+
+    function requirements(){
+      window.open("/reqs", "_self");
+    }
+    
+    function testcases(){
+      window.open("/tests", "_self");
+    }
+    
+    function defects(){
+      window.open("/defects", "_self");
+    }
+    
+    function results(){
+      alert("This feature is under construction !");
+    }
+
+    function logout(){
+      window.sessionStorage.removeItem('token');
+      window.open("/", "_self");
+    }
+
+    function add_req(){
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      document.getElementById("modal-title").innerHTML = 'Add New Requirement';
+      document.getElementById("name").value = '';
+      document.getElementById("name").readOnly = false;
+      $('#modal-severity').val('critical').change();
+      $('#modal-type').val('functional').change();
+      document.getElementById('tests').innerHTML = '';
+      document.getElementById('tests').readOnly = false;
+      document.getElementById('search').disabled = false;
+      document.getElementById('save').disabled = false;
+      modal.style.display = "block";
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+
+    }
+
+    
+    const req_ids = [];
+
+    function delete_req1(){
+      modal = document.getElementById('top-menu');
+      modal.setAttribute("disabled",true);
+      var label = document.getElementById('delete_req');
+      const table = document.querySelector('tbody');
+      console.log(table);
+      const rows = table.querySelectorAll('tr');
+
+      // Initialize an empty array to store the second column values
+      const secondColumnValues = [];
+      // Loop through each row
+      rows.forEach(row => {
+        // Check if the checkbox in the row is selected
+        const checkbox = row.querySelector('td:first-child input[type="checkbox"]');
+        if (checkbox.checked) {
+          // Get the second column value and store it in the array
+          const secondColumnValue = row.querySelector('td:nth-child(2)').textContent;
+          const req_id = row.querySelector('td:nth-child(2)').getAttribute('data-id');
+          req_ids.push(req_id);
+          secondColumnValues.push(secondColumnValue);
+        }
+      });
+
+
+
+      // Log the array of second column values
+      values = secondColumnValues.join('<br>');
+      console.log(secondColumnValues);
+      console.log(req_ids);
+      label.innerHTML = values;
+      document.getElementById('confirm').style.display = 'block';
+
+    }
+
+
+    function cancel_confirm(){
+      var modal = document.getElementById("confirm");
+      modal.style.display = 'none';
+    }
+    function submit_confirm(){
+        
+        if (document.getElementById('confirm_delete').value ==="delete all" ){
+        console.log("DELETE....");
+        console.log(req_ids);
+        alert(req_ids);
+
+        params = {
+          "req_ids" : req_ids.join()
+        };
+
+        console.log(params);
+
+        $.post('/delete_req', 
+          {
+            jdata: params
+          }
+        ) .done( function(msg) { 
+            alert(msg);
+            console.log(msg);
+            if (msg === 'Requirement(s) deleted successfully!'){
+              // var modal = document.getElementById("myModal");
+              document.getElementById("confirm").style.display = "none";
+              location.reload();
+              // requirements_onload();
+            }
+
+          }
+          ).fail(function(xhr, textStatus, errorThrown) {
+              console.log(xhr.responseText);
+              // alert(xhr.responseText);
+              alert("Failed to delete the req(s)Requirement(s) deleted successfully!. Check if the connection...."+xhr.responseText);
+              return;
+        });
+      
+
+        }
+        else {
+          alert("Requirements will be deleted only if typed 'delete all' ");
+        }
+    }
+
+
+    
+    
+
+    function edit_req(){
+        // alert("Inside Edit Req");
+        var checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+          checkedBoxes.forEach(chk => {
+            chk.closest("tr").querySelectorAll('td:not(:first-child)').forEach((td, index) => {
+              console.log(index, td.innerHTML)
+              if (index == 0){
+                console.log(td.innerHTML);
+                document.getElementById("name").value = (td.innerHTML); //.split('-')[1]).replace(/\s+/g, '');
+                // document.getElementById("name").value = (td.innerHTML.split('-')[1]).trim();
+                req_id = ((td.innerHTML.split('-')[0]).replace(/\s+/g, '')).replace(/\D/g, "");
+                count = req_id.length;
+                console.log(count);
+                document.getElementById("name").value = td.innerHTML.substring(count+8);
+                document.getElementById("modal-title").innerHTML = "Edit Requirement - RC"+ req_id;
+                console.log(req_id);
+                document.getElementById("name").readOnly = false;
+                document.getElementById("save").disabled = false;
+
+              }
+              if (index == 1){
+                document.getElementById("modal-severity").value = td.innerHTML.toLowerCase();
+                
+              }
+              if (index == 2){
+                document.getElementById("modal-type").value = td.innerHTML.toLowerCase();
+                // $('#modal-type').val('functional');
+              }
+              if (index == 3){
+                document.getElementById("tests").value = td.innerHTML;
+                
+              }
+
+              
+            });
+          });
+
+          var modal = document.getElementById("myModal");
+          // var title = document.getElementById("modal-title").innerHTML="Edit Requirement";
+          modal.style.display = "block";
+
+        
+        // Old Logic
+        // $('#main_table tr').filter(':has(:checkbox:checked)').find('td').each(function() {
+        //   console.log(this);
+          // document.getElementById("");
+          // if (this.innerHTML === '<input type="checkbox" id=\"check\">'){
+          //   count=count+1;
+          //   console.log(count);
+          // }
+        // }
+        // if (count > 1){
+        //   alert("Please select only one Requirement to edit at a time. Thank you.");
+          
+        // }
+        // else {
+        //   var modal = document.getElementById("myModal");
+        //   var title = document.getElementById("modal-title").innerHTML="Edit Requirement";
+        //   modal.style.display = "block";
+        // }
+        
+      }
+    
+
+    function cancel(){
+      // alert("Inside Cancel");
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+      // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+    }
+
+    
+    // Disable Add and Edit Button if more then one Requirement is checked
+
+    // $(document).ready(function() {
+    // //set initial state.
+        
+        
+    //     $('#main_table input:checkbox').change(function() {
+    //       console.log(($('#main_table input:checkbox:checked')));
+    //         if($(this).is(":checked")) {
+              
+    //           req_checkbox_count = document.getElementById($('#main_table input:checkbox:checked').length)
+    //           if (req_checkbox_count > 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+    //           else if(req_checkbox_count < 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+              
+    //           else if (req_checkbox_count == 1){
+    //             document.getElementById("edit").disabled = false;
+    //             document.getElementById("delete").disabled = false;
+    //           }
+    //         }
+
+    //         if($(this).is(":checked")) {
+              
+    //           var check = document.getElementById($('#main_table input:checkbox:checked'));
+    //           req_checkbox_count = check.length;
+    //           if (req_checkbox_count > 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+    //           else if(req_checkbox_count < 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+              
+    //           else if (req_checkbox_count == 1){
+    //             document.getElementById("edit").disabled = false;
+    //             document.getElementById("delete").disabled = false;
+    //           }
+    //         }
+                   
+    //         });
+    //     });
+      
+      // $('#tbody input:checkbox').change(function(){
+        $('tbody').on('change', 'input[type="checkbox"]', function() {
+          var modal = document.getElementById('myModal');
+          modal.style.display = "none";
+          console.log("check box clicked");
+          req_checkbox_count = ($('#main_table input:checkbox:checked').length);
+          console.log(req_checkbox_count);
+          if (req_checkbox_count > 1){
+            // document.getElementById("delete").disabled = true;
+            document.getElementById("edit").disabled = true;
+            
+          }
+          else if(req_checkbox_count < 1){
+            document.getElementById("edit").disabled = true;
+            document.getElementById("delete").disabled = true;
+          }
+          
+          else if (req_checkbox_count == 1){
+            document.getElementById("edit").disabled = false;
+            document.getElementById("delete").disabled = false;
+          }
+
+        // $("#add").prop("disabled", $('#main_table input:checkbox:checked').length >1);
+        // $("#edit").prop("disabled", $('#main_table input:checkbox:checked').length >1);
+        // $("#edit").prop("disabled", $('#main_table input:checkbox:checked').length <1);
+        // $("#edit").prop("enabled", $('#main_table input:checkbox:checked').length ==1);
+      });
+
+
+      // ******** Filter the Reqs based on Severit Type **********
+      // const mySeverity= document.getElementById("severity");
+      // mySeverity.addEventListener("change", function() {
+      //   const table = document.getElementById("main_table");
+      
+      //   const selectedOption = mySeverity.value;
+      //   console.log("Selected option:", selectedOption);
+      //   // Get the table element
+      //   console.log(table.rows);
+
+      //   // Get all the rows in the table
+      //   // const rows = table.getElementsByTagName("tr");
+      //   // console.log(rows);
+
+      //   // Loop through each row and hide the ones that do not match the filter
+      //   for (let i = 1; i < table.rows.length; i++) {
+      //     const row = table.rows[i];
+      //     const severityCell = row.cells[1];
+      //     // console.log(severityCell.textContent);
+
+      //     if (selectedValue === "All" || selectedValue === severityCell.textContent) {
+      //       row.style.display = "";
+      //     } else {
+      //       row.style.display = "none";
+      //     }
+      //   }
+
+      // });
+
+      function save_requirement(){
+        req_id = '';
+        project_id = window.sessionStorage.getItem("project_id");
+        title = document.getElementById('modal-title').innerHTML;
+        console.log(title);
+        if(title === 'Add New Requirement'){
+          console.log('New requirement');
+          req_id = 0;
+          // console.log(int(req_id));
+        }
+        else{
+            console.log('Update requirement');
+            titlecode = title.split('-')[1].replace(/\s+/g, '');
+            req_id = titlecode.substring(2);
+            console.log(req_id);
+        }
+        
+
+        var name = document.getElementById('name').value;
+        var severity = $('#modal-severity').find(":selected").text();
+        var type = $('#modal-type').find(":selected").text();
+        var tests = document.getElementById('tests').innerHTML;
+
+        console.log(name);
+
+        
+
+        params = {
+          "project_id" : project_id,
+          "req_id" : req_id,
+          "Name" : name,
+          "Severity" : severity,
+          "Type" : type,
+          "Tests" : ["tc1", "tc2,", "tc3"]
+        };
+        console.log(params);
+
+        $.post('/add_new_req', 
+          {
+            jdata: params
+          }
+        ) .done( function(msg) { 
+            alert(msg);
+            console.log(msg);
+            if (msg === 'New Requirement added successfully!'){
+              // var modal = document.getElementById("myModal");
+              document.getElementById("myModal").style.display = "none";
+              location.reload();
+              // requirements_onload();
+            }
+
+          }
+          ).fail(function(xhr, textStatus, errorThrown) {
+              console.log(xhr.responseText);
+              // alert(xhr.responseText);
+              alert("Failed to save the req. Check if the connection...."+xhr.responseText);
+              return;
+        });
+      
+        // $.post( "/postmethod", {
+        //     jdata: params
+        // },
+        // function(data, status){
+        //   alert("Data: " + data + "\nStatus: " + status);
+        // });
+        
+      }
+
+      function filter_table() {
+        var severityFilter = document.getElementById('severity').value;
+        var typeFilter = document.getElementById('type').value;
+        var coverageFilter = document.getElementById('coverage_filter').value;
+        console.log(severityFilter, typeFilter, coverageFilter);
+        
+
+        var table = document.getElementById('tbody');
+        var rows = table.rows;
+        
+        for (var i = 0; i < rows.length; i++) {
+          var severity = rows[i].cells[4].innerHTML;
+          var type = rows[i].cells[3].innerHTML;
+          var coverage = rows[i].cells[5].innerHTML;
+          console.log(severity,type,coverage);
+          
+          var shouldDisplay = true;
+          
+          if (severityFilter !== 'All' && severity.trim() !== severityFilter) {
+            shouldDisplay = false;
+          }
+          
+          if (typeFilter !== 'All' && type.trim() !== typeFilter) {
+            shouldDisplay = false;
+          }
+
+          if (coverageFilter !== 'All' && coverage.trim() !== coverageFilter) {
+            shouldDisplay = false;
+          }
+
+          
+          
+          rows[i].style.display = shouldDisplay ? '' : 'none';
+        }
+      }
+
+
+      function filter_rows(){
+        // alert("inside filter severity");
+        // const table = document.getElementById('main_table');
+        // let cells = table.querySelectorAll('td');
+        // const tbody = table.querySelector('tbody');
+        // var filter = document.getElementById('severity').value;
+        // filter = filter.charAt(0).toUpperCase() + filter.substring(1).toLowerCase(); // Panel
+        // console.log(filter);
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("severity");
+        filter = input.value.toUpperCase();
+        console.log(filter);
+        table = document.getElementById("main_table");
+        tr = table.getElementsByTagName("tr");
+        // console.log(tr);
+
+        // Loop through all table rows, and hide those who don't match the search query
+        if (filter === 'ALL'){
+          // alert("Inside filter");
+          for (i = 1; i < tr.length; i++) {
+          
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              // txtValue = td.textContent || td.innerText || td.innerHTML;
+              
+                tr[i].style.display = "";
+              
+            }
+            
+          }
+          return
+        }
+        
+        for (i = 1; i < tr.length; i++) {
+          
+          td = tr[i].getElementsByTagName("td")[2];
+          if (td) {
+            // txtValue = td.textContent || td.innerText || td.innerHTML;
+            txtValue = td.innerHTML;
+            console.log(txtValue);
+            if (txtValue.toUpperCase().indexOf(filter) > -1)  {
+              // console.log("Inside compare");
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+
+
+        // for (var i = 0, row; row = tbody.rows[i]; i++) {
+        //     //iterate through rows
+        //     //rows would be accessed using the "row" variable assigned in the for loop
+        //     // console.log('Severity is LOw');
+        //     // console.log(row);
+        //     for (var j = 0, col; col = row.cells[j]; j++) {
+              
+
+        //       // if (col[].innerHTML === "Low"){
+
+
+        //       if (col.innerHTML === filter){
+        //         console.log('Severity is: '+filter);
+        //         row.style.display = "";
+
+        //       }
+        //       else{
+        //         // row.style.display = 'none';
+        //         console.log("Inside else block");
+
+        //       }
+
+        //       //iterate through columns
+        //       //columns would be accessed using the "col" variable assigned in the for loop
+        //     }
+            
+
+            
+        //   }
+
+        
+        // for (let row of tbody.rows) 
+        //   {
+        //       // console.log(row);
+        //       for(let cell of row.cells) 
+        //       {
+        //         let val = cell.innerText; // your code below
+        //         // console.log(val);
+                
+        //         if (val === filter){
+        //           console.log(val);
+        //           row.style.display = 'none';
+        //           // console.log(row);
+        //         }
+        //         else{
+        //           // row.style.display = 'none';
+        //         }
+        //       }
+        //   }
+        // function filterTable() {
+        //   const selectedSeverity = filter.value;
+        //   const rows = Array.from(tbody.querySelectorAll('tr'));
+        //   rows.forEach(row => {
+        //     const cell = row.querySelector('td:nth-child(3)');
+        //     console.log(cell.innerHTML);
+        //     const showRow = selectedSeverity === '' || cell.textContent.trim() === selectedSeverity;
+        //     row.style.display = showRow ? '' : 'none';
+        //   });
+        // }
+
+        // filter.addEventListener('change', filterTable);
+        
+      //   cells.forEach( (cell) =>  {
+
+      //   if (cell.innerHTML === 'Critical'){
+
+      //     console.log(cell.innerHTML);
+      //   }
+        
+        
+      // });
+        
+
+        // data.forEach(item => {
+        //   const row = document.createElement('tr');
+        //   row.innerHTML = `
+        //     <td>${item.id}</td>
+        //     <td>${item.name}</td>
+        //     <td>${item.severity}</td>
+        //     <td>${item.type}</td>
+        //   `;
+        //   tbody.appendChild(row);
+        // });
+      }
+
+      
+    </script>
+
+</body>
+</html>

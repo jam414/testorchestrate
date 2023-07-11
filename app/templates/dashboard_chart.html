@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automation Portal
+  </title>
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <!-- <script src='js/chart.min.js'></script> -->
+  <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+  
+</head>
+<h1 class="h3 mb-3 font-weight-normal" id="titleheader"></h1>
+<body id="mainBody">
+  <script>
+    token = window.sessionStorage.getItem('token');
+    // console.log(token)
+    
+    window.onload=function()
+    {
+        token = window.sessionStorage.getItem('token');
+        project_name = window.sessionStorage.getItem('project_name');
+        document.getElementById('project_title').innerHTML = project_name;
+        console.log("Here is the project name: "+project_name);
+        console.log("Here is the token: "+token);
+        const jwtPayload = JSON.parse(window.atob(token.split('.')[1]))
+        console.log(jwtPayload);
+        const isExpired = Date.now() >= jwtPayload.exp * 1000;
+        document.getElementById("status_message").innerHTML = "Welcome " + jwtPayload.userid
+        if (isExpired){
+          window.open("/", "_self");
+        }
+        load_charts();
+    };
+  </script>  
+    
+    <div id="navbar">
+      <img src="../static/css/TestOrchestrate_black.jpg" title="logo" id="logo" height="75" width="200"/>
+      <div id="navbar-right">
+        <p id="status_message"></p>
+        <!-- <a class="active" href="index.html">Home</a>
+        <a class="active" href="#">Profile</a> -->
+        <!-- <h3>Logged in as Administrator</h3> -->
+       
+      </div>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a id="db" href="#" onclick="dashboard();return false;">DASHBOARD</a>
+      <a id="db" href="#" onclick="requirements();return false;">TEST REQUIREMENTS</a>
+      <a id="tc" href="#" onclick="testcases();return false;">TEST CASES</a>
+      <a id="exe" href="#" onclick="execute();return false;">RUN TEST CASES</a>
+      <a id="exe" href="#" onclick="execute();return false;">DEFECTS</a>
+      <a id="res" href="#" onclick="results();return false;">REPORTS</a>
+      <a id="out" href="#" onclick="logout();return false;">SIGN OFF</a>
+    </div>
+
+    
+      <!-- <div id="main_container">
+        <div class = "chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class = "chart">
+          <canvas id="myChart1"></canvas>
+        </div>
+
+        
+      </div> -->
+
+      <div id="main_container" class="dashboard">
+        <div>
+          <span><a href="#">Home ></a><a href="#">Dashboard ></a></span><label id="project_title">Project Name</label>
+        </div><br>
+
+      <div class="flex-container">
+
+        <div class="flex-child myChart">
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        
+        <div class="flex-child myChart1">
+          <div>
+            <canvas id="myChart1"></canvas>
+          </div>
+        </div>
+        <div class="flex-child myChart2">
+          <div>
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+
+        
+ 
+ 
+ </script>
+ <script>
+
+    function dashboard(){
+      alert("Clicked");
+    }
+
+    function requirements(){
+      window.open("/reqs", "_self");
+    }
+    
+    function testcases(){
+      window.open("/tests", "_self");
+    }
+    
+    function execute(){
+      alert("This feature is under construction !");
+    }
+    
+    function results(){
+      alert("This feature is under construction !");
+    }
+
+    function logout(){
+      window.sessionStorage.setItem('token', null);
+      window.open("/", "_self");
+    }
+
+
+    function load_charts(){
+      
+      var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Test Cases', 'Defects', 'Requirements'],
+            datasets: [{
+              label: 'Project Summary',
+              data: [20, 25, 40],
+              backgroundColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        var ctx = document.getElementById('myChart1').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Test Cases', 'Defects', 'Requirements'],
+            datasets: [{
+              label: 'Project Summary',
+              data: [200, 250, 400],
+              backgroundColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            },
+            plugins: {
+            title: {
+                display: true,
+                text: 'Custom Chart Title',
+                color: 'rgba(232, 140, 171, 1)'
+            },
+            customCanvasBackgroundColor: {
+              color: 'rgba(232, 140, 171, 1)'
+            }
+        }
+          }
+        });
+
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['Test Cases', 'Defects', 'Requirements', 'Test', 'Test2', 'test3'],
+            datasets: [{
+              label: 'Project Summary',
+              data: [200, 250, 400, 300, 400, 500],
+              backgroundColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderColor: [
+                'rgba(162, 232, 198, 1)',
+                'rgba(103, 221, 238, 1)',
+                'rgba(232, 140, 171, 1)',
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                title: 'Hello',
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    }
+    </script>
+
+</body>
+</html>

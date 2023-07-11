@@ -1,0 +1,15 @@
+#pendo-g-d8MzsTl5h0UcUciua5iRHPkFFt4 .rc-docs-list-container {
+  padding: 5px 15px;
+}
+#pendo-g-d8MzsTl5h0UcUciua5iRHPkFFt4 .rc-docs-list {
+  padding: 0px 20px;
+}
+#pendo-g-d8MzsTl5h0UcUciua5iRHPkFFt4 ul.rc-docs-list-items {
+  display: list-item;
+  margin-left: 10px;
+}
+#pendo-g-d8MzsTl5h0UcUciua5iRHPkFFt4 .rc-docs-list-items {
+  display: list-item;
+  line-height: 1.7em;
+  list-style-type: disc;
+}

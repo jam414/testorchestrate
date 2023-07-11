@@ -1,0 +1,694 @@
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got 'Market'. (line 1, character 16)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got 'Market'. (line 1, character 17)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got 'Market'. (line 1, character 18)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "The value 'Equity' does not exist for the field 'project'."
+      ],
+      "warningMessages": []
+}
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got 'Market'. (line 1, character 18)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got 'Market'. (line 1, character 17)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "Error in the JQL Query: Expecting either 'OR' or 'AND' but got '-'. (line 1, character 23)"
+      ],
+      "errors": {}
+}
+{
+      "errorMessages": [
+            "The value 'EquityMarket-Defects' does not exist for the field 'project'."
+      ],
+      "warningMessages": []
+}
+{
+      "errorMessages": [
+            "The value 'Equity Market-Defects' does not exist for the field 'project'."
+      ],
+      "warningMessages": []
+}
+{
+      "expand": "schema,names",
+      "issues": [
+            {
+                  "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+                  "fields": {
+                        "aggregateprogress": {
+                              "progress": 0,
+                              "total": 0
+                        },
+                        "aggregatetimeestimate": null,
+                        "aggregatetimeoriginalestimate": null,
+                        "aggregatetimespent": null,
+                        "assignee": null,
+                        "components": [],
+                        "created": "2023-05-21T00:35:58.302-0400",
+                        "creator": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "customfield_10001": null,
+                        "customfield_10002": null,
+                        "customfield_10003": null,
+                        "customfield_10004": null,
+                        "customfield_10005": null,
+                        "customfield_10006": null,
+                        "customfield_10007": null,
+                        "customfield_10008": null,
+                        "customfield_10009": null,
+                        "customfield_10010": null,
+                        "customfield_10014": null,
+                        "customfield_10015": null,
+                        "customfield_10016": null,
+                        "customfield_10017": null,
+                        "customfield_10018": {
+                              "hasEpicLinkFieldDependency": false,
+                              "nonEditableReason": {
+                                    "message": "The Parent Link is only available to Jira Premium users.",
+                                    "reason": "PLUGIN_LICENSE_ERROR"
+                              },
+                              "showField": false
+                        },
+                        "customfield_10019": "0|i0001b:",
+                        "customfield_10020": null,
+                        "customfield_10021": null,
+                        "customfield_10022": null,
+                        "customfield_10023": null,
+                        "customfield_10024": null,
+                        "customfield_10025": null,
+                        "customfield_10026": null,
+                        "customfield_10027": null,
+                        "customfield_10028": null,
+                        "customfield_10029": null,
+                        "customfield_10030": null,
+                        "description": null,
+                        "duedate": null,
+                        "environment": null,
+                        "fixVersions": [],
+                        "issuelinks": [],
+                        "issuetype": {
+                              "avatarId": 10316,
+                              "description": "A small piece of work that's part of a larger task.",
+                              "hierarchyLevel": -1,
+                              "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+                              "id": "10006",
+                              "name": "Sub-task",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10006",
+                              "subtask": true
+                        },
+                        "labels": [],
+                        "lastViewed": "2023-05-21T00:42:39.172-0400",
+                        "parent": {
+                              "fields": {
+                                    "issuetype": {
+                                          "avatarId": 10303,
+                                          "description": "A problem or error.",
+                                          "hierarchyLevel": 0,
+                                          "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+                                          "id": "10008",
+                                          "name": "Bug",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10008",
+                                          "subtask": false
+                                    },
+                                    "priority": {
+                                          "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                                          "id": "3",
+                                          "name": "Medium",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                                    },
+                                    "status": {
+                                          "description": "",
+                                          "iconUrl": "https://testorchestrate.atlassian.net/",
+                                          "id": "10004",
+                                          "name": "To Do",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                                          "statusCategory": {
+                                                "colorName": "blue-gray",
+                                                "id": 2,
+                                                "key": "new",
+                                                "name": "To Do",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                                          }
+                                    },
+                                    "summary": "First Issue"
+                              },
+                              "id": "10004",
+                              "key": "EMD-1",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10004"
+                        },
+                        "priority": {
+                              "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                              "id": "3",
+                              "name": "Medium",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                        },
+                        "progress": {
+                              "progress": 0,
+                              "total": 0
+                        },
+                        "project": {
+                              "avatarUrls": {
+                                    "16x16": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=xsmall",
+                                    "24x24": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=small",
+                                    "32x32": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=medium",
+                                    "48x48": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402"
+                              },
+                              "id": "10001",
+                              "key": "EMD",
+                              "name": "Equity Market - Defects",
+                              "projectTypeKey": "software",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/project/10001",
+                              "simplified": false
+                        },
+                        "reporter": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "resolution": null,
+                        "resolutiondate": null,
+                        "security": null,
+                        "status": {
+                              "description": "",
+                              "iconUrl": "https://testorchestrate.atlassian.net/",
+                              "id": "10004",
+                              "name": "To Do",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                              "statusCategory": {
+                                    "colorName": "blue-gray",
+                                    "id": 2,
+                                    "key": "new",
+                                    "name": "To Do",
+                                    "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                              }
+                        },
+                        "statuscategorychangedate": "2023-05-21T00:35:58.646-0400",
+                        "subtasks": [],
+                        "summary": "Subtask 2 for First Issue",
+                        "timeestimate": null,
+                        "timeoriginalestimate": null,
+                        "timespent": null,
+                        "updated": "2023-05-21T00:35:58.774-0400",
+                        "versions": [],
+                        "votes": {
+                              "hasVoted": false,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-3/votes",
+                              "votes": 0
+                        },
+                        "watches": {
+                              "isWatching": true,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-3/watchers",
+                              "watchCount": 1
+                        },
+                        "workratio": -1
+                  },
+                  "id": "10006",
+                  "key": "EMD-3",
+                  "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10006"
+            },
+            {
+                  "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+                  "fields": {
+                        "aggregateprogress": {
+                              "progress": 0,
+                              "total": 0
+                        },
+                        "aggregatetimeestimate": null,
+                        "aggregatetimeoriginalestimate": null,
+                        "aggregatetimespent": null,
+                        "assignee": null,
+                        "components": [],
+                        "created": "2023-05-21T00:35:45.648-0400",
+                        "creator": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "customfield_10001": null,
+                        "customfield_10002": null,
+                        "customfield_10003": null,
+                        "customfield_10004": null,
+                        "customfield_10005": null,
+                        "customfield_10006": null,
+                        "customfield_10007": null,
+                        "customfield_10008": null,
+                        "customfield_10009": null,
+                        "customfield_10010": null,
+                        "customfield_10014": null,
+                        "customfield_10015": null,
+                        "customfield_10016": null,
+                        "customfield_10017": null,
+                        "customfield_10018": {
+                              "hasEpicLinkFieldDependency": false,
+                              "nonEditableReason": {
+                                    "message": "The Parent Link is only available to Jira Premium users.",
+                                    "reason": "PLUGIN_LICENSE_ERROR"
+                              },
+                              "showField": false
+                        },
+                        "customfield_10019": "0|i00013:",
+                        "customfield_10020": null,
+                        "customfield_10021": null,
+                        "customfield_10022": null,
+                        "customfield_10023": null,
+                        "customfield_10024": null,
+                        "customfield_10025": null,
+                        "customfield_10026": null,
+                        "customfield_10027": null,
+                        "customfield_10028": null,
+                        "customfield_10029": null,
+                        "customfield_10030": null,
+                        "description": null,
+                        "duedate": null,
+                        "environment": null,
+                        "fixVersions": [],
+                        "issuelinks": [],
+                        "issuetype": {
+                              "avatarId": 10316,
+                              "description": "A small piece of work that's part of a larger task.",
+                              "hierarchyLevel": -1,
+                              "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+                              "id": "10006",
+                              "name": "Sub-task",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10006",
+                              "subtask": true
+                        },
+                        "labels": [],
+                        "lastViewed": null,
+                        "parent": {
+                              "fields": {
+                                    "issuetype": {
+                                          "avatarId": 10303,
+                                          "description": "A problem or error.",
+                                          "hierarchyLevel": 0,
+                                          "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+                                          "id": "10008",
+                                          "name": "Bug",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10008",
+                                          "subtask": false
+                                    },
+                                    "priority": {
+                                          "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                                          "id": "3",
+                                          "name": "Medium",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                                    },
+                                    "status": {
+                                          "description": "",
+                                          "iconUrl": "https://testorchestrate.atlassian.net/",
+                                          "id": "10004",
+                                          "name": "To Do",
+                                          "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                                          "statusCategory": {
+                                                "colorName": "blue-gray",
+                                                "id": 2,
+                                                "key": "new",
+                                                "name": "To Do",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                                          }
+                                    },
+                                    "summary": "First Issue"
+                              },
+                              "id": "10004",
+                              "key": "EMD-1",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10004"
+                        },
+                        "priority": {
+                              "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                              "id": "3",
+                              "name": "Medium",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                        },
+                        "progress": {
+                              "progress": 0,
+                              "total": 0
+                        },
+                        "project": {
+                              "avatarUrls": {
+                                    "16x16": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=xsmall",
+                                    "24x24": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=small",
+                                    "32x32": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=medium",
+                                    "48x48": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402"
+                              },
+                              "id": "10001",
+                              "key": "EMD",
+                              "name": "Equity Market - Defects",
+                              "projectTypeKey": "software",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/project/10001",
+                              "simplified": false
+                        },
+                        "reporter": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "resolution": null,
+                        "resolutiondate": null,
+                        "security": null,
+                        "status": {
+                              "description": "",
+                              "iconUrl": "https://testorchestrate.atlassian.net/",
+                              "id": "10004",
+                              "name": "To Do",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                              "statusCategory": {
+                                    "colorName": "blue-gray",
+                                    "id": 2,
+                                    "key": "new",
+                                    "name": "To Do",
+                                    "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                              }
+                        },
+                        "statuscategorychangedate": "2023-05-21T00:35:46.080-0400",
+                        "subtasks": [],
+                        "summary": "Subtask 1 for First Issue",
+                        "timeestimate": null,
+                        "timeoriginalestimate": null,
+                        "timespent": null,
+                        "updated": "2023-05-21T00:35:46.203-0400",
+                        "versions": [],
+                        "votes": {
+                              "hasVoted": false,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-2/votes",
+                              "votes": 0
+                        },
+                        "watches": {
+                              "isWatching": true,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-2/watchers",
+                              "watchCount": 1
+                        },
+                        "workratio": -1
+                  },
+                  "id": "10005",
+                  "key": "EMD-2",
+                  "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10005"
+            },
+            {
+                  "expand": "operations,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,renderedFields",
+                  "fields": {
+                        "aggregateprogress": {
+                              "percent": 0,
+                              "progress": 0,
+                              "total": 144000
+                        },
+                        "aggregatetimeestimate": 144000,
+                        "aggregatetimeoriginalestimate": 144000,
+                        "aggregatetimespent": null,
+                        "assignee": null,
+                        "components": [],
+                        "created": "2023-05-04T10:31:18.467-0400",
+                        "creator": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "customfield_10001": null,
+                        "customfield_10002": null,
+                        "customfield_10003": null,
+                        "customfield_10004": null,
+                        "customfield_10005": null,
+                        "customfield_10006": null,
+                        "customfield_10007": null,
+                        "customfield_10008": null,
+                        "customfield_10009": null,
+                        "customfield_10010": null,
+                        "customfield_10014": null,
+                        "customfield_10015": null,
+                        "customfield_10016": null,
+                        "customfield_10017": null,
+                        "customfield_10018": {
+                              "hasEpicLinkFieldDependency": false,
+                              "nonEditableReason": {
+                                    "message": "The Parent Link is only available to Jira Premium users.",
+                                    "reason": "PLUGIN_LICENSE_ERROR"
+                              },
+                              "showField": false
+                        },
+                        "customfield_10019": "0|i0000v:",
+                        "customfield_10020": null,
+                        "customfield_10021": null,
+                        "customfield_10022": null,
+                        "customfield_10023": null,
+                        "customfield_10024": null,
+                        "customfield_10025": null,
+                        "customfield_10026": null,
+                        "customfield_10027": null,
+                        "customfield_10028": null,
+                        "customfield_10029": null,
+                        "customfield_10030": null,
+                        "description": "Some desc",
+                        "duedate": null,
+                        "environment": null,
+                        "fixVersions": [],
+                        "issuelinks": [],
+                        "issuetype": {
+                              "avatarId": 10303,
+                              "description": "A problem or error.",
+                              "hierarchyLevel": 0,
+                              "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+                              "id": "10008",
+                              "name": "Bug",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10008",
+                              "subtask": false
+                        },
+                        "labels": [],
+                        "lastViewed": "2023-05-21T00:35:03.345-0400",
+                        "priority": {
+                              "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                              "id": "3",
+                              "name": "Medium",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                        },
+                        "progress": {
+                              "percent": 0,
+                              "progress": 0,
+                              "total": 144000
+                        },
+                        "project": {
+                              "avatarUrls": {
+                                    "16x16": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=xsmall",
+                                    "24x24": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=small",
+                                    "32x32": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402?size=medium",
+                                    "48x48": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10402"
+                              },
+                              "id": "10001",
+                              "key": "EMD",
+                              "name": "Equity Market - Defects",
+                              "projectTypeKey": "software",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/project/10001",
+                              "simplified": false
+                        },
+                        "reporter": {
+                              "accountId": "712020:837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "accountType": "atlassian",
+                              "active": true,
+                              "avatarUrls": {
+                                    "16x16": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "24x24": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "32x32": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png",
+                                    "48x48": "https://secure.gravatar.com/avatar/d435dc756aa048381c8390998db83fdb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJ-5.png"
+                              },
+                              "displayName": "James",
+                              "emailAddress": "jam414@yahoo.com",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/user?accountId=712020%3A837c9bc0-9f79-4c1e-84d8-96b83f003d8b",
+                              "timeZone": "America/New_York"
+                        },
+                        "resolution": null,
+                        "resolutiondate": null,
+                        "security": null,
+                        "status": {
+                              "description": "",
+                              "iconUrl": "https://testorchestrate.atlassian.net/",
+                              "id": "10004",
+                              "name": "To Do",
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                              "statusCategory": {
+                                    "colorName": "blue-gray",
+                                    "id": 2,
+                                    "key": "new",
+                                    "name": "To Do",
+                                    "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                              }
+                        },
+                        "statuscategorychangedate": "2023-05-04T10:31:19.257-0400",
+                        "subtasks": [
+                              {
+                                    "fields": {
+                                          "issuetype": {
+                                                "avatarId": 10316,
+                                                "description": "A small piece of work that's part of a larger task.",
+                                                "hierarchyLevel": -1,
+                                                "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+                                                "id": "10006",
+                                                "name": "Sub-task",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10006",
+                                                "subtask": true
+                                          },
+                                          "priority": {
+                                                "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                                                "id": "3",
+                                                "name": "Medium",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                                          },
+                                          "status": {
+                                                "description": "",
+                                                "iconUrl": "https://testorchestrate.atlassian.net/",
+                                                "id": "10004",
+                                                "name": "To Do",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                                                "statusCategory": {
+                                                      "colorName": "blue-gray",
+                                                      "id": 2,
+                                                      "key": "new",
+                                                      "name": "To Do",
+                                                      "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                                                }
+                                          },
+                                          "summary": "Subtask 1 for First Issue"
+                                    },
+                                    "id": "10005",
+                                    "key": "EMD-2",
+                                    "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10005"
+                              },
+                              {
+                                    "fields": {
+                                          "issuetype": {
+                                                "avatarId": 10316,
+                                                "description": "A small piece of work that's part of a larger task.",
+                                                "hierarchyLevel": -1,
+                                                "iconUrl": "https://testorchestrate.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+                                                "id": "10006",
+                                                "name": "Sub-task",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/issuetype/10006",
+                                                "subtask": true
+                                          },
+                                          "priority": {
+                                                "iconUrl": "https://testorchestrate.atlassian.net/images/icons/priorities/medium.svg",
+                                                "id": "3",
+                                                "name": "Medium",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/priority/3"
+                                          },
+                                          "status": {
+                                                "description": "",
+                                                "iconUrl": "https://testorchestrate.atlassian.net/",
+                                                "id": "10004",
+                                                "name": "To Do",
+                                                "self": "https://testorchestrate.atlassian.net/rest/api/2/status/10004",
+                                                "statusCategory": {
+                                                      "colorName": "blue-gray",
+                                                      "id": 2,
+                                                      "key": "new",
+                                                      "name": "To Do",
+                                                      "self": "https://testorchestrate.atlassian.net/rest/api/2/statuscategory/2"
+                                                }
+                                          },
+                                          "summary": "Subtask 2 for First Issue"
+                                    },
+                                    "id": "10006",
+                                    "key": "EMD-3",
+                                    "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10006"
+                              }
+                        ],
+                        "summary": "First Issue",
+                        "timeestimate": 144000,
+                        "timeoriginalestimate": 144000,
+                        "timespent": null,
+                        "updated": "2023-05-20T12:21:06.546-0400",
+                        "versions": [],
+                        "votes": {
+                              "hasVoted": false,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-1/votes",
+                              "votes": 0
+                        },
+                        "watches": {
+                              "isWatching": true,
+                              "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/EMD-1/watchers",
+                              "watchCount": 1
+                        },
+                        "workratio": 0
+                  },
+                  "id": "10004",
+                  "key": "EMD-1",
+                  "self": "https://testorchestrate.atlassian.net/rest/api/2/issue/10004"
+            }
+      ],
+      "maxResults": 50,
+      "startAt": 0,
+      "total": 3
+}

@@ -1,0 +1,2886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0049)https://austere.testrail.io/index.php?/runs/add/1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-hashes&#39; https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io ; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io https://cdn.pendo.io https://data.pendo.io https://app.pendo.io https://pendo-static-5699730914541568.storage.googleapis.com https://cdn.embedly.com ; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io https://pendo-static-5699730914541568.storage.googleapis.com ; style-src-elem &#39;self&#39; &#39;unsafe-inline&#39; https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io https://pendo-static-5699730914541568.storage.googleapis.com ; style-src-attr style-src-attr &#39;self&#39; &#39;unsafe-inline&#39;  ; img-src &#39;self&#39; data: https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io https://data.pendo.io https://pendo-static-5699730914541568.storage.googleapis.com https://api.qrserver.com/ ; font-src &#39;self&#39; https://fonts.gstatic.com https://static.testrail-staging.com https://static.testrail.com https://static.testrail.io ; connect-src &#39;self&#39; https://app.pendo.io https://data.pendo.io https://pendo-static-5699730914541568.storage.googleapis.com ; media-src *  ; object-src &#39;none&#39;  ; prefetch-src &#39;self&#39;  ; worker-src &#39;none&#39;  ; base-uri &#39;self&#39;  ; frame-src  https://app.pendo.io https://*.testrail-staging.com https://*.testrail.com https://*.testrail.io https://*.testrail.net ; child-src  https://app.pendo.io ;">
+	<title>Add Test Run - TestRail</title>
+							<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/app-modern-combined.css" media="all">
+				<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/font.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/drilldown.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/style.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/brand-modern.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/assembla.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/banner-enterprise-modern.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/application.autocomplete.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/input-autocomplete.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/jquery.data-tables.min.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/fixed-columns.data-tables.min.css" media="all">
+	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/application.datasets.css" media="all">
+    	<link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/autocomplete.css" media="all">
+	<link rel="shortcut icon" href="https://static.testrail.io/7.8.0.1141/images/favicon.ico">
+	<link rel="shortcut icon" href="https://static.testrail.io/7.8.0.1141/images/favicon.ico">
+	<script async="" src="./Add Test Run - TestRail_files/pendo.js.download"></script><script type="text/javascript" src="./Add Test Run - TestRail_files/jquery.js.download"></script>
+			<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.js.download"></script>
+	<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.fusion.js.download"></script><style type="text/css">@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ft calendar customization */
+.fc-cal-date-normal-fusion {
+  color: #5F5F5F;
+  font-family: 'Source Sans Pro';
+  font-size: 11px;
+}
+
+.fc-cal-date-selected-fusion {
+  color: #FEFEFE;
+  font-family: 'Source Sans Pro SemiBold';
+  font-size: 11px;
+}</style>
+			<script type="text/javascript">
+			var _0x172b=['915521FAOgwP','1WUUTor','85768HrInlH','1VBoajH','701113SlGqlh','596675VFZSmj','430136IMhboy','iyE4qlbA7A3C4A2F1D1I1B1A2A3B1B3fqyH2B7C-16xvhyA2E1lduC7E2B4E2F2G2C1B10B2D1E6C1E1E3E1G2c1D-16yC2A3E2yD1J2B3lozD1B1G4da1wB9B6C6dG-10A-8D3J2A9B1A8C7E1E5A2A1A1sB-22uE2D6G1F1H-8H-7lB8A5C7epG4d1I3B8lnE-13F4E2D3F1H4A10D9C1B5E6B1F4E3E1g==','9197lCfGYC','713897AESQnW','1QhbbSq','license','33GAfgRX'];var _0x3f57b9=_0x10c9;function _0x10c9(_0x3cfbbf,_0x10e5b7){_0x3cfbbf=_0x3cfbbf-0x73;var _0x172b34=_0x172b[_0x3cfbbf];return _0x172b34;}(function(_0x22f311,_0x1ab4f2){var _0x50a77f=_0x10c9;while(!![]){try{var _0x461480=parseInt(_0x50a77f(0x7b))+-parseInt(_0x50a77f(0x75))*-parseInt(_0x50a77f(0x7e))+parseInt(_0x50a77f(0x7c))+parseInt(_0x50a77f(0x78))+parseInt(_0x50a77f(0x7f))*parseInt(_0x50a77f(0x79))+parseInt(_0x50a77f(0x7a))*-parseInt(_0x50a77f(0x77))+-parseInt(_0x50a77f(0x76))*parseInt(_0x50a77f(0x73));if(_0x461480===_0x1ab4f2)break;else _0x22f311['push'](_0x22f311['shift']());}catch(_0x19bcfb){_0x22f311['push'](_0x22f311['shift']());}}}(_0x172b,0x7d53f),FusionCharts['options'][_0x3f57b9(0x74)]({'key':_0x3f57b9(0x7d),'creditLabel':![]}));		</script>
+	<script type="text/javascript" src="./Add Test Run - TestRail_files/jspdf.min.js.download"></script>
+	<script type="text/javascript" src="./Add Test Run - TestRail_files/html2canvas.js.download"></script>
+	<script type="text/javascript" src="./Add Test Run - TestRail_files/jquery.js.download"></script>
+<style type="text/css">@font-face {
+  font-family: "Fira Sans Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Fira Sans Light"), local("FiraSans-Light"),
+    url(https://fonts.gstatic.com/s/firasans/v8/va9B4kDNxMZdWfMOD5VnPKreRhf6Xl7Glw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Fira Sans Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"),
+    url(https://fonts.gstatic.com/s/firasans/v8/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* ft calendar customiztion */
+.fc-cal-day-candy {
+  background-color: rgb(52, 52, 52);
+  color: rgb(204, 204, 204);
+  font-family: "Fira Sans Light";
+  border: none;
+}
+
+.fc-cal-date-normal-candy {
+  background-color: rgb(52, 52, 52);
+  color: rgb(204, 204, 204);
+  font-family: "Fira Sans Light";
+  border: none;
+}
+
+.fc-cal-date-normal-candy:hover {
+  background-color: rgb(110, 110, 110);
+  color: rgb(255, 255, 255);
+  font-family: "Fira Sans Light";
+  border: none;
+}
+
+.fc-cal-date-disabled-candy {
+  background-color: rgb(52, 52, 52);
+  color: rgba(153, 156, 165, 0.75);
+  font-family: "Fira Sans Light";
+  border: none;
+}
+
+.fc-cal-month-header-candy {
+  background-color: rgb(54, 134, 156);
+  font-family: "Fira Sans Light";
+}
+
+.fc-cal-weekend-candy {
+  background-color: rgb(53, 85, 93);
+}
+
+.fc-cal-container-candy {
+  border: 0.5px solid rgb(75, 75, 75);
+}
+
+.fc-cal-nav-next-candy,
+.fc-cal-nav-prev-candy {
+  font-family: "Fira Sans Light";
+  font-size: 12px;
+}
+
+.fc-cal-date-selected-candy {
+  background-color: rgb(54, 134, 156);
+  color: rgb(255, 255, 255);
+  font-family: "Fira Sans Regular";
+}</style><style type="text/css">@font-face {
+  font-family: "Titillium Web Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"),
+    url(https://fonts.gstatic.com/s/titilliumweb/v7/NaPecZTIAOhVxoMyOr9n_E7fdMPmDaZRbrw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Titillium Web SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Titillium Web SemiBold"), local("TitilliumWeb-SemiBold"),
+    url(https://fonts.gstatic.com/s/titilliumweb/v7/NaPDcZTIAOhVxoMyOr9n_E7ffBzCGItzY5abuWI.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* ft calendar customiztion */
+.fc-cal-day-umber {
+  background-color: #fff1e5;
+  color: #33302e;
+  font-family: "Titillium Web Regular";
+  border: none;
+}
+
+.fc-cal-date-normal-umber {
+  background-color: #fff1e5;
+  color: #33302e;
+  font-family: "Titillium Web Regular";
+  border: none;
+}
+
+.fc-cal-date-normal-umber:hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Titillium Web Regular";
+  border: none;
+}
+
+.fc-cal-date-disabled-umber {
+  background-color: #fff1e5;
+  color: rgba(51, 48, 46, 0.5);
+  font-family: "Titillium Web Regular";
+  border: none;
+}
+
+.fc-cal-month-header-umber {
+  background-color: #000000;
+  font-family: "Titillium Web Regular";
+}
+
+.fc-cal-weekend-umber {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.fc-cal-container-umber {
+  border: none;
+}
+
+.fc-cal-nav-next-umber,
+.fc-cal-nav-prev-umber {
+  font-family: "Titillium Web Regular";
+  font-size: 12px;
+}
+
+.fc-cal-date-selected-umber {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Titillium Web Regular";
+}
+
+.fc-cal-date-selected-umber:hover {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Titillium Web Regular";
+}
+</style><link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/4Pz_Bx1-oEFVfH59WDN1wHnCPP0.guide.css"><link type="text/css" rel="stylesheet" href="./Add Test Run - TestRail_files/SJcV1nQiOjwunpZTbhq2IfTF2Ww.guide.css"></head>
+	<body style="min-width: 960px; overflow: hidden;" class="modern">
+
+
+<script type="text/javascript">
+	$(document).ready(
+		function()
+		{
+			$('#body').css('display', 'table');
+		}
+	);
+</script>
+
+	<script type="text/javascript">
+				$(document).ready(function(){
+					$('#name').focus();
+				});
+			</script>	
+
+<script type="text/javascript">
+			$(document).ready(function(){
+				$.datepicker.setDefaults(
+					{
+						dateFormat: 'm/d/yy',
+						dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+						dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+						dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+						monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+						monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+						firstDay: 0
+                    }
+				);
+			});
+		</script>
+
+	<div id="top">
+    <div id="top-logo">
+        <a href="javascript:void(0)" id="bannerLink"><img src="./Add Test Run - TestRail_files/testrail-logo.svg"></a>
+    </div>
+    <div class="bubble estimate-bubble" id="enterpriseBubble">
+    <a class="close close-hover" href="javascript: void(0);" onclick="App.Dialogs.trEnterpriseBannerConfirmNew(&#39;logo&#39;)">×</a>
+    <div class="modules modules_tab_fullsection">
+        <div class="modules_tab_lefthalf">
+            <img src="./Add Test Run - TestRail_files/editionsimage.png">
+        </div>
+        <div class="modules_tab_righthalf">
+            <div id="logo_confirm"></div>
+            <div id="logo_banner_desc">
+                <div class="hd_sb_txt">
+                    <span style="color: #979797;">Your edition:</span> 
+    TestRail Professional                </div>
+                <div class="hd_sb_txt">
+                    Enable enterprise-grade <strong>security</strong> 
+    and <strong>performance.</strong>                </div>
+                <a href="https://austere.testrail.io/index.php?/enterprise" class="button-enterprise button-arrow button-discover">
+                    Explore Enterprise                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="top-panel">
+		<div class="top-panel-inner">
+			<div class="top-social">
+				<a href="http://blog.gurock.com/" tooltip-text="Learn more about new TestRail versions and features on the Gurock blog." target="_blank" tabindex="-1" class="top-social-link link-tooltip"><div class="icon-header-blog"></div></a>
+				<a href="http://twitter.com/testrail" tooltip-text="Follow TestRail on Twitter for relevant TestRail updates." target="_blank" tabindex="-1" class="top-social-link link-tooltip"><div class="icon-header-twitter"></div></a>
+				<a href="https://secure.gurock.com/customers/testrail/newsletter?email=jameel@austeretech.com" target="_blank" tooltip-text="Subscribe to Gurock&#39;s newsletter to receive TestRail updates in your inbox." class="top-social-link link-tooltip"><div class="icon-header-mail"></div></a>
+			</div>
+			<ul class="top-menu pull-right">
+			  <li class="top-menu-item"><a id="inProgressLink" href="javascript:void(0)" onclick="this.blur(); App.Tests.showInProgress(); return false;">Working On <span class="caret" style="vertical-align: 2px"></span></a>
+				</li><li class="top-menu-item"><a class="dropdownLink" id="navigation-user" href="https://austere.testrail.io/index.php?/runs/add/1#userDropdown" title="James Lee"><span class="navigation-username">James Lee</span> <span class="caret" style="vertical-align: 2px"></span></a>
+				</li><li class="top-menu-item"><a class="dropdownLink top-menu-highlight" id="navigation-menu" href="https://austere.testrail.io/index.php?/runs/add/1#helpDropdown" tabindex="-1">Help &amp; Feedback <span class="caret top-menu-highlight" style="vertical-align: 2px"></span></a>
+				</li>
+			</ul>
+						<div class="top-search" title="Press Ctrl+Shift+F to open search dialog">
+	<input class="top-search-control background hidden" id="background_search_query" tabindex="-1" autocomplete="off">
+	<input class="top-search-control" type="text" name="query" id="search_query" tabindex="-1" autocomplete="off" onclick="App.Search.showDialog(); return false;">
+	<span class="search-close" id="clear_search_query" onclick="App.Search.clearSearchInput(); return false;"></span>
+</div>
+<div class="top-search-dialog hidden" id="top_search_dialog">
+	<div class="main-column">
+		<div class="dialog-categories">
+			<div class="search-dialog-header">Quick jump to</div>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=1">Projects</a>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=2">Test Cases</a>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=3">Test Runs</a>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=4">Milestones</a>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=5">Test Suites</a>
+						<a class="dialog-category" href="https://austere.testrail.io/index.php?/new_search/results&amp;category[]=6">Reports</a>
+					</div>
+
+		<div id="zeroState">
+			<div class="search-dialog-header">
+				Recent search results
+			</div>
+			<div id="recentSearchResultsContent">
+			</div>
+
+			<div class="search-dialog-header">
+				Recently viewed
+			</div>
+			<div class="recently-viewed">
+				
+	<a href="https://austere.testrail.io/index.php?/runs/view/16" class="recently-viewed-link">
+		<span class="column filter-icon filter-icon-runs-18"></span>
+				<strong>R16</strong> -&nbsp;
+				Release 1.1: Run 1 (smoke test)	</a>
+
+	<a href="https://austere.testrail.io/index.php?/cases/view/2232" class="recently-viewed-link">
+		<span class="column filter-icon filter-icon-cases-18"></span>
+				<strong>C2232</strong> -&nbsp;
+				test-case	</a>
+
+	<a href="https://austere.testrail.io/index.php?/suites/view/1" class="recently-viewed-link">
+		<span class="column filter-icon filter-icon-suites-18"></span>
+				<strong>S1</strong> -&nbsp;
+				Master	</a>
+
+	<a href="https://austere.testrail.io/index.php?/projects/overview/1" class="recently-viewed-link">
+		<span class="column filter-icon filter-icon-projects-18"></span>
+				<strong>P1</strong> -&nbsp;
+				test-example-proj	</a>
+
+	<a href="https://austere.testrail.io/index.php?/cases/view/22" class="recently-viewed-link">
+		<span class="column filter-icon filter-icon-cases-18"></span>
+				<strong>C22</strong> -&nbsp;
+				Print document history and attributes	</a>
+			</div>
+		</div>
+		<div id="newSearchResultsContent"></div>
+	</div>
+
+	<div class="filters-column">
+		<div id="filterNewSearchContent"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	App.Search.projectID = 1;
+});
+</script>
+					</div>
+	</div>
+			<div class="top-section top-section-with-return text-ppp">
+			<span id="return"><a class="link-noline" id="navigation-dashboard-top" href="https://austere.testrail.io/index.php?/dashboard">← Return to Dashboard</a></span>
+			<a class="link-noline" id="navigation-project" href="https://austere.testrail.io/index.php?/projects/overview/1">test-example-proj</a>
+		</div>
+	</div>
+
+<form id="newsletterForm" target="_blank" action="https://secure.gurock.com/customers/testrail/newsletter?email=" method="post">
+	<input name="cm-ahdml-ahdml" id="newsletter" type="hidden">
+</form>
+
+<div id="header">
+	<ul class="header-menu">
+		<li class="header-menu-item header-menu-item-right"><a tabindex="-1" href="https://austere.testrail.io/index.php?/admin/overview" id="navigation-admin">Administration</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="https://austere.testrail.io/index.php?/projects/overview/1" id="navigation-projects">Overview</a></li><li class="header-menu-item"><a tabindex="-1" href="https://austere.testrail.io/index.php?/todos/overview/1" id="navigation-todos">Todo</a></li><li class="header-menu-item"><a tabindex="-1" href="https://austere.testrail.io/index.php?/milestones/overview/1" id="navigation-milestones">Milestones</a></li><li class="header-menu-item header-menu-item-selected"><a tabindex="-1" href="https://austere.testrail.io/index.php?/runs/overview/1" id="navigation-runs">Test Runs &amp; Results</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="https://austere.testrail.io/index.php?/suites/view/1" id="navigation-suites">Test Cases</a></li>
+<li class="header-menu-item"><a tabindex="-1" href="https://austere.testrail.io/index.php?/reports/overview/1" id="navigation-reports">Reports</a></li>	</ul>
+</div>
+
+<div id="separator"></div>
+<div id="body-container" class="">
+	<div id="body" class="table" style="display: table;">
+	<div id="content" class="column content overflow-content">
+		
+            
+            					<div id="content-header" class="content-header content-header-default">
+	<div class="content-header-inner">
+		<div class="content-header-result" style=""></div>
+								                                    		<div class="content-header-title page_title">
+																				Add Test Run					</div>
+	</div>
+</div>
+                <script type="text/javascript">
+                    $("#sites").prop("selectedIndex", 0);
+			   </script>
+																		<div id="content-inner" class="content-inner goals-clear">
+																	            
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"attachments_drop",
+		"Drop files here to attach, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image",
+		"Drop images here to embed, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image_nobrowse",
+		"Drop images here to embed."	);
+		App.Translations.add(
+		"attachments_drop_notype",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach",
+		"You can only add images to this text field (example: PNG or JPG files). You can attach other file types to a case or result from the sidebar or result dialogs."	);
+		App.Translations.add(
+		"attachments_file_here",
+		"Drop file here, or click to browse."	);
+		App.Translations.add(
+		"attachments_remove_image",
+		"Remove"	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach_jira",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_confirm_replace",
+		"This action <strong>replaces current attachment with selected one. This will refresh all attachment\u2019s instances across your projects<\/strong> (except those on closed Runs & Plans). This cannot be undone. Do you wish to continue?"	);
+		App.Translations.add(
+		"attachments_replace_title",
+		"Replace?"	);
+		App.Translations.add(
+		"attachments_loading_error_title",
+		"Loading error"	);
+		App.Translations.add(
+		"attachments_loading_error_generic",
+		"<strong>An unexpected uploading error occurred.<\/strong><br><br>Try again!"	);
+		App.Translations.add(
+		"attachment_info_all_projects",
+		"All Projects"	);
+		App.Translations.add(
+		"attachments_confirm_delete",
+		"This <strong>deletes selected instances of your attachments.<\/strong> The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently."	);
+		App.Translations.add(
+		"attachments_delete",
+		"Delete"	);
+		App.Translations.add(
+		"attachment_upload_name_allowed",
+		""	);
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		App.Dropzone.init();
+	}
+);
+</script>
+<div class="dialog dialog_dialog" id="attachmentDialog" style="width: 450px">
+	<div class="dialog-title">
+		<span class="addAttachment">Add Attachment</span>
+		<span class="addImage">Add Images</span>
+	</div>
+	<form id="attachmentForm" action="https://austere.testrail.io/post">
+		<div class="dialog-body">
+			<div class="message message-error validationError" id="attachmentErrors"></div>
+			<div class="form-group bottom">
+				<div id="attachmentDropzone" class="dropzone dz-persistent" style="min-height: 100px" data-project-id="1"></div>
+			</div>
+			<div id="attachmentScreenshotMac" class="hidden">
+				<div class="shortcut">
+					<p class="top">How to take a screenshot on your Mac:</p>
+					<kbd>^ Ctrl</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>⌘ Cmd</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>⇧ Shift</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>4</kbd>
+				</div>
+				<div class="shortcut">
+					<p class="top">Then paste it:</p>
+					<kbd>⌘ Cmd</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>v</kbd>
+				</div>
+			</div>
+			<div id="attachmentScreenshotWin" class="hidden">
+				<div class="shortcut">
+					<p class="top">How to take a screenshot on Windows:</p>
+					<kbd>Alt</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>PrtSc</kbd>
+					<span class="shortcut-plus">or</span>
+					<kbd>PrtSc</kbd>
+				</div>
+				<div class="shortcut">
+					<p class="top">Then paste it:</p>
+					<kbd>Ctrl</kbd>
+					<span class="shortcut-plus">+</span>
+					<kbd>v</kbd>
+				</div>
+			</div>			
+		</div>		
+		<div id="attachmentButtons" class="dialog-buttons-highlighted button-group">
+			<button id="attachmentSubmit" type="submit" class="button button-left button-positive button-ok dialog-action-default">
+				<span class="addAttachment">Add Attachment</span><span class="addImage">Add Images</span>
+			</button>
+			<a class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>		
+		</div>
+	</form>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		App.Editor.init(1);
+	}
+);
+</script>
+<div class="attachments-new-dialog dialog dialog_attachment" id="attachmentNewDialogFile">
+	<div class="dialog-title">
+		<span class="addAttachment">Attach file</span>
+	</div>
+	
+<div class="attachments-filter bubble filter-bubble hidden" id="filterAttachmentsBubble">
+	<div id="filterAttachmentsContent" class="filter-bubble-inner">
+	</div>
+</div><script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"attachments_drop",
+		"Drop files here to attach, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image",
+		"Drop images here to embed, or click to browse."	);
+		App.Translations.add(
+		"attachments_drop_image_nobrowse",
+		"Drop images here to embed."	);
+		App.Translations.add(
+		"attachments_drop_notype",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach",
+		"You can only add images to this text field (example: PNG or JPG files). You can attach other file types to a case or result from the sidebar or result dialogs."	);
+		App.Translations.add(
+		"attachments_file_here",
+		"Drop file here, or click to browse."	);
+		App.Translations.add(
+		"attachments_remove_image",
+		"Remove"	);
+		App.Translations.add(
+		"attachments_drop_notype_canattach_jira",
+		"You can only add images to this text field (example: PNG or JPG files)."	);
+		App.Translations.add(
+		"attachments_confirm_replace",
+		"This action <strong>replaces current attachment with selected one. This will refresh all attachment\u2019s instances across your projects<\/strong> (except those on closed Runs & Plans). This cannot be undone. Do you wish to continue?"	);
+		App.Translations.add(
+		"attachments_replace_title",
+		"Replace?"	);
+		App.Translations.add(
+		"attachments_loading_error_title",
+		"Loading error"	);
+		App.Translations.add(
+		"attachments_loading_error_generic",
+		"<strong>An unexpected uploading error occurred.<\/strong><br><br>Try again!"	);
+		App.Translations.add(
+		"attachment_info_all_projects",
+		"All Projects"	);
+		App.Translations.add(
+		"attachments_confirm_delete",
+		"This <strong>deletes selected instances of your attachments.<\/strong> The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently."	);
+		App.Translations.add(
+		"attachments_delete",
+		"Delete"	);
+		App.Translations.add(
+		"attachment_upload_name_allowed",
+		""	);
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		App.Dropzone.init();
+	}
+);
+</script>
+
+<input id="newAttachments" type="hidden">
+<input id="projectId" type="hidden" value="">
+<div class="attachments-library attachment-library-dialog">
+		<div>
+		<div style="float: left">
+			<strong class="attachment-library-title">Media Library</strong>
+						<a id="libraryAddAttachment" class="button button-left button-add">Add New</a>
+						<a id="libraryDeleteAttachment" style="display: none;" class="button button-left button-negative button-delete" href="javascript:void(0)" onclick="this.blur(); App.Dialogs.remove(&#39;This action &lt;strong&gt;deletes selected attachment/s and all their instances across your projects&lt;/strong&gt; (except those on closed Test Runs &amp; Plans) permanently. This cannot be undone. Do you wish to continue?&#39;, null, null, null, function() { App.Attachments.removeAttachments(); });; return false;">Delete</a>
+		</div>
+
+		<div style="float: right">
+			<span class="h1-additional">
+				Sort:				<a id="attachments-library-sortby" href="https://austere.testrail.io/index.php?/runs/add/1#sortDropdown" class="link link-dashed dropdownLink">
+					<span id="attachmentsByName">Date</span></a>
+				<span id="orderByAsc" class="hidden"><div class="icon-asc"></div></span>
+				<span id="orderByDesc" class=""><div class="icon-desc"></div></span>
+				&nbsp;|&nbsp;
+				Filter:																<a class="link link-dashed" href="javascript:void(0)" onclick="this.blur(); App.Attachments.filterAttachments(event); return false;" id="attachmentFilterByChange"><span id="attachmentFilterByEmpty" class="">None</span><span id="attachmentFilterByInfo" class="hidden toolbar-highlighted"></span></a>
+				<span id="attachmentFilterByBusy" class="busy"><div class="icon-progress-inline"></div></span>
+				<span id="attachmentFilterByReset" class="hidden">
+					<a href="javascript:void(0)" onclick="this.blur(); App.Attachments.filterReset(); return false;" class="link-tooltip" tooltip-text="Reset filters"><div class="icon-orderreset"></div></a>
+				</span>
+
+				<input type="text" name="search" id="libraryAttachmentsSearch" class="attachment-library-search">
+			</span>
+
+			<div id="sortDropdown" class="dropdown dropdown-menu sortDropdown" style="position: fixed; width: 100px">
+	<ul>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments(&#39;created_on&#39;); return false;">Date</a></li>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments(&#39;name&#39;); return false;">Name</a></li>
+		<li><a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Attachments.sortAttachments(&#39;size&#39;); return false;">Size</a></li>
+	</ul>
+</div>		</div>
+	</div>
+
+	
+	<div class="frolaAttachmentpop" style="margin-top: 40px; clear: both; background-color: white; height: 361px; overflow-y: auto;" id="attachmentsNewList">
+</div>
+<div id="attachmentsPagination" style="margin-bottom: 10px;"></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	App.Attachments.orderByOptions = {"created_on":"Date","name":"Name","size":"Size"};
+
+	var defaultTimeout = null;
+	$('#libraryAttachmentsSearch').keyup(function() {
+		if (defaultTimeout != null) clearTimeout(defaultTimeout);
+		defaultTimeout = setTimeout(
+			function() {
+				defaultTimeout = null;
+				App.Attachments.reloadRepository();
+			},
+			500
+		);
+	});
+
+});
+</script>
+	<div id="attachmentNewButtons" class="dialog-buttons-highlighted button-group">
+		<div style="margin-top: 6px; float: left;">Maximum file size: 256 MB.</div>
+		<button id="attachmentNewSubmit" type="submit" class="button button-right button-positive button-ok" style="margin-left: 7px">
+			<span class="addAttachment">Attach</span>
+		</button>
+		<a class="button button-right button-negative button-cancel dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+
+
+
+<form action="https://austere.testrail.io/index.php?/runs/add/1" id="form" method="post"><input type="hidden" name="_token" value="fcGzhQP4WwHCfd11kUNO">
+
+<input id="attachments" type="hidden" name="attachments" value="">
+
+<div class="form-group form-group-main">
+	<label for="name">Name		<span class="form-required">*</span></label>
+	<input class="form-control " type="text" name="name" id="name" maxlength="250" value="Test Run 4/8/2023">
+	<div class="form-description">
+		Ex: <em>Test Run 2014-08-01</em>, <em>Build 240</em> or <em>Version 3.0</em>	</div>
+</div>
+<div class="form-group">
+	<label for="refs" class="text-ppp" style="width: 462px">
+		<span class="pull-left" style="line-height: 1.4;">
+			References		</span>
+		<span class="text-secondary pull-right">
+			<a class="link" target="_blank" tabindex="-1" href="https://www.gurock.com/testrail/docs/integrate/references/introduction">
+				?			</a>
+		</span>
+	</label>
+	<input class="form-control " type="text" name="refs" id="refs" maxlength="250" style="margin-top:5px" value="">
+	<div class="form-description">Add reference ID's to external tickets here.</div>
+</div>
+<div class="form-separator">
+</div>
+<div class="form-group">
+	<label for="milestone_id">Milestone</label>
+	
+
+																											
+<div class="dropdown-size">
+<select class="searchable form-control form-control-small form-select  chzn-done" id="milestone_id" name="milestone_id" style="display: none;">
+        <option value=""> &nbsp; </option>
+            <optgroup label="Active">
+<option value="3">Release 1.0</option>
+				<option value="4">Release 1.1</option>
+				<option value="5">Release 2.0</option>
+				</optgroup>            </select><div id="milestone_id_chzn" class="chzn-container chzn-container-single" style="width: 100%;"><a href="javascript:void(0)" class="chzn-single"><span>&nbsp;</span><div><b></b></div></a><div class="chzn-drop" style="display: none; width: 100%; top: 0px;"><div class="chzn-search" style=""><input type="text" autocomplete="off" style=""></div><ul class="chzn-results"><li id="milestone_id_chzn_o_0" class="active-result result-selected" style=""> &nbsp; </li><li id="milestone_id_chzn_g_1" class="group-result">Active</li><li id="milestone_id_chzn_o_2" class="active-result group-option" style="">Release 1.0</li><li id="milestone_id_chzn_o_3" class="active-result group-option" style="">Release 1.1</li><li id="milestone_id_chzn_o_4" class="active-result group-option" style="">Release 2.0</li></ul></div></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#milestone_id, #parent_id, #assignedto_id').parent().addClass('dropdown-size');
+    });
+</script>
+	<div class="form-description">The milestone this test run belongs to.</div>
+</div>
+<div class="searchable-wrapper">
+			<div class="form-group dropdown-size">
+			<label for="assignedto_id">Assign To</label>
+			<select class="form-control form-control-small form-select searchable chzn-done" name="assignedto_id" id="assignedto_id" style="display: none;">
+				<option value="">&nbsp;</option>
+				<option value="1">Me</option>
+				<optgroup disabled="disabled" label="–––"></optgroup>
+									<option value="1">James Lee</option>
+							</select><div id="assignedto_id_chzn" class="chzn-container chzn-container-single" style="width: 100%;"><a href="javascript:void(0)" class="chzn-single" tabindex="-1"><span>&nbsp;</span><div><b></b></div></a><div class="chzn-drop" style="width: 100%; top: 24px; left: 0px; display: none;"><div class="chzn-search" style=""><input type="text" autocomplete="off" style="" tabindex="0"></div><ul class="chzn-results"><li id="assignedto_id_chzn_o_0" class="active-result result-selected" style="">&nbsp;</li><li id="assignedto_id_chzn_o_1" class="active-result" style="">Me</li><li id="assignedto_id_chzn_o_3" class="active-result" style="">James Lee</li></ul></div></div>
+			<div class="form-description">The user to whom the tests of the new test run should initially be assigned.
+An email is sent to the user if email notifications are enabled.</div>
+		</div>
+	</div>
+<div class="form-separator">
+</div>
+<div class="form-group">
+	<label for="description">
+		<span class="form-toolbar" style="padding-top: 0px">
+	<a href="javascript:void(0)" onclick="this.blur(); App.Editor.addTable(&#39;#description&#39; + &#39;_display&#39;); return false;" class="link-tooltip" tooltip-text="Add a table to this text field." tabindex="-1">
+        <div class="icon-markdown-table"></div></a>
+            <a href="javascript:void(0)" onclick="this.blur(); App.Editor.addImage(&#39;#description&#39;, 1, &#39;run&#39;, &#39;&#39;); return false;" class="link-tooltip" tooltip-text="Add an image to this text field." tabindex="-1">
+            <div class="icon-markdown-image"></div></a>
+        <a href="https://www.gurock.com/testrail/docs/user-guide/getting-started/editor" class="link-tooltip" tooltip-text="Open the editor formatting reference." target="_blank" tabindex="-1">
+        <div class="icon-markdown-help"></div>
+    </a>
+	</span>
+
+Description	</label>
+	<div class="textarea-resizable editor-bindable attachment-list-wrapper" data-attribute="description" id="description_attachments_wrapper">
+        <div contenteditable="true" class="form-control field-editor form-control-full " id="description_display"></div>    
+		<div id="description_display_drop" class="dropzone dz-clickable" rel="description_display" dialog="" data-project-id="1"><div class="dz-default dz-message"><span>Drop images here to embed.</span></div></div>
+			
+		<script type="text/javascript">
+                $(document).ready(function () {
+                App.Editor.applyDrop({
+                    'selector': '#' + 'description_display_drop',
+                    'control': '#' + 'description_display',
+                    'project_id': 1,
+                    'can_attach': true,
+                    'entity_type': 'run',
+                    'entity_id': ''
+                });
+            }
+        );
+        	</script>
+	</div>
+
+<input type="hidden" value="" id="description" name="description">
+<script type="text/javascript">
+    $(function() {
+        App.DirtyChecker.init();
+        if ($('#description_display .attachment-block:last').length > 0
+            && $('#description_display .attachment-block:last').find('.attachment-list-delete-inline').length === 0) {
+            $('#description_display .attachment-block:last').after('<div contenteditable="false" class="inlineAttachmentListRemove attachment-list-delete-inline" style="display: none;" href="javascript:void(0)" onclick="App.Attachments.entityRemoveAttachmentsDialog(\'This <strong>deletes selected instances of your attachments.</strong> The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently.\', \'1\', \'run\', \'#description_attachments_wrapper\'); $(\'#description_display .inlineAttachmentListRemove\').hide(); return false;"><div class="attachment-list-delete-icon"></div><span>Delete</span></div><span contenteditable="false" class="inline-attachment-list-whitespace">&nbsp;</span>&nbsp;');
+        }
+    });
+</script>	<div class="form-description form-description-full">
+					Use this description to describe the purpose of this test run.			</div>
+</div>
+
+<input type="hidden" id="case_ids" name="case_ids" class="dirty-trackable" value="">
+<input type="hidden" id="rerun_id" name="rerun_id" value="0">
+<input type="hidden" id="copy_assignedto" name="copy_assignedto" value="">
+
+<div class="form-separator">
+</div>
+<div class="form-group form-control-default">
+	<div class="radio" style="margin-bottom: 15px">
+		<label>
+			<strong>Include all test cases</strong>
+			<input type="radio" class="radio" name="include_all" value="1" id="includeAll" checked="checked">
+			<p>
+								Select this option to include all test cases in this test run. If new test cases are added to the repository, they are also automatically included in this run.							</p>
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<strong>Select specific test cases</strong>
+			<input type="radio" class="radio" name="include_all" value="0" id="includeSpecific">
+			<p>You can alternatively select the test cases to include in this test run.
+New test cases are not automatically added to this run in this case.</p>
+		</label>
+	</div>
+	<div id="includeSpecificContainer" style="margin-top: 5px; margin-left: 20px; padding-bottom: 15px; display: block;" class="hidden">
+		<div class="form-message">
+			<span id="includeSpecificInfo">
+				<strong>0</strong> test cases included (<a class="" href="javascript:void(0)" onclick="this.blur(); App.Runs.selectCases(1); return false;">change selection</a>)			</span>
+		</div>
+	</div>
+	<div class="radio" style="margin-top: 15px">
+		<label>
+			<strong>Dynamic Filtering</strong>
+			<a href="http://docs.gurock.com/testrail-userguide/userguide-testrunfilters#dynamic_filtering" class="beta-help" target="_blank" title="Read more about Dynamic Filtering in our User Guide."></a>
+			<input type="radio" class="radio" name="include_all" value="0" id="includeDynamic">
+			<input type="hidden" value="0" name="include_dynamic" id="include_dynamic">
+			<input type="hidden" value="" name="dynamic_filters" id="dynamic_filters">
+			<p>Automatically add test cases based on filter selection. New test cases are automatically added to the run if they match the filter (unless the run is closed).</p>
+		</label>
+	</div>
+	<div id="includeDynamicContainer" style="margin-top: 5px; margin-left: 20px; display: none;" class="hidden">
+		<div class="form-message">
+			<span id="includeDynamicInfo">
+				<strong>0</strong> test cases included (<a class="" href="javascript:void(0)" onclick="this.blur(); App.Runs.dynamicFilters(1, 1); return false;">change filter</a>)			</span>
+		</div>
+	</div>
+</div>
+
+<div class="button-group form-buttons">
+	<button id="accept" class="button button-left button-positive button-ok" type="submit">
+		Add Test Run	</button>
+	<a href="https://austere.testrail.io/index.php?/runs/overview/1" class="button button-left button-negative button-cancel run-form-cancel">
+		Cancel	</a>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#includeAll').click(
+			function()
+			{
+				$('#include_dynamic').val(0);
+				$('#includeSpecificContainer').hide();
+				$('#includeDynamicContainer').hide();
+			}
+		);
+
+		$('#includeSpecific').click(
+			function()
+			{
+				$('#include_dynamic').val(0);
+				$('#includeSpecificContainer').show();
+				$('#includeDynamicContainer').hide();
+			}
+		);
+
+		$('#includeDynamic').click(
+			function()
+			{
+				$('#include_dynamic').val(1);
+				$('#includeSpecificContainer').hide();
+				$('#includeDynamicContainer').show();
+			}
+		);
+		App.Attachments.initEditorAttachments(App.Runs.attachmentsCode);
+	}
+);
+</script>
+
+</form>
+<div id="selectionDropdown" class="dropdown dropdown-menu" rel="itemPrev" style="width: 165px; z-index: 10000">
+	<ul>
+		<li>
+			<a id="selectCasesFilterSet" class="dropdown-menu-link" rel="1" href="javascript:void(0)">Set Selection</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li>
+			<a id="selectCasesFilterAdd" class="dropdown-menu-link" rel="2" href="javascript:void(0)">Add To Selection</a>
+		</li>
+		<li class="dropdown-menu-separator"></li>
+		<li>
+			<a id="selectCasesFilterRemove" class="dropdown-menu-link" rel="3" href="javascript:void(0)">Remove From Selection</a>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	
+	App.Hotkeys.isForm(true);
+	App.DirtyChecker.enableSaveButton();
+	App.Hotkeys.registerModifier(
+		's',
+		function()
+		{
+			$('#form').submit();
+		}
+	);
+});
+</script>
+
+<div class="bubble filter-bubble hidden" id="filterTestsBubble">
+	<div id="filterTestsContent" class="filter-bubble-inner">
+	</div>
+</div>
+
+
+
+
+<div class="dialog" id="selectColumnsDialog" style="width: 500px;">
+	<div class="dialog-title">
+		Select Columns	</div>
+	<form id="selectColumnsForm" class="dialogFormDefault">	
+		<div class="dialog-body">
+			<script type="text/javascript">
+				var selectColumnsDialogValidation = {
+					'width_required': 'Field Width is a required field.',
+					'width_min_max': 'Field Width must be between 25 and 1000.'
+				};
+			</script>
+			<div class="message message-error validationError" id="selectColumnsErrors"></div>
+			<div id="selectColumnsGridContainer"></div>
+			<div style="margin-top: 1em">
+				<a id="selectColumnsAdd" href="javascript:void(0)" onclick="this.blur(); App.Tables.addColumn(); return false;">Add Column</a>
+			</div>
+		</div>
+		<div class="button-group dialog-buttons-highlighted">
+			<button id="selectColumnsSubmit" type="submit" class="button button-left button-positive button-ok dialog-action-default">
+				Update Columns			</button>
+			<a class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>		
+		</div>
+	</form>
+</div>
+<div class="dialog" id="addColumnDialog" style="width: 400px;">
+	<div class="dialog-title">
+		Add Column	</div>
+	<form id="addColumnForm" class="dialogFormDefault">
+		<div class="dialog-body">
+			<div class="form-group bottom">
+				<label for="addColumnItems">Column					<span class="form-required">*</span></label>
+								<select class="form-control form-control-full form-select" name="addColumnItems" id="addColumnItems">
+								</select>
+				<div class="form-description">Select the column to add to the tables.</div>
+			</div>
+		</div>
+		<div class="button-group dialog-buttons-highlighted">
+			<button id="addColumnSubmit" type="submit" class="button button-left button-positive button-ok dialog-action-default">
+				Add Column			</button>
+			<a class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>		
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	<div id="qpane-splitter" class="column splitter qpane-splitter" style="display: none">
+	</div>
+		<div id="qpane" class="column qpane" style="width: 600px; display: none">
+		<div id="qpane-empty" class="qpane-empty hidden">
+			<div class="qpane-empty-header">
+				No test case selected.			</div>
+			<div class="qpane-empty-body">
+				You can select a different group or change the filters.			</div>
+		</div>
+		<div id="qpane-inner">
+			<div id="qpaneSticky">
+				<div id="qpane-content">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar-splitter" class="column splitter sidebar-splitter">
+	</div>
+		<div id="sidebar" class="column sidebar" style="width: 250px">
+
+<div class="sidebar-inner">
+	
+<input id="attachmentsToDelete" type="hidden">
+<div id="entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01" class="attachment-list-wrapper" deleteids="">
+	<div id="entityAttachmentList" class="attachment-list dz-persistent">
+						<div id="entityAttachmentListAdd" style="display: none;" class="attachment-list-add" onclick="App.Attachments.showDialog(&#39;#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01&#39;, 1, &#39;&#39;, &#39;run&#39;, { &#39;inputParent&#39;: &#39;#form&#39; });">
+			<div class="attachment-list-add-icon"></div>
+		</div>
+						<div id="entityAttachmentListRemove" style="display: none;" class="attachment-list-delete" href="javascript:void(0)" onclick="this.blur(); App.Attachments.entityRemoveAttachmentsDialog(&#39;This &lt;strong&gt;deletes selected instances of your attachments.&lt;/strong&gt; The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently.&#39;, &#39;1&#39;, &#39;run&#39;, &#39;#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01&#39;, &#39;#form&#39;); return false;">
+			<div class="attachment-list-delete-icon"></div>
+			<span>Delete</span>
+		</div>
+						<div id="entityAttachmentListEmptyIcon" class="attachment-list-empty-add" onclick="App.Attachments.showDialog(&#39;#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01&#39;, 1, &#39;&#39;, &#39;run&#39;, { &#39;inputParent&#39;: &#39;#form&#39; });"></div>
+			</div>
+
+	<div id="entityAttachmentListDropzoneText" class="attachment-list-dropzone-text">
+		<span>Drop files here to attach,<br>or click on "+" to browse</span>
+	</div>
+	<div id="entityAttachmentListRemoveBottom" class="attachment-list-delete-text" style="display: none;" href="javascript:void(0)" onclick="this.blur(); App.Attachments.entityRemoveAttachmentsDialog(&#39;This &lt;strong&gt;deletes selected instances of your attachments.&lt;/strong&gt; The files will keep on being stored on your Library. Go to Attachments on Data Storage to delete permanently.&#39;, &#39;1&#39;, &#39;run&#39;, &#39;#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01&#39;, &#39;#form&#39;); return false;">
+		<div class="attachment-list-delete-icon-red"></div><span>Delete</span>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		$(function () {
+				App.Attachments.init({
+					selector: '#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01 #entityAttachmentList',
+					itemsParent: '#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01',
+					inputParent: '#form',
+					project_id: 1,
+					entity_id: '',
+					entity_type: 'run',
+					clickable: false
+				});
+			}
+		);
+	</script>
+
+<script type="text/javascript">
+	$(function () {
+		var wrapperParent = '#entityAttachmentListWrapper-580fe0a2-2de9-4364-811a-e984a8811b01';
+		$(wrapperParent).attr('deleteIds', '');
+		App.Attachments.lazyLoad(wrapperParent + ' #entityAttachmentList', 0.35);
+		App.Attachments.dontShowEntityDeleteDialog = false;
+	});
+</script>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	App.Tables.columns_for_user = {};
+		App.Tables.columns_for_user['cases:title'] = 0;
+	
+	App.Tables.columns = {};
+		App.Tables.columns['cases:custom_automation_type'] = 'Automation Type';
+		App.Tables.columns['cases:created_by'] = 'Created By';
+		App.Tables.columns['cases:created_on'] = 'Created On';
+		App.Tables.columns['cases:is_deleted'] = 'Deletion Status';
+		App.Tables.columns['cases:estimate'] = 'Estimate';
+		App.Tables.columns['cases:estimate_forecast'] = 'Forecast';
+		App.Tables.columns['cases:id'] = 'ID';
+		App.Tables.columns['cases:priority_id'] = 'Priority';
+		App.Tables.columns['cases:refs'] = 'References';
+		App.Tables.columns['cases:section_id'] = 'Section';
+		App.Tables.columns['cases:template_id'] = 'Template';
+		App.Tables.columns['cases:title'] = 'Title';
+		App.Tables.columns['cases:type_id'] = 'Type';
+		App.Tables.columns['cases:updated_by'] = 'Updated By';
+		App.Tables.columns['cases:updated_on'] = 'Updated On';
+	
+			App.Tables.group_by = 'cases:section_id';
+				App.Tables.group_order = 'asc';
+	
+	
+	App.Tables.runsColumns = {};
+	
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	App.Runs.project_id = 1;
+	App.Runs.case_ids = [];
+});
+</script>
+
+
+    </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var Consts = {};
+    Consts.ajaxBaseUrl = 'index.php?';
+        Consts.ajaxErrorMessage = 'An error occurred during the last operation or your installation is currently in maintenance mode. Please try again or refresh the current page.';
+    Consts.resourceBaseUrl = 'https://static.testrail.io/7.8.0.1141/';
+        Consts.ajaxCsrf = 'fcGzhQP4WwHCfd11kUNO';
+    Consts.ajaxVersion = '7.8.0.1141';
+    Consts.dialogTitleError = 'Error';
+    Consts.statusFailed = 5;
+    Consts.statusRetest = 4;
+    Consts.statusBlocked = 2;
+    Consts.statusPassed = 1;
+    Consts.statusUntested = 3;
+    Consts.statusDefault = 1;
+	Consts.minWidth = 700;
+	Consts.minWidthOffset = 300;
+	Consts.minWidthVariable = 50;
+</script>
+
+
+<div id="userDropdown" class="dropdown dropdown-menu user-menu" rel="helpMenu" style="width: 125px">
+	<ul><li><a class="dropdown-menu-link" id="navigation-user-settings" href="https://austere.testrail.io/index.php?/mysettings">
+			My Settings</a></li><li><a class="dropdown-menu-link" id="navigation-user-logout" href="https://austere.testrail.io/index.php?/auth/logout">Logout</a></li></ul>
+</div>
+<div class="dialog" id="messageDialog" style="width: 350px; word-wrap: break-word">
+	<div class="dialog-title"></div>
+	<div class="dialog-body">
+		<p style="margin: 0" class="dialog-message"></p>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			OK		</a>
+	</div>
+</div><div class="dialog" id="confirmDialog" style="width: 350px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p style="margin: 0" class="dialog-message"></p>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			Yes		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			No		</a>		
+	</div>
+</div>
+
+<div id="confirmDialogOkCancel" class="dialog">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body"><p class="dialog-message"></p></div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default">
+			OK		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+<div id="tooltip" class="tooltip">
+	<div class="tooltip-pointer-up"></div>
+	<div class="tooltip-pointer-down"></div>
+	<div class="tooltip-pointer-right"></div>
+	<div class="tooltip-header"></div>
+	<p style="margin: 0"></p>
+</div><div class="dialog" id="deleteDialog" style="width: 425px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p class="top bottom dialog-message"></p>
+		<p class="dialog-extra text-delete"></p>
+		<div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1">
+			<div class="checkbox">
+				<label>
+					<span class="dialog-confirm"></span>
+					<span class="dialog-confirm-busy"><div class="icon-progress-inline"></div></span>
+					<input type="checkbox" value="1" name="deleteCheckbox">
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-ok-disabled button-left button-positive button-disabled dialog-action-default">
+			OK		</a>
+		<a class="button button-left button-positive button-disabled button-hidden button-no-margin-right dialog-action-secondary">
+		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div><div class="dialog" id="dpaDialog" style="max-width: 725px">
+    <div class="dialog-title">Confirmation</div>
+    <div class="dialog-body">
+        <p class="top bottom dialog-message"></p>
+        <p class="dialog-extra text-delete"></p>
+
+        <form action="https://austere.testrail.io/index.php?/admin/users/accept_data_processing_agreement" id="dpa_form" method="post">        <input type="hidden" name="_token" value="fcGzhQP4WwHCfd11kUNO">
+        <div class="form-group">
+            <label for="name">Please enter your full name:<span class="form-required">*</span></label>
+            <input class="form-control " type="text" name="full_name" id="full_name" maxlength="250" value="">
+        </div>
+
+        </form>
+        <div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1; padding-bottom: 50px">
+            <div class="checkbox">
+                <label>
+                    <span class="dialog-confirm"></span>
+                    <input type="checkbox" value="1" name="deleteCheckbox">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="button-group dialog-buttons-highlighted">
+        <a class="button button-ok button-ok-disabled button-left button-positive button-disabled dialog-action-default">
+            Submit        </a>
+        <a class="button button-cancel button-left button-negative dialog-action-close">
+            Cancel        </a>
+    </div>
+</div>
+<div class="dialog" id="trEnterpriseDialog" style="width: 350px; word-wrap: break-word">
+    <div class="dialog-title"></div>
+    <form action="https://austere.testrail.io/index.php?/mysettings/tr_enterprise_banner_setting" id="tr_enterprise_form" method="post">    <input type="hidden" name="_token" value="fcGzhQP4WwHCfd11kUNO">    <div class="dialog-body">
+        <p style="margin: 0" class="dialog-message"></p>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" class="radio" name="tr_enterprise_banner_display" value="0" checked="">
+                    Remove for this Session                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" class="radio" name="tr_enterprise_banner_display" value="1">
+                    Remove forever                </label>
+            </div>
+        </div>
+    </div>
+    <div class="button-group dialog-buttons-highlighted">
+        <input type="submit" value="Submit" class="button button-ok button-left button-positive dialog-action-default">
+        <a class="button button-cancel button-left button-negative dialog-action-close">
+            Cancel        </a>
+    </div>
+    </form></div>
+
+<div class="dialog" id="deleteEntityAttachmentDialog" style="width: 425px">
+	<div class="dialog-title">Confirmation</div>
+	<div class="dialog-body">
+		<p class="top bottom dialog-message"></p>
+		<p class="dialog-extra text-delete"></p>
+		<div class="message message-delete bottom delete-confirm-container" style="margin-top: 12px; line-height: 1">
+			<div class="checkbox">
+				<label>
+					<span class="dialog-confirm">Don’t show me this again</span>
+					<input id="deleteDontShowAgain" type="checkbox" value="1" name="deleteCheckbox">
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="button-group dialog-buttons-highlighted">
+		<a class="button button-ok button-left button-positive dialog-action-default delete-entity-attachment-button-submit">
+			Delete		</a>
+		<a class="button button-cancel button-left button-negative dialog-action-close">
+			Cancel		</a>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		$(document).delegate('.dialog-buttons-highlighted .delete-entity-attachment-button-submit', 'click', function(evt)
+		{
+			App.Attachments.dontShowEntityDeleteDialog = $('#deleteDontShowAgain').prop('checked');
+			App.Ajax.call({
+                target: '/mysettings/ajax_delete_entity_attachment_setting',
+
+                arguments: {
+                    dont_show: $('#deleteDontShowAgain').prop('checked')
+                },
+
+                error: function error(data) {
+                    App.Ajax.handleError(data);
+                }
+            });
+		});
+	});
+</script>
+
+    
+<div id="helpDropdown" class="dropdown dropdown-menu help-menu" rel="helpMenu" style="width: 175px">
+	<ul>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="https://www.gurock.com/testrail/docs/user-guide/getting-started">
+                TestRail User Guide            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://www.gurock.com/testrail/support">
+                Support &amp; Videos            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://forum.gurock.com/">
+                Community Forum            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="https://www.gurock.com/testrail/docs/user-guide/howto/keyboard-shortcuts-hotkeys">
+                Keyboard Shortcuts            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://blog.gurock.com/">
+                Gurock Blog            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://twitter.com/testrail">
+                TestRail on Twitter            </a>
+        </li>
+        <li>
+            <a class="dropdown-menu-link" target="_blank" href="http://www.gurock.com/testrail/">
+                TestRail on the Web            </a>
+        </li>
+        <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link dropdown-menu-link-highlighted" target="_blank" href="https://secure.gurock.com/customers/testrail/newsletter?email=jameel@austeretech.com">
+                Subscribe to Newsletter            </a>
+        </li>
+                <li class="dropdown-menu-separator"></li>
+        <li>
+            <a class="dropdown-menu-link" href="javascript:void(0)" onclick="this.blur(); App.Help.showAbout(); return false;">
+                About TestRail            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#bannerLink').bubble({
+            bubble: '#enterpriseBubble',
+            inContainer: true
+        });
+
+        $('#content').on('change', 'input:checkbox[name="entity_run"]', function() {
+            delselectAll(this, 'run')
+        });
+
+        $('#content').on('change', 'input:checkbox[name="entity_milestones"]', function() {
+            delselectAll(this, 'milestones')
+        });
+    });
+
+    function delselectAll (type, entity) {
+        let parent = $(type).data('option');
+        if (parent === undefined) {
+            $('input:checkbox[name=select_all]').each(function() {
+                let select = $(this).parent().closest('div').attr('id');
+
+                if ($('#' + select).find(type).length > 0) {
+                    parent = select;
+                }
+            });
+        }
+        let selector = '#' + parent;
+        $(selector)
+            .find('input:checkbox[name="select_all"]')
+            .prop(
+                'checked',
+                $(selector + ' input:checked[name="entity_'+ entity +'"]').length ===
+                $(selector + ' input:checkbox[name="entity_'+ entity +'"]').length
+            );
+        $('#delete-' + entity).css(
+            'display',
+            $('input:checked[name="entity_'+ entity +'"]').length > 0
+                ? 'block'
+                : 'none'
+        );
+    }
+
+    function SelectAllEntity (type) {
+        let parent = $(type).parent().closest('div').attr('id');
+        let checked_status = $(type).is(':checked');
+        $('#' + parent).find('input[type=checkbox]')
+            .attr('data-option', parent)
+            .not(':disabled')
+            .prop(
+                'checked',
+                checked_status
+            );
+        let selector = $('#' + parent).find('input:checkbox[name="entity_milestones"]').length
+            ? 'milestones'
+            : 'run';
+        $('#delete-' + selector).css(
+            'display',
+            checked_status && $('input:checked[name="entity_'+ selector +'"]').length
+                ? 'block'
+                : 'none'
+            );
+    }
+</script>
+
+
+									
+
+	
+<div id="projectGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">1/6</span>
+		Create a Project	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Welcome! Start by creating your first project. Projects in TestRail usually represent a product or software project and serve as organizational unit for cases, results and milestones. You can create as many projects as you like.</p>
+		<div class="tooltip-goal-image goal-project-help"></div>
+	</div>
+</div><div id="casesGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">2/6</span>
+		Add Test Cases	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Test cases represent a certain feature, behavior or functionality you wish to test. They often contain a description, a list of steps and expected results. Cases are organized in sections to make it easy to group related cases together.</p>
+		<div class="tooltip-goal-image goal-cases-help"></div>
+	</div>
+</div><div id="runGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">3/6</span>
+		Start a Test Run	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">To execute tests and enter results for your cases, you start a test run. You can have multiple test runs over time and reuse your test cases across runs. A test run has a status and you can easily follow its progress and test activity.</p>
+		<div class="tooltip-goal-image goal-run-help"></div>
+	</div>
+</div><div id="resultsGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">4/6</span>
+		Add Test Results	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Once you've added a test run, you can start testing and record results. A result has a status such as <em>Passed</em> or <em>Failed</em> and the statuses are signaled by different colors. Adding results contributes to the overall status and progress of the test run.</p>
+		<div class="tooltip-goal-image goal-results-help"></div>
+	</div>
+</div>
+<div id="usersGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">5/6</span>
+		Invite Team Members	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">TestRail is especially useful when used with a team. Invite other team members and build your test case repository, assign test runs and record results together. Easily track the workload and progress from the Todo tab for your entire team.</p>
+		<div class="tooltip-goal-image goal-users-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to invite other users for now				<input type="checkbox" id="usersGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#usersGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(5, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="integrationGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">6/6</span>
+		Set up Integration	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Integrate TestRail with your issue/bug tracker (such as JIRA, Redmine &amp; more), requirement tool and test automation. Start by configuring your issue integration to collaborate with your dev team, run coverage reports and link issues to results.</p>
+		<div class="tooltip-goal-image goal-integration-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to integrate TestRail with other tools for now				<input type="checkbox" id="integrationGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#integrationGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(6, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="goals" class="goals">
+	<div id="goals-banner" class="goals-banner ">
+		<span id="goals-cancel" class="goals-cancel hidden">
+			<a class="link-noline nolink" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoals(false); return false;"><div class="icon-cancel"></div></a>
+		</span>
+		<div class="goals-banner-inner">
+			<ol class="goals-progress">
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Create a project</span>
+																									<div class="goals-progress-marker link-tooltip goal-project" tooltip-id="#projectGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Add cases</span>
+																									<div class="goals-progress-marker link-tooltip goal-cases-checked" tooltip-id="#casesGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Start a run</span>
+																									<div class="goals-progress-marker link-tooltip goal-run" tooltip-id="#runGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Add results</span>
+																									<div class="goals-progress-marker link-tooltip goal-results" tooltip-id="#resultsGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Invite users</span>
+																									<div class="goals-progress-marker link-tooltip goal-users" tooltip-id="#usersGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Set up integration</span>
+																									<div class="goals-progress-marker link-tooltip goal-integration" tooltip-id="#integrationGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+							</ol>
+		</div>
+		<div id="goals-start" class="goals-start hidden">
+			<div class="goal-start"></div>
+		</div>
+		<div id="goals-finish" class="goals-finish hidden">
+			<div class="goal-finish"></div>
+		</div>
+		<div id="goals-next" class="goals-next hidden">
+			<img src="./Add Test Run - TestRail_files/blank.gif" usemap="#goalsNextMap" class="goal-next">
+			<map name="goalsNextMap">
+				<area shape="rect" coords="691,13,726,48" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoalsNext(); return false;">
+				<area shape="rect" coords="64,305,254,339" target="_blank" href="http://www.gurock.com/testrail/support">
+				<area shape="rect" coords="280,305,470,339" target="_blank" href="http://blog.gurock.com/">
+				<area shape="rect" coords="496,305,686,339" target="_blank" href="http://www.gurock.com/testrail/videos/introduction-projects/">
+			</map>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+				var timer = null;
+		$('#goals').unbind('mouseenter').bind('mouseenter', function()
+		{
+			timer = setTimeout(
+				function()
+				{
+					$('#goals-cancel').fadeTo(250, 1);
+				},
+				2500
+			);
+		});
+
+		$('#goals').unbind('mouseleave').bind('mouseleave', function()
+		{
+			$('#goals-cancel').hide();
+			if (timer)
+			{
+				clearTimeout(timer);
+				timer = null;
+			}
+		});
+			}
+);
+</script>
+<div class="dialog dialog_attachment" id="attachmentInfoDialog" style="width: 900px; height: 531px;"></div>
+<div id="newAttachmentTemplate" style="display: none;">
+	<div style="width: 150px; height: 150px; {{attachment_thumbnail}}" class="attachment-block attachment-{{attachment_icon}} {{attachment_selected_class}} lazy" id="libraryAttachment-{{attachment_id}}" onclick="App.Attachments.showInfoDialog(&#39;{{attachment_id}}&#39;);" title="{{attachment_name}}">
+	<div class="attachment-icon" style="{{attachment_icon_style}}"></div>
+	<div class="attachment-name">
+		{{attachment_truncated_name}}
+	</div>
+	<img {{attachment_src_tag}}="{{attachment_imgurl}}" {{attachment_onerror_tag}}="{{attachment_img_onerror}}" class="hidden-image">
+	<div class="attachment-selection {{attachment_selected_class}}" onclick="App.Attachments.toggleSelection(&#39;{{attachment_id}}&#39;, event, {{project_id}});"></div>
+</div>
+</div>
+<div id="libraryAttachmentsAddItemTemplate" style="display: none;">
+	<div id="{{element_id}}" class="attachment-library-add">
+	<div class="attachment-library-add-icon"></div>
+</div>
+</div>
+
+									
+
+	
+<div id="projectGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">1/6</span>
+		Create a Project	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Welcome! Start by creating your first project. Projects in TestRail usually represent a product or software project and serve as organizational unit for cases, results and milestones. You can create as many projects as you like.</p>
+		<div class="tooltip-goal-image goal-project-help"></div>
+	</div>
+</div><div id="casesGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">2/6</span>
+		Add Test Cases	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Test cases represent a certain feature, behavior or functionality you wish to test. They often contain a description, a list of steps and expected results. Cases are organized in sections to make it easy to group related cases together.</p>
+		<div class="tooltip-goal-image goal-cases-help"></div>
+	</div>
+</div><div id="runGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">3/6</span>
+		Start a Test Run	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">To execute tests and enter results for your cases, you start a test run. You can have multiple test runs over time and reuse your test cases across runs. A test run has a status and you can easily follow its progress and test activity.</p>
+		<div class="tooltip-goal-image goal-run-help"></div>
+	</div>
+</div><div id="resultsGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">4/6</span>
+		Add Test Results	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Once you've added a test run, you can start testing and record results. A result has a status such as <em>Passed</em> or <em>Failed</em> and the statuses are signaled by different colors. Adding results contributes to the overall status and progress of the test run.</p>
+		<div class="tooltip-goal-image goal-results-help"></div>
+	</div>
+</div>
+<div id="usersGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">5/6</span>
+		Invite Team Members	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">TestRail is especially useful when used with a team. Invite other team members and build your test case repository, assign test runs and record results together. Easily track the workload and progress from the Todo tab for your entire team.</p>
+		<div class="tooltip-goal-image goal-users-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to invite other users for now				<input type="checkbox" id="usersGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#usersGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(5, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="integrationGoalHelp" class="tooltip tooltip-goal">
+	<div class="tooltip-goal-title">
+		<span class="tooltip-goal-step">6/6</span>
+		Set up Integration	</div>
+	<div class="tooltip-goal-body">
+		<p class="top">Integrate TestRail with your issue/bug tracker (such as JIRA, Redmine &amp; more), requirement tool and test automation. Start by configuring your issue integration to collaborate with your dev team, run coverage reports and link issues to results.</p>
+		<div class="tooltip-goal-image goal-integration-help"></div>
+				<div class="checkbox" style="margin-top: 1em">
+			<label>
+				I don't plan to integrate TestRail with other tools for now				<input type="checkbox" id="integrationGoalToggle">
+			</label>
+		</div>
+			</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+		$('#integrationGoalToggle').unbind('click').click(
+			function()
+			{
+				App.Users.setGoal(6, this.checked);
+			}
+		);
+	}
+);
+</script>
+
+<div id="goals" class="goals">
+	<div id="goals-banner" class="goals-banner ">
+		<span id="goals-cancel" class="goals-cancel hidden">
+			<a class="link-noline nolink" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoals(false); return false;"><div class="icon-cancel"></div></a>
+		</span>
+		<div class="goals-banner-inner">
+			<ol class="goals-progress">
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Create a project</span>
+																									<div class="goals-progress-marker link-tooltip goal-project" tooltip-id="#projectGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step goals-progress-step-done">
+						<span class="goals-progress-title">Add cases</span>
+																									<div class="goals-progress-marker link-tooltip goal-cases-checked" tooltip-id="#casesGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Start a run</span>
+																									<div class="goals-progress-marker link-tooltip goal-run" tooltip-id="#runGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Add results</span>
+																									<div class="goals-progress-marker link-tooltip goal-results" tooltip-id="#resultsGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Invite users</span>
+																									<div class="goals-progress-marker link-tooltip goal-users" tooltip-id="#usersGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+																			<li class="goals-progress-step ">
+						<span class="goals-progress-title">Set up integration</span>
+																									<div class="goals-progress-marker link-tooltip goal-integration" tooltip-id="#integrationGoalHelp" tooltip-position="top" tooltip-width="400"></div>
+					</li>
+							</ol>
+		</div>
+		<div id="goals-start" class="goals-start hidden">
+			<div class="goal-start"></div>
+		</div>
+		<div id="goals-finish" class="goals-finish hidden">
+			<div class="goal-finish"></div>
+		</div>
+		<div id="goals-next" class="goals-next hidden">
+			<img src="./Add Test Run - TestRail_files/blank.gif" usemap="#goalsNextMap" class="goal-next">
+			<map name="goalsNextMap">
+				<area shape="rect" coords="691,13,726,48" href="javascript:void(0)" onclick="this.blur(); App.Users.hideGoalsNext(); return false;">
+				<area shape="rect" coords="64,305,254,339" target="_blank" href="http://www.gurock.com/testrail/support">
+				<area shape="rect" coords="280,305,470,339" target="_blank" href="http://blog.gurock.com/">
+				<area shape="rect" coords="496,305,686,339" target="_blank" href="http://www.gurock.com/testrail/videos/introduction-projects/">
+			</map>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(
+	function()
+	{
+				var timer = null;
+		$('#goals').unbind('mouseenter').bind('mouseenter', function()
+		{
+			timer = setTimeout(
+				function()
+				{
+					$('#goals-cancel').fadeTo(250, 1);
+				},
+				2500
+			);
+		});
+
+		$('#goals').unbind('mouseleave').bind('mouseleave', function()
+		{
+			$('#goals-cancel').hide();
+			if (timer)
+			{
+				clearTimeout(timer);
+				timer = null;
+			}
+		});
+			}
+);
+</script>
+
+
+
+<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.gammel.js.download"></script>
+<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.candy.js.download"></script>
+<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.umber.js.download"></script>
+<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.testrail.js.download"></script>
+<script type="text/javascript" src="./Add Test Run - TestRail_files/fusioncharts.theme.custom.js.download"></script>
+<script type="text/javascript" src="./Add Test Run - TestRail_files/autocomplete.js.download"></script>
+
+<script>
+    var text_format_type = "" ;
+</script>
+            <script type="text/javascript" src="./Add Test Run - TestRail_files/extensions-combined.js.download"></script>
+        <script type="text/javascript" src="./Add Test Run - TestRail_files/application-combined.js.download"></script>
+    <script type="text/javascript">
+$(document).ready(function()
+{
+		App.Translations.add(
+		"timespans_hour_short",
+		"h"	);
+		App.Translations.add(
+		"timespans_minute_short",
+		"m"	);
+		App.Translations.add(
+		"timespans_second_short",
+		"s"	);
+		App.Translations.add(
+		"auth_confirm_not_match_password",
+		"Password doesn't match."	);
+		App.Translations.add(
+		"auth_password_good",
+		"Good"	);
+		App.Translations.add(
+		"auth_password_weak",
+		"Weak"	);
+	});
+</script>
+<script type="application/javascript">
+(function(apiKey){ // <-- passed in at the bottom
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        // Create a `<script>` tag linked to your application-specific Agent build from our CDN...
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);
+    })(window,document,'script','pendo');
+    pendo.initialize({
+        sanitizeUrl: function(url) {
+            return url.replace('index.php?', 'index.php')
+        },
+        visitor: {
+            id: '776152-1',
+            is_admin: true,
+            is_active: true        },
+        account: {
+            id: '776152'
+        }
+    });
+})('1c20428c-1995-4c00-6e1c-daff12af9c00');
+</script>
+<script>
+  var currentProjectId = '1' || "0";
+    var scrollWidth = 0;
+    $(document).on('mousedown', '.field-editor', function (e)
+    {
+        var currentWidth = e.offsetX;
+        var key = "";
+        var selector ="#"+e.currentTarget.id
+        if (currentProjectId == "0")
+        {
+            var nProject = getURL();
+            key = nProject +"-"+selector+"-width";
+        }
+        else
+        {
+            key = currentProjectId +"-"+selector+"-width";
+        }
+
+        var editorWidth = JSON.parse(localStorage.getItem(key));
+        if(!editorWidth)
+        {
+            editorWidth = $(selector).width()-12;
+        }
+        scrollWidth = currentWidth+12-editorWidth;
+    });
+    $(function()
+    {
+        $('.testrail-editor').each(function()
+        {
+            $(this).attr('tabindex', '-1')
+        });
+        $('body').click(function(evt)
+        {
+            if($(evt.target).is('.field-editor') || $(evt.target).is('.testrail-editor') || $(evt.target).parents().hasClass('fr-box') || $(evt.target).parents().hasClass('frolaAttachmentpop') || $(evt.target).parents().hasClass('attachments-new-dialog')  || $(evt.target).parents().hasClass('attachments-library') || $(evt.target).is('attachments-library') || $(evt.target).hasClass('dz-hidden-input') || $(evt.target).hasClass('attachment-block') || $(evt.target).parents().hasClass('attachment-info-details') || $(evt.target).parents().hasClass('dialog') || $(evt.target).hasClass('blockOverlay'))
+            {
+             return
+            }
+        });
+        $("input").focus(function(){
+        });
+
+        if(window.location.search.indexOf("?/auth/login") !=0)
+        {
+            Consts.formConfirmLeaveMessage = 'You have changed one or more fields in this form. Are you sure you want to navigate away from this page? You would lose all changes you have made.';
+        }
+
+        App.Sidebar.init();
+
+        var crsf_token = 'fcGzhQP4WwHCfd11kUNO';
+
+        /*
+        *dynamic_obj varibale
+        *
+        */
+
+        var dynamic_obj = {
+            project_id: '1',
+            text_drop: 'Drop files here to upload, or',
+            text_select:'Select Files',
+            library_title: 'Media Library',
+            library_add_new: 'Add New',
+            remove_title: 'Remove',
+            delete_title: 'Delete',
+            dialog_info: 'Maximum file size: 256 MB.',
+            add_attach: 'Attach',
+            cancel_title: 'Cancel',
+            isBDDAutocompleteEnabled: false        };
+
+        /*
+        * To display project text editor type
+        *text_format_type defined project wise textformat type
+        * seting_format_type global setting format type
+        */
+         text_format_type = 'plaintext';
+        var seting_format_type = '';
+        if (seting_format_type != '' && text_format_type == '')
+        {
+            text_format_type = seting_format_type;
+        }
+        var currentProjectId = '1' || "0";
+
+        // $('.testrail-editor').each(function()
+        // {
+        //     var editorId = $(this).attr('id');
+        //     if (editorId != undefined)
+        //     {
+        //         if ($('#testrail_cont-' + editorId).length < 1)
+        //         {
+        //                 $('#'+editorId).wrap('<div class="testrail-container" id="testrail_cont-' + editorId + '"></div>');
+        //         }
+        //     }
+        // });
+        if (currentProjectId == "0")
+        {
+            var nProject = getURL();
+            $('.testrail-editor').each(function()
+            {
+                var editorId = $(this).attr('id');
+                if (editorId != undefined)
+                {
+                    getLocalStorgeData(nProject,"#"+editorId);
+                }
+            });
+
+        }
+        else
+        {
+            $('.testrail-editor').each(function()
+            {
+                var editorId = $(this).attr('id');
+                if (editorId != undefined)
+                {
+                    getLocalStorgeData(currentProjectId,"#"+editorId);
+                }
+            });
+        }
+
+        /*
+        * Based on the editor type editor will display
+        */
+
+        if(text_format_type =="plaintext")
+        {
+            $('.testrail-editor').each(function()
+            {
+                var editorId = $(this).attr('id');
+
+                $(document).on('focus keyup blur', '.testrail-editor', function()
+                {
+                    var editor_id = $(this).attr('id');
+                    var content = $(this).text();
+                    $("#"+editor_id+"_mark").val(content);
+                });
+            });
+        }
+
+    });
+    /*
+    * rename tag to
+    * @param object $obj
+    * @param string new_tag
+    */
+    function renameTag($obj, new_tag)
+    {
+        var obj = $obj.get(0);
+        var tag = obj.tagName.toLowerCase();
+        var tag_start = new RegExp('^<' + tag);
+        var tag_end = new RegExp('<\\/' + tag + '>$');
+        var new_html = obj.outerHTML.replace(tag_start, "<" + new_tag).replace(tag_end, '</' + new_tag + '>');
+        $obj.replaceWith(new_html);
+    }
+
+    function getURL()
+    {
+        var currentProjectId = '1' || "0";
+
+        if (currentProjectId == "0")
+        {
+            var lhref = window.location.href;
+            lhrefSplit = lhref.split("/");
+            lEle=lhrefSplit[lhrefSplit.length - 1];
+            lEle1=lhrefSplit[lhrefSplit.length - 2];
+            lEle2=lhrefSplit[lhrefSplit.length - 3];
+            var newproject_id=lEle2+"_"+lEle1+"_"+lEle;
+            return  newproject_id;
+        }
+        else
+        {
+            return  currentProjectId;
+        }
+
+    }
+    function getLocalStorgeData(project_id,selector)
+    {
+        var key=project_id +"-"+selector;
+        var key1=project_id +"-"+selector+"-width";
+        let lData = JSON.parse(localStorage.getItem(key));
+        let lDataWid = JSON.parse(localStorage.getItem(key1));
+        if (lData !== null)
+        {
+            if($(selector).prev().hasClass('fr-box'))
+            {
+                $($(selector).prev().find('.fr-wrapper')[0]).height(lData-2);
+            }
+            else
+            {
+                $(selector).height(lData);
+            }
+
+        }
+        if (lDataWid !== null)
+        {
+            if($(selector).prev().hasClass('fr-box'))
+            {
+                $($(selector).prev().find('.fr-wrapper')[0]).width(lDataWid);
+                $($(selector).prev().find('.fr-toolbar')[0]).width(lDataWid);
+            }
+            else
+            {
+                $(selector).width(lDataWid);
+            }
+        }
+    }
+    function setLocalStorgeData (ht,lproject_id,selector,wt)
+    {
+        var key=lproject_id +"-"+selector;
+        var key1=lproject_id +"-"+selector +"-width";
+        var lData1= JSON.parse(localStorage.getItem(key));
+        var lDataWid= JSON.parse(localStorage.getItem(key1));
+        if (lData1 !== null &&  lData1 != 0)
+        {
+            // getLocalStorgeData(lproject_id,selector);
+            lData1 = ht;
+            localStorage.setItem(key, JSON.stringify(lData1));
+
+        }
+        else
+        {
+            var obj = ht;
+            if(ht == 0)
+            {
+                localStorage.setItem(key,$(selector).height());
+            }
+            else
+            {
+                localStorage.setItem(key, JSON.stringify(obj));
+            }
+
+        }
+        if (lDataWid !== null && lDataWid != 0)
+        {
+            // getLocalStorgeData(lproject_id,selector);
+            lDataWid = wt;
+            localStorage.setItem(key1, JSON.stringify(lDataWid));
+
+        }
+        else
+        {
+            var objWid = wt;
+            if(wt == 0)
+            {
+                localStorage.setItem(key1,$(selector).width());
+            }
+            else
+            {
+                localStorage.setItem(key1, JSON.stringify(objWid));
+            }
+        }
+    }
+
+    $(function()
+    {
+        activateResizeObserver();
+        $(window).resize(function(){
+        });
+    })
+
+    function activateResizeObserver()
+    {
+        // $('.testrail-container').each(function()
+        // {
+        //     var editorId = $(this).children('.testrail-editor').attr('id');
+        // });
+    }
+
+    $(document).ready(() => {
+        // $('.testrail-container').each(function()
+        // {
+        //     var editorId = $(this).children('.testrail-editor').attr('id');
+        //     var nProject = getURL();
+        //     if (editorId != undefined)
+        //     {
+        //         getLocalStorgeData(nProject,editorId);
+        //     }
+        // })
+    })
+
+    $(function() {
+        App.Sidebar.init();
+        
+    });
+</script>
+
+<input type="file" multiple="multiple" class="dz-hidden-input" accept=".bmp,.doc,.docx,.exe,.gif,.htm,.html,.jpeg,.jpg,.odp,.ods,.odt,.pdf,.png,.ppt,.pptx,.sil,.txt,.tif,.tiff,.xhtml,.xls,.xlsx,.xml,.zip" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"><div id="fancy_overlay"></div><div id="fancy_wrap"><div class="fancy_loading" id="fancy_loading"><div id="fancy_loading_spinner"></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg fancy_bg_n"></div><div class="fancy_bg fancy_bg_ne"></div><div class="fancy_bg fancy_bg_e"></div><div class="fancy_bg fancy_bg_se"></div><div class="fancy_bg fancy_bg_s"></div><div class="fancy_bg fancy_bg_sw"></div><div class="fancy_bg fancy_bg_w"></div><div class="fancy_bg fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div><div id="fancy_title"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div></div></div></div><div id="jstree-marker" style="display: none;"></div><button aria-label="Open Resource Center" aria-expanded="false" type="button" id="_pendo-badge_Hhf7H23vJ3hk1jdtR271Im-1A3o" data-layout="badgeResourceCenter" class="_pendo-badge _pendo-resource-center-badge-container _pendo-badge_" style="border-radius: 28px; inset: auto 10px 10px auto; margin: 0px; position: fixed; z-index: 19000; background: rgba(255, 255, 255, 0); padding: 0px; height: 56px; width: 56px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 6px 0px; border: 0px; float: none; vertical-align: text-bottom; cursor: pointer; display: inline-block;"><style type="text/css" scoped="scoped" style="white-space: pre-wrap;"></style><img id="pendo-image-badge-32cf3f20" src="./Add Test Run - TestRail_files/guide-media-6bd9592b-f953-4757-9ef7-5c226a43bb8d" data-_pendo-image-1="" class="_pendo-image _pendo-badge-image _pendo-resource-center-badge-image" style="display: block; height: 56px; width: 56px; padding: 0px; margin: 0px; line-height: 1; border: none; box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px; float: none; vertical-align: baseline;"><style id="pendo-resource-center-bubble-animation">@keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.6) } } .pendo-resource-center-badge-notification-bubble::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgb(3, 148, 116); border-radius: 100%; z-index: -1; animation: pulse 2s infinite; will-change: transform; }</style><div class="pendo-resource-center-badge-notification-bubble" style="position: absolute; border-radius: 20px; line-height: 0px; height: 26px; box-sizing: content-box; background-color: rgb(3, 148, 116); top: -2px; left: -12px; padding: 0px 10px; margin-left: 0px; margin-top: 0px;"><div class="pendo-notification-bubble-unread-count" style="font-weight: 400; font-family: inherit; height: 100%; position: relative; top: 50%; color: rgb(255, 255, 255); white-space: pre-wrap;">6</div></div></button><div class="ui-dialog ui-widget ui-widget-content ui-corner-all dialog ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-selectCasesDialog" style="display: block; z-index: 1002; outline: 0px; height: auto; width: 850px; position: absolute; top: 455px; left: 534px;" id="dialog-ident-selectCasesDialog"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-selectCasesDialog">Select Cases</span><a href="https://austere.testrail.io/index.php?/runs/add/1#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="dialog ui-dialog-content ui-widget-content" id="selectCasesDialog" style="width: auto; height: 661px; display: block; min-height: 0px;">
+	<div class="dialog-title">Select Cases</div>	
+	<form id="selectCasesForm">
+		<div class="dialog-body" style="padding: 0px; height: 602px;">
+			<div id="selectCasesContainer" class="select-dialog-container">							
+				<div id="selectCasesContent" class="select-dialog-content" style=""><input type="hidden" name="can_move" id="can_move" value="1">
+																													<div class="select-dialog-column select-dialog-column-main-container">
+<div id="selectCasesMain" class="select-dialog-column select-dialog-column-main" style="margin-left: 250px; margin-right: 250px" min-width="400">
+	<div id="selectCasesSplitter1" class="select-dialog-column select-dialog-column-splitter" name="splitter1"></div>
+	<div class="select-dialog-scroll">
+		<div id="selectCasesGroupContainer" class="select-dialog-group select-dialog-group-with-splitter" style="min-width: 350px">
+					<div class="toolbar select-dialog-toolbar">
+	<a id="selectCasesColumns" href="javascript:void(0)" style="margin-left: 8px" class="toolbar-button button-columns">
+		Columns</a>
+	<div class="toolbar-inner">
+		Select		<a id="selectCasesGroupAll" class="link" href="javascript:void(0)">All</a> |
+		<a id="selectCasesGroupNone" class="link" href="javascript:void(0)">None</a>
+	</div>
+</div>			<div id="selectCasesGroup"><div class="grid-container  bottom">
+	<div class="grid-title">
+									<span class="title">Tutorial</span>
+	</div>
+			
+	<table class="grid selectable">
+		<colgroup>
+			<col class="checkbox">
+																																<col style="">
+									</colgroup>
+		<tbody><tr class="header">
+			<th class="checkbox"><input type="checkbox" class="selectionCheckbox" rel="all"></th>
+																<th>Title</th>
+									</tr>
+										<tr class="row odd">
+				<td class="checkbox"><input name="selected-49" class="selectionCheckbox" value="49" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/49"><span class="title">Apply sort routine to complex table with different currencies</span></a>
+						</td>
+												</tr>
+								<tr class="row even">
+				<td class="checkbox"><input name="selected-50" class="selectionCheckbox" value="50" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/50"><span class="title">Verify CSV import with enclosed test data files</span></a>
+						</td>
+												</tr>
+								<tr class="row odd">
+				<td class="checkbox"><input name="selected-51" class="selectionCheckbox" value="51" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/51"><span class="title">Apply sort routine to complex table with different currencies</span></a>
+						</td>
+												</tr>
+								<tr class="row even">
+				<td class="checkbox"><input name="selected-52" class="selectionCheckbox" value="52" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/52"><span class="title">Verify title, sub title and heading styles</span></a>
+						</td>
+												</tr>
+								<tr class="row odd">
+				<td class="checkbox"><input name="selected-53" class="selectionCheckbox" value="53" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/53"><span class="title">Add and verify Tables of Contents with multi-page document</span></a>
+						</td>
+												</tr>
+								<tr class="row even">
+				<td class="checkbox"><input name="selected-54" class="selectionCheckbox" value="54" type="checkbox"></td>
+															<td><a target="_blank" href="https://austere.testrail.io/index.php?/cases/view/54"><span class="title">Format table with built-in style</span></a>
+						</td>
+												</tr>
+			</tbody></table>
+	</div>
+	</div>
+				</div>
+	</div>
+</div>
+</div>
+<div id="selectCasesTree" class="select-dialog-column select-dialog-column-tree" style="width: 250px">
+	<div class="select-dialog-scroll">
+		<div class="select-dialog-tree">
+					<div class="toolbar select-dialog-toolbar">
+	<div class="toolbar-inner">
+		Select		<a id="selectCasesTreeAll" class="link" href="javascript:void(0)">All</a> |
+		<a id="selectCasesTreeNone" class="link" href="javascript:void(0)">None</a>
+	</div>
+</div>			<div class="jstree jstree-default">
+			<ul id="selectCasesSections" class="jstree jstree-0 jstree-default jstree-focused">
+																											
+	<li id="selectCasesNode-1" rel="1" class="section jstree-open">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="1" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class=""><ins class="jstree-icon">&nbsp;</ins>
+			Prerequisites		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-1" style="vertical-align: top; display: none;"></span>
+			<ul class="">
+															
+	<li id="selectCasesNode-2" rel="2" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="2" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Software &amp; Versions		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-2" style="vertical-align: top; display: none;"></span>
+		</li>
+																	
+	<li id="selectCasesNode-3" rel="3" class="section jstree-closed jstree-leaf jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="3" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class=""><ins class="jstree-icon">&nbsp;</ins>
+			Hardware		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-3" style="vertical-align: top; display: none;"></span>
+		</li>
+			</ul>
+		</li>
+														
+	<li id="selectCasesNode-4" rel="4" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="4" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class=""><ins class="jstree-icon">&nbsp;</ins>
+			Installation		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-4" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-5" rel="5" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="5" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class=""><ins class="jstree-icon">&nbsp;</ins>
+			Updates		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-5" style="vertical-align: top; display: none;"></span>
+		</li>
+																								
+	<li id="selectCasesNode-6" rel="6" class="section jstree-open">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="6" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class="jstree-clicked"><ins class="jstree-icon">&nbsp;</ins>
+			Tutorial		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-6" style="vertical-align: top; display: none;"></span>
+			<ul class="">
+															
+	<li id="selectCasesNode-7" rel="7" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="7" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Goals		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-7" style="vertical-align: top; display: none;"></span>
+		</li>
+																	
+	<li id="selectCasesNode-8" rel="8" class="section jstree-closed jstree-leaf jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="8" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Metrics		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-8" style="vertical-align: top; display: none;"></span>
+		</li>
+			</ul>
+		</li>
+																								
+	<li id="selectCasesNode-9" rel="9" class="section jstree-open">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="9" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Login &amp; Account		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-9" style="vertical-align: top; display: none;"></span>
+			<ul class="">
+																		
+	<li id="selectCasesNode-10" rel="10" class="section jstree-closed jstree-leaf jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="10" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Reset Password		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-10" style="vertical-align: top; display: none;"></span>
+		</li>
+			</ul>
+		</li>
+														
+	<li id="selectCasesNode-11" rel="11" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="11" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Feature 1		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-11" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-12" rel="12" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="12" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Feature 2		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-12" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-13" rel="13" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="13" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Feature 3		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-13" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-14" rel="14" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="14" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Feature 4		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-14" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-15" rel="15" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="15" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Feature 5		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-15" style="vertical-align: top; display: none;"></span>
+		</li>
+																								
+	<li id="selectCasesNode-16" rel="16" class="section jstree-open">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="16" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Administration		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-16" style="vertical-align: top; display: none;"></span>
+			<ul class="">
+															
+	<li id="selectCasesNode-17" rel="17" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="17" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Projects		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-17" style="vertical-align: top; display: none;"></span>
+		</li>
+														
+	<li id="selectCasesNode-18" rel="18" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="18" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Settings		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-18" style="vertical-align: top; display: none;"></span>
+		</li>
+																											
+	<li id="selectCasesNode-19" rel="19" class="section jstree-open jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="19" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Users &amp; Roles		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-19" style="vertical-align: top; display: none;"></span>
+			<ul class="">
+															
+	<li id="selectCasesNode-20" rel="20" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="20" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Permissions		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-20" style="vertical-align: top; display: none;"></span>
+		</li>
+																	
+	<li id="selectCasesNode-21" rel="21" class="section jstree-closed jstree-leaf jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="21" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Groups		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-21" style="vertical-align: top; display: none;"></span>
+		</li>
+			</ul>
+		</li>
+			</ul>
+		</li>
+														
+	<li id="selectCasesNode-22" rel="22" class="section jstree-closed jstree-leaf">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="22" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1"><ins class="jstree-icon">&nbsp;</ins>
+			Search		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-22" style="vertical-align: top; display: none;"></span>
+		</li>
+																	
+	<li id="selectCasesNode-23" rel="23" class="section jstree-closed jstree-leaf jstree-last">
+		<ins class="jstree-icon">&nbsp;</ins><input type="checkbox" rel="23" class="checkbox-tree">
+			<a href="https://austere.testrail.io/index.php?/runs/add/1" class=""><ins class="jstree-icon">&nbsp;</ins>
+			Help &amp; Documentation		</a>
+		<span class="text-secondary hidden" id="selectCasesCount-23" style="vertical-align: top; display: none;"></span>
+		</li>
+				</ul>
+			</div>
+				</div>
+	</div>
+</div>
+<div id="selectCasesFilter" class="select-dialog-column select-dialog-column-filter" style="width: 250px; margin-left: -250px">
+	<div class="select-dialog-scroll">
+		<div class="select-dialog-filter">
+		<div class="sidebar-h1 top select-dialog-filter-h1">Selection Filter</div>
+		<div class="filter-group filter" id="filter-cases:custom_automation_type" rel="cases:custom_automation_type">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:custom_automation_type&#39;); return false;">Automation Type</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:custom_automation_type&#39;); return false;" style="display: none;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:custom_automation_type&#39;); return false;" style="display: inline;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown" style="display: block;">
+																									<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+												
+		<option value="0">
+																				 None								</option>
+										
+		<option value="1">
+																				 Ranorex								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:created_by" rel="cases:created_by">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_by&#39;); return false;">Created By</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_by&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_by&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+																	
+		<option value="1">
+																				James Lee								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:created_on" rel="cases:created_on">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_on&#39;); return false;">Created On</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_on&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:created_on&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="daterange">
+				
+	
+<select id="filterDateRangeType-70fd2d50-c75f-42ab-9664-76ec9d89da39" rel="items" class="form-control form-control-full form-select item" style="margin-bottom: 0.75em">
+	<option value="3" selected="selected">Today</option>
+	<option value="4">Yesterday</option>
+	<option value="5">This week</option>
+	<option value="7">Last week</option>
+	<option value="9">This month</option>
+	<option value="11">Last month</option>
+	<option value="14">Last 24 hours</option>
+	<option value="15">Last 48 hours</option>
+	<option value="6">Last 7 days</option>
+	<option value="8">Last 14 days</option>
+	<option value="10">Last 30 days</option>
+	<option value="12">Last 60 days</option>
+	<option value="13">Last 90 days</option>
+	<option value="2">Custom</option>
+</select>
+
+
+<div class="hidden" id="filterDateRangeCustom-70fd2d50-c75f-42ab-9664-76ec9d89da39" style="margin-bottom: 8px">
+	<table class="filter-list">
+		<colgroup>
+			<col style="width: 50px">
+			<col style="">
+		</colgroup>
+											<tbody><tr class="filterLine">
+			<td class="text">From:</td>
+			<td class="value" style="padding-right: 2px"><input type="text" class="custom_from form-control datepicker hasDatepicker" style="width: 150px" value="" id="dp1680976445742"></td>
+		</tr>
+											<tr>
+			<td class="text" style="padding-bottom: 0">To:</td>
+			<td class="value" style="padding-right: 2px; padding-bottom: 0"><input type="text" class="custom_to form-control form-control-full datepicker hasDatepicker" style="width: 150px" value="" id="dp1680976445743"></td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:estimate" rel="cases:estimate">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate&#39;); return false;">Estimate</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="timespan">
+				
+<div class="radio form-radio" style="margin-top: 10px">
+	<label>
+		Match only of the following		<input type="radio" class="radio" rel="1" name="filter-cases:estimate_mode" id="filter-cases:estimate_mode_and" checked="checked">
+	</label>
+</div>
+<div class="radio">
+	<label>
+		Match any of the following		<input type="radio" class="radio" rel="2" name="filter-cases:estimate_mode" id="filter-cases:estimate_mode_or">
+	</label>
+</div>
+
+<div style="margin: 10px 0 5px 0">
+		
+	
+
+<table class="filter-list">
+	<colgroup>
+		<col class="op">
+		<col class="value">
+		<col class="action">
+		<col class="action">
+	</colgroup>
+			<tbody><tr class="filterLine" id="filterLine-5d77334c-88fa-4e6e-acd4-db6f2fdb4e21">
+	<td class="op">
+									<select class="form-control form-control-full form-select">
+						<option value="1" selected="selected">Is</option>
+						<option value="2">Is Not</option>
+						<option value="7">Is Less</option>
+						<option value="8">Is More</option>
+					</select>
+	</td>
+	<td class="value">
+																			<input type="text" class="form-control form-control-full " value="" maxlength="250">
+	</td>
+	<td class="action">
+		<a class="add" href="javascript:void(0)" onclick="this.blur(); App.Filters.addLine(&#39;5d77334c-88fa-4e6e-acd4-db6f2fdb4e21&#39;); return false;"><div class="icon-small-add"></div></a>
+		<div class="addBusy hidden icon-animation-busy"></div>
+	</td>
+	<td class="action">
+		<a class="deleteEnabled hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.removeLine(&#39;5d77334c-88fa-4e6e-acd4-db6f2fdb4e21&#39;); return false;"><div class="icon-small-remove"></div></a>
+		<div class="deleteDisabled icon-small-remove-disabled "></div>
+	</td>
+</tr>
+	</tbody></table>
+</div>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:estimate_forecast" rel="cases:estimate_forecast">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate_forecast&#39;); return false;">Forecast</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate_forecast&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:estimate_forecast&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="timespan">
+				
+<div class="radio form-radio" style="margin-top: 10px">
+	<label>
+		Match only of the following		<input type="radio" class="radio" rel="1" name="filter-cases:estimate_forecast_mode" id="filter-cases:estimate_forecast_mode_and" checked="checked">
+	</label>
+</div>
+<div class="radio">
+	<label>
+		Match any of the following		<input type="radio" class="radio" rel="2" name="filter-cases:estimate_forecast_mode" id="filter-cases:estimate_forecast_mode_or">
+	</label>
+</div>
+
+<div style="margin: 10px 0 5px 0">
+		
+	
+
+<table class="filter-list">
+	<colgroup>
+		<col class="op">
+		<col class="value">
+		<col class="action">
+		<col class="action">
+	</colgroup>
+			<tbody><tr class="filterLine" id="filterLine-b0204e50-24fe-4e15-a973-f785f9c9e21f">
+	<td class="op">
+									<select class="form-control form-control-full form-select">
+						<option value="1" selected="selected">Is</option>
+						<option value="2">Is Not</option>
+						<option value="7">Is Less</option>
+						<option value="8">Is More</option>
+					</select>
+	</td>
+	<td class="value">
+																			<input type="text" class="form-control form-control-full " value="" maxlength="250">
+	</td>
+	<td class="action">
+		<a class="add" href="javascript:void(0)" onclick="this.blur(); App.Filters.addLine(&#39;b0204e50-24fe-4e15-a973-f785f9c9e21f&#39;); return false;"><div class="icon-small-add"></div></a>
+		<div class="addBusy hidden icon-animation-busy"></div>
+	</td>
+	<td class="action">
+		<a class="deleteEnabled hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.removeLine(&#39;b0204e50-24fe-4e15-a973-f785f9c9e21f&#39;); return false;"><div class="icon-small-remove"></div></a>
+		<div class="deleteDisabled icon-small-remove-disabled "></div>
+	</td>
+</tr>
+	</tbody></table>
+</div>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:priority_id" rel="cases:priority_id">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:priority_id&#39;); return false;">Priority</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:priority_id&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:priority_id&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+															
+		<option value="4">
+																				Critical								</option>
+													
+		<option value="3">
+																				High								</option>
+													
+		<option value="2">
+																				Medium								</option>
+													
+		<option value="1">
+																				Low								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:refs" rel="cases:refs">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:refs&#39;); return false;">References</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:refs&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:refs&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="string">
+				
+<div class="radio form-radio" style="margin-top: 10px">
+	<label>
+		Match only of the following		<input type="radio" class="radio" rel="1" name="filter-cases:refs_mode" id="filter-cases:refs_mode_and" checked="checked">
+	</label>
+</div>
+<div class="radio">
+	<label>
+		Match any of the following		<input type="radio" class="radio" rel="2" name="filter-cases:refs_mode" id="filter-cases:refs_mode_or">
+	</label>
+</div>
+
+<div style="margin: 10px 0 5px 0">
+		
+	
+
+<table class="filter-list">
+	<colgroup>
+		<col class="op">
+		<col class="value">
+		<col class="action">
+		<col class="action">
+	</colgroup>
+			<tbody><tr class="filterLine" id="filterLine-801b734c-94b6-4263-94fa-28e2ed178c08">
+	<td class="op">
+									<select class="form-control form-control-full form-select">
+						<option value="1" selected="selected">Is</option>
+						<option value="2">Is Not</option>
+						<option value="5">Contains</option>
+						<option value="6">Doesn't Contain</option>
+					</select>
+	</td>
+	<td class="value">
+												<input type="text" class="form-control form-control-full " value="" maxlength="250">
+	</td>
+	<td class="action">
+		<a class="add" href="javascript:void(0)" onclick="this.blur(); App.Filters.addLine(&#39;801b734c-94b6-4263-94fa-28e2ed178c08&#39;); return false;"><div class="icon-small-add"></div></a>
+		<div class="addBusy hidden icon-animation-busy"></div>
+	</td>
+	<td class="action">
+		<a class="deleteEnabled hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.removeLine(&#39;801b734c-94b6-4263-94fa-28e2ed178c08&#39;); return false;"><div class="icon-small-remove"></div></a>
+		<div class="deleteDisabled icon-small-remove-disabled "></div>
+	</td>
+</tr>
+	</tbody></table>
+</div>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:section_id" rel="cases:section_id">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:section_id&#39;); return false;">Section</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:section_id&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:section_id&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+												
+		<option value="1">
+																				Prerequisites								</option>
+										
+		<option value="2">
+																				&nbsp;&nbsp;Software &amp; Versions								</option>
+										
+		<option value="3">
+																				&nbsp;&nbsp;Hardware								</option>
+										
+		<option value="4">
+																				Installation								</option>
+										
+		<option value="5">
+																				Updates								</option>
+										
+		<option value="6">
+																				Tutorial								</option>
+										
+		<option value="7">
+																				&nbsp;&nbsp;Goals								</option>
+										
+		<option value="8">
+																				&nbsp;&nbsp;Metrics								</option>
+										
+		<option value="9">
+																				Login &amp; Account								</option>
+										
+		<option value="10">
+																				&nbsp;&nbsp;Reset Password								</option>
+										
+		<option value="11">
+																				Feature 1								</option>
+										
+		<option value="12">
+																				Feature 2								</option>
+										
+		<option value="13">
+																				Feature 3								</option>
+										
+		<option value="14">
+																				Feature 4								</option>
+										
+		<option value="15">
+																				Feature 5								</option>
+										
+		<option value="16">
+																				Administration								</option>
+										
+		<option value="17">
+																				&nbsp;&nbsp;Projects								</option>
+										
+		<option value="18">
+																				&nbsp;&nbsp;Settings								</option>
+										
+		<option value="19">
+																				&nbsp;&nbsp;Users &amp; Roles								</option>
+										
+		<option value="20">
+																				&nbsp;&nbsp;&nbsp;&nbsp;Permissions								</option>
+										
+		<option value="21">
+																				&nbsp;&nbsp;&nbsp;&nbsp;Groups								</option>
+										
+		<option value="22">
+																				Search								</option>
+										
+		<option value="23">
+																				Help &amp; Documentation								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:template_id" rel="cases:template_id">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:template_id&#39;); return false;">Template</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:template_id&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:template_id&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+															
+		<option value="4">
+																				Behaviour Driven Development								</option>
+													
+		<option value="3">
+																				Exploratory Session								</option>
+													
+		<option value="2">
+																				Test Case (Steps)								</option>
+													
+		<option value="1">
+																				Test Case (Text)								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:title" rel="cases:title">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:title&#39;); return false;">Title</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:title&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:title&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="string">
+				
+<div class="radio form-radio" style="margin-top: 10px">
+	<label>
+		Match only of the following		<input type="radio" class="radio" rel="1" name="filter-cases:title_mode" id="filter-cases:title_mode_and" checked="checked">
+	</label>
+</div>
+<div class="radio">
+	<label>
+		Match any of the following		<input type="radio" class="radio" rel="2" name="filter-cases:title_mode" id="filter-cases:title_mode_or">
+	</label>
+</div>
+
+<div style="margin: 10px 0 5px 0">
+		
+	
+
+<table class="filter-list">
+	<colgroup>
+		<col class="op">
+		<col class="value">
+		<col class="action">
+		<col class="action">
+	</colgroup>
+			<tbody><tr class="filterLine" id="filterLine-91b4ec16-1f87-4b34-8e8e-b98d76b4b19b">
+	<td class="op">
+									<select class="form-control form-control-full form-select">
+						<option value="1" selected="selected">Is</option>
+						<option value="2">Is Not</option>
+						<option value="5">Contains</option>
+						<option value="6">Doesn't Contain</option>
+					</select>
+	</td>
+	<td class="value">
+												<input type="text" class="form-control form-control-full " value="" maxlength="250">
+	</td>
+	<td class="action">
+		<a class="add" href="javascript:void(0)" onclick="this.blur(); App.Filters.addLine(&#39;91b4ec16-1f87-4b34-8e8e-b98d76b4b19b&#39;); return false;"><div class="icon-small-add"></div></a>
+		<div class="addBusy hidden icon-animation-busy"></div>
+	</td>
+	<td class="action">
+		<a class="deleteEnabled hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.removeLine(&#39;91b4ec16-1f87-4b34-8e8e-b98d76b4b19b&#39;); return false;"><div class="icon-small-remove"></div></a>
+		<div class="deleteDisabled icon-small-remove-disabled "></div>
+	</td>
+</tr>
+	</tbody></table>
+</div>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:type_id" rel="cases:type_id">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:type_id&#39;); return false;">Type</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:type_id&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:type_id&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+															
+		<option value="1">
+																				Acceptance								</option>
+													
+		<option value="2">
+																				Accessibility								</option>
+													
+		<option value="3">
+																				Automated								</option>
+													
+		<option value="4">
+																				Compatibility								</option>
+													
+		<option value="5">
+																				Destructive								</option>
+													
+		<option value="6">
+																				Functional								</option>
+													
+		<option value="7">
+																				Other								</option>
+													
+		<option value="8">
+																				Performance								</option>
+													
+		<option value="9">
+																				Regression								</option>
+													
+		<option value="10">
+																				Security								</option>
+													
+		<option value="11">
+																				Smoke &amp; Sanity								</option>
+													
+		<option value="12">
+																				Usability								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:updated_by" rel="cases:updated_by">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_by&#39;); return false;">Updated By</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_by&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_by&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="dropdown">
+															<select multiple="multiple" rel="items" class="form-control form-select items" style="width: 100%; height: 150px; margin-bottom: 10px">
+	<option value="all">Any</option>
+																	
+		<option value="1">
+																				James Lee								</option>
+		</select>	</div>
+	</div>
+		<div class="filter-group filter" id="filter-cases:updated_on" rel="cases:updated_on">
+		<div class="filter-name">
+	<a class="link-noline" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_on&#39;); return false;">Updated On</a>
+	<a class="filterExpand " href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_on&#39;); return false;"><div class="icon-expand"></div></a><a class="filterCollapse hidden" href="javascript:void(0)" onclick="this.blur(); App.Filters.toggle(&#39;cases:updated_on&#39;); return false;"><div class="icon-collapse"></div></a>
+</div>
+<div class="filterContent hidden" rel="daterange">
+				
+	
+<select id="filterDateRangeType-bc31f46f-3316-4f48-b8e2-f6487f1abae8" rel="items" class="form-control form-control-full form-select item" style="margin-bottom: 0.75em">
+	<option value="3" selected="selected">Today</option>
+	<option value="4">Yesterday</option>
+	<option value="5">This week</option>
+	<option value="7">Last week</option>
+	<option value="9">This month</option>
+	<option value="11">Last month</option>
+	<option value="14">Last 24 hours</option>
+	<option value="15">Last 48 hours</option>
+	<option value="6">Last 7 days</option>
+	<option value="8">Last 14 days</option>
+	<option value="10">Last 30 days</option>
+	<option value="12">Last 60 days</option>
+	<option value="13">Last 90 days</option>
+	<option value="2">Custom</option>
+</select>
+
+
+<div class="hidden" id="filterDateRangeCustom-bc31f46f-3316-4f48-b8e2-f6487f1abae8" style="margin-bottom: 8px">
+	<table class="filter-list">
+		<colgroup>
+			<col style="width: 50px">
+			<col style="">
+		</colgroup>
+											<tbody><tr class="filterLine">
+			<td class="text">From:</td>
+			<td class="value" style="padding-right: 2px"><input type="text" class="custom_from form-control datepicker hasDatepicker" style="width: 150px" value="" id="dp1680976445744"></td>
+		</tr>
+											<tr>
+			<td class="text" style="padding-bottom: 0">To:</td>
+			<td class="value" style="padding-right: 2px; padding-bottom: 0"><input type="text" class="custom_to form-control form-control-full datepicker hasDatepicker" style="width: 150px" value="" id="dp1680976445745"></td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+	</div>
+	</div>
+
+<div class="filter-mode select-dialog-filter-mode">
+	<div class="radio form-radio" style="margin-bottom: 2px">
+		<label>
+			Match only of the above			<input type="radio" class="radio" rel="1" name="filterMode" id="filterMode_and" checked="checked">
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			Match any of the above			<input type="radio" class="radio" rel="2" name="filterMode" id="filterMode_or">
+		</label>
+	</div>
+</div>
+
+<div class="button-group select-dialog-filter-buttons">
+	<a id="selectCasesFilterApply" class="button button-droppie-parent button-left button-view" rel="1">
+		Set Selection	</a><a class="link-noline button button-droppie button-left dropdownLink" href="https://austere.testrail.io/index.php?/runs/add/1#selectionDropdown" rel="bottomLeft">
+		<span class="caret"></span>
+	</a>
+</div>
+
+<div id="selectCasesMatches" class="message message-success hidden"></div>
+
+
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+				<div id="selectCasesProgress" class="select-dialog-progress" style="display: none; padding-top: 241px;">
+					<div class="icon-progress-large" title="Loading..."></div>
+				</div>
+			</div>
+		</div>
+	</form>
+	
+</div><div class="dialog-buttons-pane-container">
+		<div class="button-group dialog-buttons-highlighted">
+			<button id="selectCasesSubmit" type="submit" class="button button-left button-positive button-ok dialog-action-default">
+				OK			</button>
+			<a id="selectCasesClose" class="button button-left button-negative button-cancel dialog-action-close">
+				Cancel			</a>
+		</div>
+	</div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div></div><div class="ui-widget-overlay" style="width: 1920px; height: 828px; z-index: 1001;"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

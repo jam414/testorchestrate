@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automation Portal
+  </title>
+  <link rel="stylesheet" href="../static/css/add_test.css">
+  
+</head>
+<h1 class="h3 mb-3 font-weight-normal" id="titleheader"></h1>
+<body id="mainBody">
+  <script>
+    token = window.sessionStorage.getItem('token');
+    // console.log(token)
+    if (token === null){
+          window.open("/", "_self");
+    }
+    
+    window.onload=function()
+    {
+        token = window.sessionStorage.getItem('token');
+        if (token === null){
+          window.open("/", "_self");
+        }
+        console.log("Here is the token: "+token);
+        const jwtPayload = JSON.parse(window.atob(token.split('.')[1]))
+        console.log(jwtPayload);
+        const isExpired = Date.now() >= jwtPayload.exp * 1000;
+        document.getElementById("status_message").innerHTML = "Welcome " + jwtPayload.userid
+        if (isExpired){
+          window.sessionStorage.removeItem('token');
+          window.open("/", "_self");
+        }
+        
+    };
+  </script>  
+    
+    <div id="navbar">
+      <a href="http://testorchestrate.com" target="_blank">
+      <img src="../static/css/TestOrchestrate_black.jpg" title="logo" id="logo" height="85" width="200"/>
+      </a>
+      <div id="navbar-right"><br>
+        <div id="status_message"></div>
+        <!-- <h5 id="settings">Settings</h5> -->
+        <!-- <a class="active" href="index.html">Home</a>
+        <a class="active" href="#">Profile</a> -->
+        <!-- <h5>Welcome</h5> -->
+      </div>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a id="db" href="#" onclick="dashboard();return false;">HOME</a>
+      <a id="db" href="#" onclick="dashboard();return false;">MY DASHBOARD</a>
+      <a id="db" href="#" onclick="requirements();return false;">TEST REQUIREMENTS</a>
+      <a id="tc" href="#" onclick="testcases();return false;">TEST CASES</a>
+      <a id="exe" href="#" onclick="execute();return false;">RUN TEST CASES</a>
+      <a id="res" href="#" onclick="results();return false;">REPORTS</a>
+      <a id="out" href="#" onclick="logout();return false;">SIGN OFF</a>
+    </div>
+    <div id="add_test" class="add_test">
+      <!-- <div>
+        <span><a href="#">Home ></a><a href="#"> Tests ></a><a href="#"> Add New Test ></a></span>
+      </div></p> -->
+      <div>
+        <span><a href="#">Home ></a><a href="#"> Test Cases ></a><a href="#"> Add Test Case ></a><a href="#" id="project_title">Project Name</a></span>
+      </div><br>
+      <div id = "top">
+          <label id="name">Name:</label>&nbsp;&nbsp;
+          <input type="text" id="testname"></input>
+      </div></p>
+      <div id="attr">  
+        <select name="severity" id="severity" onchange="filter_severity()">
+          <option value="all">Severity</option>
+          <option value="critical">Critical</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <select name="type" id="type">
+            <option value="all">Type</option>
+            <option value="functional">Functional</option>
+            <option value="non_functional">Non Functional</option>
+        </select>
+        <select name="framework" id="framework" onchange="filter_framework()">
+          <option value="testcase_s">Test Case with Steps</option>
+          <option value="testcase_t">Test Case (Simple)</option>
+          <option value="bdd">Behaviour Driven Development</option>
+        </select>
+        <select name="runner" id="runner" onchange="filter_runner()">
+          <option value="manual">Manual</option>
+          <option value="automated">Automated</option>
+        </select></p>
+        <input type="text" id="tag" placeholder="Tag"></input>
+        <select name="platform" id="platform" onchange="filter_platform()">
+          <option value="windows">Windows</option>
+          <option value="linux">Linux</option>
+          <option value="Chrome">Chrome</option>
+          <option value="ie">IE</option>
+          <option value="edge">Edge</option>
+        </select></p></p></p>
+        <label>Dependency:&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="dependency" class="dependency" placeholder="Search and Add Dependent Test Cases">
+        <button id="search">Search</button></p>
+        
+
+        <label>Dependent Tests:</label><label id="pre_label">Pre-Conditions:</label></br>
+        <textarea id="tests" name="tests" rows="3" cols="50"></textarea>
+        <textarea id="precondition" name="precondition" rows="3" cols="50"></textarea></p>
+
+        <div id="step_box">
+          <!-- Old Logic -->
+            <!-- <label>Steps:</label><label id="exp_result_label">Expected Results:</label></br>
+            <label id="step_no">1.</label>
+            <textarea id="steps" name="steps" rows="2" cols="50"></textarea>
+            <textarea id="exp_results" name="exp_results" rows="2" cols="50"></textarea> -->
+            <!-- <input type="checkbox" id="check"></input> -->
+          <!-- Old Logic -->
+              
+                  <table id="table">
+                    <thead>
+                    
+                    <tr>
+                        <th>Step Name</th>
+                        <th>Expected Result</th>
+                        <th><input type="checkbox" id="check"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <tr>
+                        <td><textarea  rows="2" col="50" class="step_name"></textarea></td>
+                        <td><textarea  rows="2" col="50" class="step_result"></textarea></td>
+                        <td><input type="checkbox" id="check"></td>
+                    </tr>
+                    <!-- <tr>
+                      <td><textarea rows="2" col="50" class="step_name"></textarea></td>
+                      <td><textarea rows="2" col="50" class="step_result"></textarea></td>
+                      <td><input type="checkbox" id="check"></td> 
+                    </tr> -->
+                    </tbody>
+                </table></p>
+        
+                <div id = "add_del_steps">
+                    <a href="#"><img src="../static/css/add_blue.jpg" id="add_step" alt="add" onclick="add_step()" height="20" width="22"/></a>
+                    <a href="#"><img src="../static/css/del_new.jpg" id="del_step" alt="del" onclick="del_step()"height="20" width="22"/></a>
+                </div></p>
+        </div></p>
+        <div id="simple_test">
+          <label id="steps_s">Steps:</label><label id="exp_result_s">Expected Result:</label></br>
+          <textarea rows="4" col="50" class="step_name_s" id="step_name_s"></textarea>
+          <textarea rows="4" col="50" class="step_result_s" id = "step_result_s"></textarea>
+        </div></p>
+        <div id="footer" class="footer">
+          <button id="save" class="save" onclick="save_test()">Save</button>
+          <button id="cancel" class="cancel" onclick="cancel()">Cancel</button>
+        </div>
+        
+
+      </div></p>
+    </div>
+              
+ 
+ <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+ </script>
+ <script>
+
+      var step_count = 1;
+
+      function add_step(){ 
+        // alert ("Add Step");
+        // +++++++++++++++++ Old Logic with +++++++++++++++++++++++++++
+        // br = document.createElement('br');
+        // div = document.createElement('div');
+        // label = document.createElement('label');
+        // label.innerHTML = String(step_count+1)+".";
+        // step_box =  document.getElementById('step_box');
+        // text_step = document.createElement('textarea');
+        // text_step.setAttribute('id', 'steps');
+        // text_step.setAttribute('name', 'steps');
+        // text_step.setAttribute('rows', '2');
+        // text_step.setAttribute('cols', '50');
+
+        // text_result = document.createElement('textarea');
+        // text_result.setAttribute('id', 'exp_results');
+        // text_result.setAttribute('name', 'exp_results');
+        // text_result.setAttribute('rows', '2');
+        // text_result.setAttribute('cols', '50');
+       
+
+
+        // checkbx = document.createElement('input');
+        // checkbx.setAttribute('type', 'checkbox')
+        // checkbx.setAttribute('id', 'checkbox');
+
+        // div.append(br);
+        // div.append(br);
+        // div.append(label);
+        // div.append(text_step);
+        // div.append(text_result);
+        // div.append(checkbx);
+        // div.append(br);
+        // step_box.append(div);
+        // step_count +=1;
+
+        // // step_box.append(br);
+        // // step_box.append(br);
+        // // step_box.append(text_step);
+        // // step_box.append(text_result);
+        // // step_box.append(checkbx);
+        // // step_box.append(br);
+
+        //+++++++++++++++++++++Old Logic++++++++++++++++++++++++++++++
+
+        // var tbody = document.getElementById("tbody")
+        // var tr = document.createElement("tr");
+        // td1 = document.createElement("td");
+        // txtarea1 = document.createElement('textarea');
+        // txtarea1.setAttribute('class', 'step_name');
+        // txtarea1.setAttribute('rows','2');
+        // txtarea1.setAttribute('col','50');
+        // txtarea1.setAttribute('id','step_name');
+        // td1.append(txtarea1);
+        // td2 = document.createElement("td");
+        // txtarea2 = document.createElement('textarea');
+        // txtarea2.setAttribute('class', 'step_result');
+        // txtarea2.setAttribute('rows','2');
+        // txtarea2.setAttribute('col','50');
+        // txtarea2.setAttribute('id','step_result');
+        // td2.append(txtarea2)
+        // td3 = document.createElement("td");
+
+        // cb = document.createElement("INPUT");
+        // cb.setAttribute("type", "checkbox");
+        // cb.setAttribute("name", "checkbox");
+        // cb.setAttribute("id", "checkbox");
+
+        // td3.append(cb);
+        // tr.append(td1);
+        // tr.append(td2);
+        // tr.append(td3);
+        // tbody.append(tr);
+
+        // ++++++++++++++++++++++++++++++++++++++++++++
+
+        var table = document.getElementById("table");
+        var row = table.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        cell1.innerHTML = '<textarea  rows="2" col="50" class="step_name"></textarea>';
+        cell2.innerHTML = '<textarea  rows="2" col="50" class="step_result"></textarea>';
+        cell3.innerHTML = '<input type="checkbox" id="check">';
+      }
+
+      function del_step(){
+
+        var table = document.getElementById("table");
+        var rowCount = table.rows.length;
+        console.log(rowCount);
+        if (rowCount < 3){
+          alert ('The Test Case needs to have atleast one Step else create a Test Case with Text');
+          return;
+        }
+        for (var i = rowCount - 1; i > 0; i--) {
+          var row = table.rows[i];
+          var chkbox = row.cells[2].childNodes[0];
+          if (chkbox.checked) {
+            table.deleteRow(i);
+          }
+        }
+        // Old Logic
+        // alert ("Delete Step");
+        // step_box = document.getElementById('step_box');
+
+        // var array = []
+        // var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+        // // console.log(checkboxes.length);
+
+        // for (var i = 0; i < checkboxes.length; i++) {
+        //   console.log(checkboxes[i].parentElement);
+        //   node = checkboxes[i].parentElement;
+        //   // step_box.remove(checkboxes[i].previousSibling);
+        //   // step_box.remove(checkboxes[i].previousElementSibling);
+        //   // step_box.remove(node);
+        //   node.style.display = 'none';     
+        // }
+        // Old Logic
+
+      //   const table = document.querySelector('tbody');
+      //   console.log(table);
+      //   const rows = table.querySelectorAll('tr');
+      //   rows.forEach(row => {
+      //   // Check if the checkbox in the row is selected
+      //   const checkbox = row.querySelectorAll('input[type="checkbox"]');
+      //   if (checkbox.checked) {
+      //     console.log(checkbox);
+          
+          
+      //    }
+      //  });
+          // const table = document.querySelector('tbody');
+
+          // $('#tbody tr').filter(':has(:checkbox:checked)').find('td').each(function() {
+          //   console.log(this);
+          //   table.remove('#tbody tr');
+          //   // document.getElementsByTagName("textarea")[0].value;
+          //   // document.getElementById("");
+          //   // if (this.innerHTML === '<input type="checkbox" id=\"check\">'){
+          //   //   count=count+1;
+          //   //   console.log(count);
+          //   // }
+
+          // });
+      }
+    
+    function filter_severity(){
+
+    }
+    function filter_runner(){
+      
+    }
+    function filter_platform(){
+      
+    }
+
+    function filter_framework(){
+      var framework = document.getElementById('framework');
+      console.log(framework.value);
+      if (framework.value === 'testcase_t'){
+        var step_box = document.getElementById('step_box');
+        step_box.style.display = 'none';
+        document.getElementById('simple_test').style.display='block';
+        // var table = document.getElementById('table');
+        // table.style.display='none';
+        // step_box.remove(table);
+        // document.getElementById('attr').remove(document.getElementById('add_del_steps'));
+        return;
+      }
+
+      if (framework.value === 'testcase_s'){
+        var step_box = document.getElementById('step_box');
+        document.getElementById('simple_test').style.display='none';
+        step_box.style.display = 'block';
+        // var table = document.getElementById('table');
+        // step_box.append(table);
+        return;
+
+      }
+    }
+
+    function save_test(){
+      var params = {};
+      var values = [];
+
+      var project_id = window.sessionStorage.getItem('project_id');
+      var testname = document.getElementById('testname').value;
+      // var severity = document.getElementById('severity').innerText;
+      var severity = $('#severity').find(":selected").text();
+      // var type = document.getElementById('type').innerText;
+      var type = $('#type').find(":selected").text();
+      // var framework = document.getElementById('framework').innerText;
+      var framework1 = $('#framework').find(":selected").text();
+      // var runner = document.getElementById('runner').innerText;
+      var runner = $('#runner').find(":selected").text();
+      var tag = document.getElementById('tag').value;
+      // var platform = document.getElementById('platform').innerText;
+      var platform = $('#platform').find(":selected").text();
+      var precondition = document.getElementById('precondition').value;
+
+      console.log(project_id, testname, severity,type,framework, runner,tag,platform,precondition);
+      
+      var framework = document.getElementById('framework').value;
+      console.log(framework);
+      if(framework === 'testcase_s'){
+        alert('inside testcase_s')
+        var table = document.getElementById("table");
+        var rows = table.rows;
+        
+
+        for (var i = 1; i < rows.length; i++) {
+          var row = rows[i];
+          var textareas = row.getElementsByTagName("textarea");
+          var checkbox = row.getElementsByTagName("input")[0];
+          var index = i;
+          var stepname = textareas[0].value;
+          var expresult = textareas[1].value;
+          var isChecked = checkbox.checked;
+          var rowData = [index, stepname, expresult];
+          values.push(rowData);
+        }
+
+        console.log(values);
+
+        params = {
+          "project_id" : project_id,
+          "testname" : testname,
+          "severity" : severity,
+          "type" : type,
+          "framework" : framework1,
+          "runner" : runner,
+          "tag" : tag,
+          "platform" : platform,
+          "precondition" : precondition,
+          "steps" : JSON.stringify(values)
+        }
+        //  console.log(params);
+      }
+
+      if(framework === 'testcase_t'){
+        alert('inside testcase_t');
+        steps = document.getElementById('step_name_s').value;
+        expresult = document.getElementById('step_result_s').value;
+        values.push(steps);
+        values.push(expresult);
+        console.log(values);
+        params = {
+          "project_id" : project_id,
+          "testname" : testname,
+          "severity" : severity,
+          "type" : type,
+          "framework" : framework1,
+          "runner" : runner,
+          "tag" : tag,
+          "platform" : platform,
+          "precondition" : precondition,
+          "steps" : JSON.stringify(values)
+        }
+      }
+      console.log(params);
+      
+
+      $.post('/add_new_test', 
+          {
+            jdata: params
+          }
+        ) .done( function(msg) { 
+            alert(msg);
+            console.log(msg);
+            if (msg === 'Test Case Added Successfully'){
+              // location.reload();
+              window.open("/tests", "_self");
+            }
+
+          }
+          ).fail(function(xhr, textStatus, errorThrown) {
+              console.log(xhr.responseText);
+              // alert(xhr.responseText);
+              alert("Failed to save the test. Check if the connection...."+xhr.responseText);
+              return;
+        });
+
+    }
+
+    function cancel(){
+      window.open("/tests", "_self");
+    }
+
+    function dashboard(){
+      alert("Clicked");
+    }
+
+    function requirements(){
+      window.open("/reqs", "_self");
+    }
+    
+    function testcases(){
+      window.open("/tests", "_self");
+    }
+    
+    function execute(){
+      alert("This feature is under construction !");
+    }
+    
+    function results(){
+      alert("This feature is under construction !");
+    }
+
+    function logout(){
+      window.sessionStorage.setItem('token', null);
+      window.open("/", "_self");
+    }
+    </script>
+
+</body>
+</html>

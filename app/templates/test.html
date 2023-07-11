@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About Flask</title>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>   
+  </head>
+  <body>
+    
+    <h1> About Flask </h1>
+    <p> Flask is a micro web framework written in Python.</p>
+    <p> Applications that use the Flask framework include Pinterest,
+      LinkedIn, and the community web page for Flask itself.</p>
+    
+    
+      
+      // create a button element in HTML to trigger the function
+      <button onclick="openDialogBox()">Open Dialog Box</button>
+      <dialog id="myDialog">This is a dialog window</dialog>
+
+
+      <script>
+        function openDialogBox() {
+            alert("hello");
+        // use the built-in dialog method to show the dialog box
+           // create a function to open the dialog box
+
+            // create a dialog element and set its properties
+            // const dialog = document.createElement('dialog');
+            const dialog = document.getElementById("myDialog");
+            dialog.style.backgroundColor = 'white';
+            dialog.style.padding = '20px';
+
+            // create a heading element and set its text
+            const heading = document.createElement('h2');
+            heading.textContent = 'Welcome to my website!';
+
+            // create a paragraph element and set its text
+            const paragraph = document.createElement('p');
+            paragraph.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tortor eu libero luctus rhoncus.';
+
+            // add the heading and paragraph elements to the dialog element
+            dialog.appendChild(heading);
+            dialog.appendChild(paragraph);
+
+            // use the built-in dialog method to show the dialog box
+            dialog.show();
+            }
+
+      </script>
+  </body>
+</html>

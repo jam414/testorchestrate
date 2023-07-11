@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automation Portal
+  </title>
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    token = window.sessionStorage.getItem('token');
+      if (token === null){
+        window.open("/", "_self");
+    }
+  </script>
+  <!-- <script src='js/chart.min.js'></script> -->
+  <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+  
+</head>
+<h1 class="h3 mb-3 font-weight-normal" id="titleheader"></h1>
+<body id="mainBody">
+  <script>
+    token = window.sessionStorage.getItem('token');
+    // console.log(token)
+    
+    window.onload=function()
+    {
+        token = window.sessionStorage.getItem('token');
+        if (token === null){
+          window.open("/", "_self");
+        }
+        project_name = window.sessionStorage.getItem('project_name');
+        document.getElementById('project_title').innerHTML = project_name;
+        console.log("Here is the project name: "+project_name);
+        console.log("Here is the token: "+token);
+        const jwtPayload = JSON.parse(window.atob(token.split('.')[1]))
+        console.log(jwtPayload);
+        const isExpired = Date.now() >= jwtPayload.exp * 1000;
+        document.getElementById("status_message").innerHTML = "Welcome " + jwtPayload.userid;
+        if (isExpired){
+          window.sessionStorage.removeItem('token');
+          window.open("/", "_self");
+        }
+        load_charts();
+    };
+  </script>  
+    
+    <div id="navbar">
+      <img src="../static/css/TestOrchestrate_black.jpg" title="logo" id="logo" height="75" width="200"/>
+      <div id="navbar-right">
+        <p id="status_message"><a href="#" onclick="project_settings()">Project Settings</a></p>
+        <!-- <a class="active" href="index.html">Home</a>
+        <a class="active" href="#">Profile</a> -->
+        <!-- <h3>Logged in as Administrator</h3> -->
+       
+      </div>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a id="db" href="#" onclick="dashboard();return false;">DASHBOARD</a>
+      <a id="db" href="#" onclick="requirements();return false;">TEST REQUIREMENTS</a>
+      <a id="tc" href="#" onclick="testcases();return false;">TEST CASES</a>
+      <a id="exe" href="#" onclick="execute();return false;">RUN TEST CASES</a>
+      <a id="def" href="#" onclick="defects();return false;">DEFECTS</a>
+      <a id="res" href="#" onclick="results();return false;">REPORTS</a>
+      <a id="out" href="#" onclick="logout();return false;">SIGN OFF</a>
+    </div>
+
+    
+      <!-- <div id="main_container">
+        <div class = "chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class = "chart">
+          <canvas id="myChart1"></canvas>
+        </div>
+
+        
+      </div> -->
+
+      <div id="main_container" class="dashboard">
+        <div>
+          <span><a href="#">Home ></a><a href="#">Dashboard ></a></span><label id="project_title"> Project Name</label>
+        </div><br>
+
+        <div class="flex-container">
+
+          <div class="flex-child myChart">
+            <div>
+              <div id="myChart" style="width: 350px;height: 200px;"></div>
+            </div>
+          </div>
+          
+          <div class="flex-child myChart1">
+            <div>
+              <div id="myChart1" style="width: 350px;height: 200px;"></div>
+            </div>
+          </div>
+          <div class="flex-child myChart2">
+            <div>
+              <div id="myChart2" style="width: 350px;height: 200px;"></div>
+            </div>
+          </div>
+          
+        </div></p>
+        
+          <div class="flex-container1">
+
+            <div class="flex-child1 myChart3">
+              <div>
+                <div id="myChart3" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+            
+            <div class="flex-child1 myChart4">
+              <div>
+                <div id="myChart4" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+            <div class="flex-child1 myChart5">
+              <div>
+                <div id="myChart5" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="flex-container2">
+
+            <div class="flex-child2 myChart6">
+              <span id="span_nav"><a><img onClick="add_graph()" src="../static/css/add_icon.png" alt="Add" style="width: 25px;height: 25px;border-radius: 12px;"></a></span>
+              <div >
+                <div id="myChart6" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+            
+            <div class="flex-child2 myChart7">
+              <span id="span_nav"><a><img onClick="add_graph()" src="../static/css/add_icon.png" alt="Add" style="width: 25px;height: 25px;border-radius: 12px;"></a></span>
+              <div>
+                <div id="myChart7" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+            <div class="flex-child2 myChart8">
+              <span id="span_nav"><a><img onClick="add_graph()" src="../static/css/add_icon.png" alt="Add" style="width: 25px;height: 25px;border-radius: 12px;"></a></span>
+              <div>
+                <div id="myChart8" style="width: 350px;height: 200px;"></div>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+        
+ 
+ 
+ 
+  <script>
+
+    function add_graph(){
+      alert("You can add customized graphs soon!");
+    }
+
+    function dashboard(){
+      alert("Clicked");
+    }
+
+    function requirements(){
+      window.open("/reqs", "_self");
+    }
+    
+    function testcases(){
+      window.open("/tests", "_self");
+    }
+    
+    function defects(){
+      window.open("/defects", "_self");
+    }
+    
+    function results(){
+      alert("This feature is under construction !");
+    }
+
+    function logout(){
+      window.sessionStorage.removeItem('token');
+      window.open("/", "_self");
+    }
+
+
+    function load_charts(){
+      google.charts.load('current',{packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart4);
+      google.charts.setOnLoadCallback(drawChart5);
+
+
+      function drawChart() {
+
+        const data = google.visualization.arrayToDataTable([
+          ['status', 'count', { role: 'style' }],
+          ['Requirements', 55, 'color: #657CD0'],
+          ['Test Cases', 49, 'color: #C29BB0'],
+          ['Defects', 44, 'color: #DA68A0']
+          
+        ]);
+
+        const options = {
+          title: 'Project Summary'
+        };
+
+        const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+        console.log(chart.getSelection());
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+
+        chart.draw(data, options);
+
+      }
+      function selectHandler(e) {
+        console.log(this.getSelection());
+        
+      }
+
+      function drawChart1() {
+      // Set Data
+        var data = google.visualization.arrayToDataTable([
+          ['Status', 'Count', { role: 'style' }],
+          ['Passed', 20, 'color: #06C3C0'],
+          ['Failed', 18, 'color: #D65960'], 
+          ['Not Run', 16, 'color: #777B80']
+        ]);
+
+        var options = {
+          title: 'Test Results',
+          legend: { position: 'none' },
+          hAxis: { title: 'Status' },
+          vAxis: { title: 'Count', minValue: 0 },
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('myChart1'));
+        chart.draw(data, options);
+        
+      }
+
+      function drawChart2() {
+        // var data = google.visualization.arrayToDataTable([
+        // ['Status', 'Count', { role: 'style' }],
+        // ['Covered', 20, 'color: #06C3C0'],
+        // ['Not Covered', 18, 'color: #777B80']
+        // ]);
+
+        // var options = {
+        //   title: 'Requirements Coverage',
+        //   legend: { position: 'none' },
+        //   hAxis: { title: 'Status' },
+        //   vAxis: { title: 'Count', minValue: 0 },
+        // };
+
+        // var chart = new google.visualization.ColumnChart(document.getElementById('myChart2'));
+        // chart.draw(data, options);
+        
+        var data = google.visualization.arrayToDataTable([
+          ['Requirement Status', 'Count', { role: 'style' }],
+          ['Covered', 45, 'color: green'],
+          ['Not Covered', 20, 'color: grey']
+        ]);
+
+        var options = {
+          title: 'Requirements Coverage',
+          legend: { position: 'right' },
+          pieSliceText: 'value',
+          slices: {
+            0: { offset: 0.2 },
+            1: { offset: 0.2 }
+          },
+          colors: ['#06C3C0', 'grey']
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('myChart2'));
+        chart.draw(data, options);
+      }
+
+      function drawChart3() {
+      // Set Data
+        var data = google.visualization.arrayToDataTable([
+          ['Severity', 'Count', { role: 'style' }],
+          ['Critical', 20, 'color: #D65960'], 
+          ['High', 18, 'color: #d0657c'], 
+          ['Medium', 16, 'color: #f6b26b'],
+          ['Low', 16, 'color: #ffe599']
+        ]);
+
+        var options = {
+          title: 'Defects by Severity',
+          legend: { position: 'none' },
+          hAxis: { title: 'Status' },
+          vAxis: { title: 'Count', minValue: 0 },
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('myChart3'));
+        chart.draw(data, options);
+        
+      }
+
+      function drawChart4() {
+        var data = google.visualization.arrayToDataTable([
+          ['Runner', 'Count'],
+          ['Automated', 45],
+          ['Manual', 20]
+        ]);
+
+        var options = {
+          title: 'Test Cases by Run Type',
+          legend: { position: 'right' },
+          is3D : true,
+          colors: ['#2986cc', '#e06666']
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('myChart4'));
+        chart.draw(data, options);
+
+      }
+
+      function drawChart5() {
+        var data = google.visualization.arrayToDataTable([
+          ['Status', 'Count'],
+          ['Open', 45],
+          ['Closed', 25],
+          ['Assigned', 15],
+          ['New', 5],
+          ['Fixed', 25]
+        ]);
+
+        var options = {
+          title: 'Defects by Status',
+          legend: { position: 'right' },
+          is3D : true,
+          colors: ['#e06666', '#06C3C0', '#b4a7d6', '#6fa8dc','#ffd966' ]
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('myChart5'));
+        chart.draw(data, options);
+
+      }
+
+
+
+      
+      
+    }
+
+  </script>
+
+</body>
+</html>

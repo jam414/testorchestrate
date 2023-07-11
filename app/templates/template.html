@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Flask Parent Template</title>
+   <link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}">
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <img src="../static/css/logo.jpg"  width="500" height="150">
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('test') }}">Test</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+    <script>
+      // window.sessionStorage.setItem('token', null);
+    </script>
+ </body>
+</html>

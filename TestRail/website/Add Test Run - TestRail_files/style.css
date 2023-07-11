@@ -1,0 +1,133 @@
+#brandLogoDialog {
+    width: 709px;
+}
+
+#image-preview {
+    max-width:390px;
+    max-height: 150px;
+}
+
+.preview-background {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    border-radius: 2px;
+    border: solid 1px #aecade;
+    margin: 10px 0px 10px 0px;
+    height: 190px;
+}
+
+#uploaded_image, #blank_image {
+    display:none;
+    border: 1px solid #000000;
+}
+
+.upload-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.inputfile + label {
+    border-radius: 2px;
+    border: solid 1px #376789;
+    background: #376789;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Barlow',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    padding: 2px 8px 2px 8px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    line-height: 26px;
+    margin: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.brand_logo_rules {
+    list-style-type: none;
+}
+
+.brand_inline_block {
+    display: inline-block;
+}
+
+#no-image {
+    width: 18%;
+}
+
+#selectNoDataTimeFrame, #selectTooLargeTimeFrame {
+    position: absolute;
+    left: 37.59%;
+    top: 18.5%;
+    z-index: 1;
+}
+
+#selectTooLargeTimeFrame .dialog-body-date {
+    padding-bottom: 5px;
+}
+
+#selectChartRendering {
+    position: absolute;
+    left: 37.6%;
+    top: 18%;
+    z-index: 1;
+}
+
+.data-point-container{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: -2px;
+}
+
+.data-point-container .data-point{
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 10%);
+    background-image: linear-gradient(to right, #448aff, #3f51b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 3px;
+    position: relative;
+    top: 9px;
+    right: 9px;
+}
+
+div#chart-line-fc.chart-loading{
+    position: relative;
+}
+
+div#chart-line-fc{
+    min-height: 200px !important;
+    border-radius: 3px;
+}
+.un-style-link-color{
+    color: #707070;
+}
+
+.chart-legend{
+    max-height: 200px;
+    overflow-y:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chart-legend::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,12 @@
+Acceptance
+Accessibility
+Automated
+Compatibility
+Destructive
+Functional
+Other
+Performance
+Regression
+Security
+Smoke & Sanity
+Usability

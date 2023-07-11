@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example Table with Sorting</title>
+	<script>
+		function sortTable(table, column) {
+			var rows = table.rows;
+			var switching = true;
+			var shouldSwitch;
+			var i;
+			var x, y;
+
+			while (switching) {
+				switching = false;
+				for (i = 1; i < (rows.length - 1); i++) {
+					shouldSwitch = false;
+					x = rows[i].getElementsByTagName("TD")[column];
+					y = rows[i + 1].getElementsByTagName("TD")[column];
+
+					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+						shouldSwitch = true;
+						break;
+					}
+				}
+
+				if (shouldSwitch) {
+					rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+					switching = true;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<table id="example-table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Severity</th>
+				<th>Type</th>
+				<th>Last Run</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Test 1</td>
+				<td>Low</td>
+				<td>Functional</td>
+				<td>Passed</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Test 2</td>
+				<td>High</td>
+				<td>Non-functional</td>
+				<td>Failed</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Test 3</td>
+				<td>Medium</td>
+				<td>Functional</td>
+				<td>Passed</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Test 4</td>
+				<td>Low</td>
+				<td>Non-functional</td>
+				<td>Passed</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Test 5</td>
+				<td>Medium</td>
+				<td>Non-functional</td>
+				<td>Failed</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<button onclick="sortTable(document.getElementById('example-table'), 2)">Sort by Severity</button>
+	<button onclick="sortTable(document.getElementById('example-table'), 3)">Sort by Type</button>
+	<button onclick="sortTable(document.getElementById('example-table'), 4)">Sort by Last Run</button>
+</body>
+</html>

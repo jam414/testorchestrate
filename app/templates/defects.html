@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Orchestrate
+  </title>
+  <!-- <link rel="stylesheet" href="../static/css/style4.css"> -->
+  <link rel="stylesheet" href="../static/css/defects.css">
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script>
+    token = window.sessionStorage.getItem('token');
+    console.log(token);
+      if (token === null){
+        window.open("/", "_self");
+    }
+  </script>
+
+  
+</head>
+<h1 class="h3 mb-3 font-weight-normal" id="titleheader"></h1>
+<body id="mainBody">
+  <!-- <script>
+    token = window.sessionStorage.getItem('token');
+    
+    window.onload=function()
+    {
+        
+        console.log("Here is the token: "+token);
+        if (token == null) 
+        { 
+            window.open("/", "_self");
+        }
+    };
+  </script>   -->
+    
+    <div id="navbar">
+      <a href="http://testorchestrate.com" target="_blank">
+      <img src="../static/css/TestOrchestrate_black.jpg" title="logo" id="logo" height="85" width="200"/>
+      </a>
+      <div id="navbar-right"><br>
+        <div id="status_message"></div>
+        <!-- <h5 id="settings">Settings</h5> -->
+        <!-- <a class="active" href="index.html">Home</a>
+        <a class="active" href="#">Profile</a> -->
+        <!-- <h5>Welcome</h5> -->
+      </div>
+    </div>
+ 
+    <div id="mySidenav" class="sidenav">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="db" href="#" onclick="dashboard();return false;">DASHBOARD</a>
+        <a id="db" href="#" onclick="requirements();return false;">TEST REQUIREMENTS</a>
+        <a id="tc" href="#" onclick="testcases();return false;">TEST CASES</a>
+        <a id="exe" href="#" onclick="execute();return false;">RUN TEST CASES</a>
+        <a id="exe" href="#" onclick="execute();return false;">DEFECTS</a>
+        <a id="res" href="#" onclick="results();return false;">REPORTS</a>
+        <a id="out" href="#" onclick="logout();return false;">SIGN OFF</a>
+      </div>
+    <div class="right" id="right">
+        <!-- <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p> -->
+        <div class = "modal-testview"  id = "modal-testview">
+          <span class="close">&times;</span>
+          <label>Defect Id: </label><label id="defect_id"></label><br>
+          <label>Summary: </label><label id="view-name"></label><br>
+          <label>Description:</label><br>
+          <textarea row ="2", col="100" readonly></textarea><br>
+          <label>Created at:</label>&nbsp;<label id="view-creationdate"></label><br>
+            <div id="view-left">
+              <label>Priority:</label>&nbsp;<label id="view-severity"></label><br>
+              <label>Run Type:</label>&nbsp;<label id="view-runner"></label><br>
+              <label>Framework:</label>&nbsp;<label id="view-framework"></label><br>
+              <label>Tag:</label>&nbsp;<label id="view-tag"></label>
+
+            </div>
+            <div id="view-right">
+              <label id="view-type-label">Type:</label>&nbsp;<label id="view-type"></label><br>
+              <label id = "view-lastrun-label">Last Run:</label>&nbsp;<label id="view-lastrun"></label><br>
+              <label id="view-platform-label">Platform:</label>&nbsp;<label id="view-platform"></label><br>
+              <label id="view-tag-label">Label:</label>&nbsp;<label id="view-label"></label>
+            </div><br>
+          
+          <label>Dependency:</label><br>
+          <textarea row ="2", col="100" readonly></textarea><br>
+          <label>Pre-conditions:</label><br>
+          <textarea id="view-preconditions" row ="2", col="100" readonly></textarea><br>
+          <!-- <label id="steps_label">&nbsp;Steps:</label><label id="expresult_label">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Expected Results:</label><br> -->
+          <div>
+            <table id="table-view-test">
+              <thead>
+              <tr>
+                  <th>No.</th>
+                  <th>Step Name</th>
+                  <th>Expected Result</th>
+              </tr>
+              </thead>
+              <tbody id = 'tbody_steps'>
+                
+              </tbody>
+    
+            </table>
+          </div>
+          <!-- <textarea id='view_steps' row ="2", col="50" readonly></textarea>
+          <textarea id = 'view_results' row ="2", col="50" readonly></textarea><br> -->
+
+        </div>
+        
+    </div>
+    <div id="mainContainer" class="tests123">
+              <div>
+                <span><a href="#">Home ></a><a href="#"> Defects ></a></span><label id="project_title">Project Name</label>
+              </div><br>
+              
+                
+                  <div id="top-menu">
+                    <select name="type" id="type" onchange="filter_table()">
+                      <option value="All">Priority-all</option>
+                      <option value="Critical">Critical</option>
+                      <option value="High">High</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Low">Low</option>
+                    </select>
+                  <!-- <select name="severity" id="severity" onchange="filter_table()">
+                    <option value="All">Severity-all</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                  </select> -->
+                    <select name="status" id="status" onchange="filter_table()">
+                      <option value="All">Status-all</option>
+                      <option value="New">New</option>
+                      <option value="Assigned">Assigned</option>
+                      <option value="Fixed">Fixed</option>
+                      <option value="Retest">Retest</option>
+                      <option value="Reopen">Reopen</option>
+                      <option value="Verified">Verified</option>
+                      <option value="Closed">Closed</option>
+                    </select>
+                    <select name="assignee" id="assignee" onchange="filter_table()">
+                      <option value="All">Assignee-all</option>
+                      <option value="jahmed">jahmed</option>
+                      
+                    </select>
+                    
+                    
+                
+                    <button id="add" onclick="add_test()">Add</button>
+                    <button id="delete" onclick="delete_tests()">Delete</button>
+                    <button id="edit" onclick="edit_test()">Edit</button>
+                
+             
+            
+              <!-- <div>
+                <select name="framework" id="framework" onchange="filter_framework()">
+                    <option value="testcase_s">Test Case with Steps</option>
+                    <option value="testcase_t">Test Cases with Text</option>
+                    <option value="bdd">Behaviour Driven Development</option>
+                </select>
+                <select name="automation" id="automation" onchange="filter_framework()">
+                    <option value="manual">Manual</option>
+                    <option value="automated">Automated</option>
+                </select>
+                <input type = 'text' name="t_label" id="t_label" onchange="filter_framework()"></input> -->
+                   
+
+              <!-- </div> -->
+            </div>
+
+              <div id="myModal" class="modal">
+                  
+                    <!-- Modal content -->
+                <div class="modal-content" id="modal-content">
+                    <div id="modal-header" class="modal-header">
+                        <span class="close">&times;</span>
+                        <lable id = "modal-title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 16px;">New Test Case</lable>
+                    </div>
+                  
+                    <label>Name:</label>
+                    <input type="text" class="text" id="name"> </p>
+
+                    <label>Severity:</label>
+                    <select name="severity" id="modal-severity">
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option> 
+                    </select>
+                    <select name="framework" id="framework" onchange="filter_framework()">
+                        <option value="testcase_s">Test Case with Steps</option>
+                        <option value="testcase_t">Test Case (simple)</option>
+                        <option value="bdd">Behaviour Driven Development</option>
+                    </select></p>
+
+                    <label>Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <select name="type" id="modal-type">
+                            <option value="functional">Functional</option>
+                            <option value="non_functional">Non Functional</option>
+                        </select>
+                        <select name="automation" id="automation" onchange="filter_framework()">
+                            <option value="manual">Manual</option>
+                            <option value="automated">Automated</option>
+                        </select></p></p>
+
+                        <label>Dependency:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="dependency" class="dependency" placeholder="Search and Add Dependent Test Cases">
+                        <button id="search">Search</button></p>
+                        
+
+                        <label>Dependent Tests:</label><label id="pre_label">Pre-Conditions:</label></br>
+                        <textarea id="tests" name="tests" rows="3" cols="50"></textarea>
+                        <textarea id="precondition" name="precondition" rows="3" cols="50"></textarea></p>
+                        <div id="step_box">
+                            <label>Steps:</label><label id="exp_result_label">Expected Results:</label></br>
+                            <textarea id="steps" name="steps" rows="2" cols="50"></textarea>
+                            <textarea id="exp_results" name="exp_results" rows="2" cols="50"></textarea><br>
+                        </div></p>
+                        <div id = "add_del_steps">
+                            <a href="#"><img src="../static/css/add_blue.jpg" id="add_step" alt="add" onclick="add_step()" height="30" width="33"/></a>
+                            <a href="#"><img src="../static/css/del_new.jpg" id="del_step" alt="del" onclick="del_step()"height="30" width="33"/></a>
+                        </div></p>
+
+                        
+
+                        <div id="modal-footer" class="modal-footer">
+                          <button id="save" class="save" onclick="save_requirement()">Save</button>
+                          <button id="cancel" class="cancel" onclick="cancel()">Cancel</button>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div id="modal-container">
+
+                    <div id="confirm" class="modal">
+                
+                    <!-- Modal content -->
+                      <div class="confirm-content">
+                        <div class="confirm-header">
+                        <span class="close_confirm">&times;</span>
+                        <h2>Delete the selected Tests?</h2>
+                      </div>
+                      <div class="confirm-body">
+                        
+                        <Label id="test_names">Hello</Label><br><br>
+                        <input type="text" id = "confirm_delete" placeholder="Type 'delete all' here"></input><br><br>
+                        <button id="submit" onclick="submit_confirm()">Ok</button>
+                        <button id="submit" onclick="cancel_confirm()">Cancel</button>
+                       <br><br>
+                        <!-- <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p> -->
+                      </div>
+                      <div class="confirm-footer">
+                        <h6>TestOrchestrate@All rights reserved.</h6>
+                      </div>
+                    </div>
+                  
+                    </div>
+                  </div>
+                
+
+            <div id="main_table">
+                <table id="table">
+                    <thead>
+                    
+                    <tr>
+                        <th><input type="checkbox" id="check"></th>
+                        <th>ID</th>
+                        <th>SUMMARY</th>
+                        <th>PRIORITY</th>
+                        <!-- <th>SEVERITY</th> -->
+                        <th>STATUS</th>
+                        <th>ASSIGNEE</th>
+                        
+
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <!-- <tr>
+                        <td><input type="checkbox" id="check"></td>
+                        <td>Name of the Test here....</td>
+                        <td>Medium</td>
+                        <td>Functional</td>
+                        <td>Not Available</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="check"></td>
+                        <td>Name of the Test here....</td>
+                        <td>Medium</td>
+                        <td>Functional</td>
+                        <td>Not Available</td>
+                    </tr> -->
+                    </tbody>
+                </table>
+
+                
+                
+            </div>
+
+            
+        
+
+    </div>
+ 
+    <!-- <div id="myModal" class="modal"> -->
+
+        <!-- Modal content -->
+        <!-- <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
+      </div> -->
+ 
+ <script>
+  values = [];
+  console.log(values);
+  window.onload=function()
+    {
+        token = window.sessionStorage.getItem('token');
+        if (token === null){
+          window.open("/", "_self");
+        }
+        console.log("Here is the token: "+token);
+        const jwtPayload = JSON.parse(window.atob(token.split('.')[1]))
+        console.log(jwtPayload);
+        console.log('token issued time: '+ jwtPayload.iat);
+        console.log('token expiry time: '+jwtPayload.exp);
+        console.log('current time: '+Date.now());
+        const isExpired = Date.now() >= jwtPayload.exp * 1000;
+        console.log(isExpired);
+        document.getElementById("status_message").innerHTML = "Welcome " + jwtPayload.userid
+        if (isExpired){
+          window.open("/", "_self");
+        }
+        const selectProject = document.getElementById("project_title");
+        // const projectName = document.createElement('option');
+        projectName = window.sessionStorage.getItem("project_name");
+        selectProject.innerHTML = projectName;
+        document.getElementById("edit").disabled = true;
+        document.getElementById("delete").disabled = true;
+        // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+        issues_onload();
+    };
+    
+    function issues_onload(){
+      console.log('inside tests_onload');
+      
+      project_id = window.sessionStorage.getItem("project_id");
+      project_name = window.sessionStorage.getItem("project_name");
+      console.log(project_id, project_name);
+      params = {
+          "project_id" : project_id,
+          "project_name" : project_name          
+        };
+        console.log(params);
+
+        $.post( "/load_issues", {
+            jdata: params
+        },
+        function(data, status){
+          values = data;
+          console.log(data);
+          console.log(status);
+          
+          // var table = document.getElementById('tbody');
+          for (let i = 0; i < data.length; i++) {
+            var table = document.getElementById("tbody");
+            var row = table.insertRow();
+            row.addEventListener('click', view_defect, false);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            // cell3.addEventListener('click', view_test, false);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            
+            cell1.innerHTML = '<input type="checkbox" id="check">';
+            cell2.innerHTML = 'DC'+data[i][0];
+            cell2.setAttribute('data_id',data[i][0]);
+            cell3.innerHTML = data[i][1];
+            cell4.innerHTML = data[i][5];
+            cell5.innerHTML = data[i][4];
+            
+            if(data[i][3] === null){
+              data[i][3] = 'Not Assigned';
+
+            }
+            cell6.innerHTML = data[i][3];
+
+            // if (data[i][12] === null){
+            //   data[i][12] = 'jahmed'
+            // } cell7.innerHTML = data[i][12];
+
+
+          //     console.log("++++"+ data[i][0]);
+              
+          //     tr1=document.createElement("tr");
+          //     tr1.addEventListener('click', view_requirement, false);
+          //     // a = document.createElement("a");
+          //     // a.setAttribute('href', "#");
+              
+          //     td1 = document.createElement("td");
+          //     td2 = document.createElement("td");
+          //     td2.setAttribute('data-id', data[i][0]);
+          //     td3 = document.createElement("td");
+          //     td4 = document.createElement("td");
+          //     td5 = document.createElement("td");
+              
+              
+          //     cb = document.createElement("INPUT");
+          //     cb.setAttribute("type", "checkbox");
+          //     cb.setAttribute("name", "cb");
+          //     cb.setAttribute("id", "check");
+              
+            
+          //     td1.append(cb);
+          //     // a.append(td2);
+              
+          //     // td2.innerHTML = "RC-"+data[i][0]+"  "+data[i][1];
+          //     td2.innerHTML = data[i][1];
+          //     td3.innerHTML = data[i][3];
+          //     td4.innerHTML = data[i][4];
+          //     td5.innerHTML = data[i][5];
+              
+
+          //     tr1.append(td1);
+          //     tr1.append(td2);
+          //     tr1.append(td3);
+          //     tr1.append(td4);
+          //     tr1.append(td5);
+          //     tbody.append(tr1);
+            }
+        });
+        // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+        return;
+      
+    }
+
+    function view_defect(){
+      // alert("Row clicked");
+      // console.log($(this.closest('tr')));
+      // this = $(this.closest('tr'));
+      $("#table-view-test").show(); 
+      // $("#view_steps").hide(); 
+      // $("#view_results").hide(); 
+      $("#steps_label").hide();
+      // $("#expresult_label").hide(); 
+
+      rows = document.querySelectorAll("tr");
+
+      checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      if (checkedBoxes.length > 1){
+        document.getElementById("right").style.display = "none";
+        rows = [];
+        return;
+      }
+      rows = document.querySelectorAll("tr");
+
+      rows.forEach(row => {
+        row.addEventListener("click", () => {
+          rows.forEach(row => row.classList.remove("highlight"));
+          row.classList.add("highlight");
+        });
+      });
+      // this.setAttribute("style", "background-color:aliceblue");
+      console.log(values[this.rowIndex-1]);
+      console.log(this.rowIndex);
+      console.log(this);
+      console.log(document.getElementById('defect_id'))
+      console.log(values[this.rowIndex-1][1]);
+      document.getElementById('defect_id').innerHTML= 'DC' + values[this.rowIndex-1][0];
+      document.getElementById('view-name').innerHTML= values[this.rowIndex-1][1];
+      document.getElementById('view-creationdate').innerHTML = values[this.rowIndex-1][11];
+      document.getElementById('view-severity').innerHTML = values[this.rowIndex-1][13];
+      document.getElementById('view-type').innerHTML = values[this.rowIndex-1][4];
+      document.getElementById('view-runner').innerHTML = values[this.rowIndex-1][14];
+      document.getElementById('view-lastrun').innerHTML = values[this.rowIndex-1][12];
+      document.getElementById('view-framework').innerHTML = values[this.rowIndex-1][6];
+      document.getElementById('view-platform').innerHTML = values[this.rowIndex-1][15];
+      document.getElementById('view-tag').innerHTML = values[this.rowIndex-1][16];
+      document.getElementById('view-label').innerHTML = values[this.rowIndex-1][17];
+      document.getElementById('view-preconditions').value = values[this.rowIndex-1][9];
+      
+      console.log(values[this.rowIndex-1][6]);
+      // if(values[this.rowIndex-1][6] === 'Test Case (Simple)'){
+      //   val1 = values[this.rowIndex-1][18];
+      //   val2 = values[this.rowIndex-1][10];
+      //   console.log(val1, val2);
+      //   document.getElementById('view_steps').value = values[this.rowIndex-1][18];
+      //   document.getElementById('view_results').value = values[this.rowIndex-1][10];
+      //   $("#table-view-test").hide(); 
+      //   $("#view_steps").show(); 
+      //   $("#view_results").show();
+      //   $("#steps_label").show();
+      //   $("#expresult_label").show(); 
+
+      //   document.getElementById("right").style.display = "block";
+      //   return;
+      
+      // }
+      // $("#steps_label").show();
+      // params = {
+      //     "defect_id" : values[this.rowIndex-1][0]
+                 
+      //   };
+      //   console.log(params);
+
+      // $.post('/get_steps', 
+      //   {
+      //     jdata: params
+      //   }
+      // ) .done ( function (data, status){
+      //     // alert(data);
+      //     console.log(data);
+      //     console.log(status);
+          
+      //     if (status === 'success'){
+      //       // var  table= document.getElementById("tbody_steps");
+            
+      //       $("#tbody_steps tr").remove(); 
+      //       for(let i=0; i < data.length ; i++){
+      //         var  table= document.getElementById("tbody_steps");
+      //         var row = table.insertRow();
+      //         var cell1 = row.insertCell(0);
+      //         var cell2 = row.insertCell(1);
+      //         var cell3 = row.insertCell(2);
+      //         cell1.innerHTML = data[i][0];
+      //         cell2.innerHTML = data[i][1];
+      //         cell3.innerHTML = data[i][2];
+      //       }
+      //       // document.getElementById("confirm").style.display = "none";
+      //       // location.reload();
+            
+      //     }
+
+      //   }
+      //   ).fail(function(xhr, textStatus, errorThrown) {
+      //       console.log(xhr.responseText);
+      //       // alert(xhr.responseText);
+      //       alert("Failed to fetch test details! Check if the connection...."+xhr.responseText);
+      //       return;
+      //   });
+
+
+
+      document.getElementById("right").style.display = "block";
+      
+      
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        document.getElementById("right").style.display = "none";
+        
+      }
+            
+
+    }
+
+    function dashboard(){
+      window.open("/dashboard", "_self");
+    }
+
+    function requirements(){
+      window.open("/reqs", "_self");
+    }
+    
+    function testcases(){
+      window.open("/tests", "_self");
+    }
+    
+    function execute(){
+      alert("This feature is under construction !");
+    }
+    
+    function results(){
+      alert("This feature is under construction !");
+    }
+
+    function logout(){
+      window.sessionStorage.removeItem('token');
+      window.open("/", "_self");
+    }
+
+    function add_test(){
+
+        window.open("/add_test", "_self");
+    //   var modal = document.getElementById("myModal");
+    //   var span = document.getElementsByClassName("close")[0];
+    //   document.getElementById("modal-title").innerHTML = 'Add New Test Case';
+    //   document.getElementById("name").value = '';
+    //   document.getElementById("name").readOnly = false;
+    //   $('#modal-severity').val('critical').change();
+    //   $('#modal-type').val('functional').change();
+    //   document.getElementById('tests').innerHTML = '';
+    //   document.getElementById('tests').readOnly = false;
+    //   document.getElementById('search').disabled = false;
+    //   document.getElementById('save').disabled = false;
+    //   modal.style.display = "block";
+    //   span.onclick = function() {
+    //       modal.style.display = "none";
+    //   }
+
+
+    }
+
+    
+    var test_ids = [];
+    var step_ids =[];
+
+    function delete_tests(){
+      console.log(typeof (test_ids));
+      modal = document.getElementById('top-menu');
+      modal.setAttribute("disabled",true);
+      var label = document.getElementById('test_names');
+      const table = document.getElementById('tbody');
+      console.log(table);
+      const rows = table.querySelectorAll('tr');
+
+      // Initialize an empty array to store the second column values
+      const secondColumnValues = [];
+      // Loop through each row
+      rows.forEach(row => {
+        // Check if the checkbox in the row is selected
+        const checkbox = row.querySelector('td:first-child input[type="checkbox"]');
+        if (checkbox.checked) {
+          // Get the second column value and store it in the array
+          const secondColumnValue = row.querySelector('td:nth-child(3)').textContent;
+          const test_id = row.querySelector('td:nth-child(2)').getAttribute('data_id');
+          console.log(test_id);
+          test_ids.push(test_id);
+          secondColumnValues.push(secondColumnValue);
+        }
+      });
+
+
+
+      // Log the array of second column values
+      values = secondColumnValues.join('<br>');
+      console.log(secondColumnValues);
+      console.log(test_ids);
+      label.innerHTML = values;
+      document.getElementById('confirm').style.display = 'block';
+
+    }
+
+
+    function cancel_confirm(){
+      var modal = document.getElementById("confirm");
+      console.log(typeof (test_ids));
+      test_ids = [];
+      modal.style.display = 'none';
+    }
+    function submit_confirm(){
+        
+        if (document.getElementById('confirm_delete').value ==="delete all" ){
+        console.log("DELETE....");
+        console.log(test_ids);
+        alert(test_ids);
+
+        params = {
+          "test_ids" : test_ids.join()
+        };
+
+        console.log(params);
+
+        $.post('/delete_tests', 
+          {
+            jdata: params
+          }
+        ) .done( function(msg) { 
+            alert(msg);
+            console.log(msg);
+            if (msg === 'Test(s) deleted successfully!'){
+              // var modal = document.getElementById("myModal");
+              document.getElementById("confirm").style.display = "none";
+              location.reload();
+              
+            }
+
+          }
+          ).fail(function(xhr, textStatus, errorThrown) {
+              console.log(xhr.responseText);
+              // alert(xhr.responseText);
+              alert("Failed to delete the Test(s) successfully!. Check if the connection...."+xhr.responseText);
+              return;
+        });
+      
+
+        }
+        else {
+          alert("Tests will be deleted only if typed 'delete all' ");
+        }
+    }
+
+
+    
+    
+
+    function edit_test(){
+        // alert("Inside Edit Test");
+        var checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+          checkedBoxes.forEach(chk => {
+            chk.closest("tr").querySelectorAll('td:not(:first-child)').forEach((td, index) => {
+              console.log(index, td.innerHTML)
+              if (index == 0){
+                console.log(td.innerHTML);
+                document.getElementById("name").value = (td.innerHTML); //.split('-')[1]).replace(/\s+/g, '');
+                // document.getElementById("name").value = (td.innerHTML.split('-')[1]).trim();
+                req_id = ((td.innerHTML.split('-')[0]).replace(/\s+/g, '')).replace(/\D/g, "");
+                count = req_id.length;
+                console.log(count);
+                document.getElementById("name").value = td.innerHTML.substring(count+8);
+                document.getElementById("modal-title").innerHTML = "Edit Requirement - RC"+ req_id;
+                console.log(req_id);
+                document.getElementById("name").readOnly = false;
+                document.getElementById("save").disabled = false;
+
+              }
+              if (index == 1){
+                document.getElementById("modal-severity").value = td.innerHTML.toLowerCase();
+                
+              }
+              if (index == 2){
+                document.getElementById("modal-type").value = td.innerHTML.toLowerCase();
+                // $('#modal-type').val('functional');
+              }
+              if (index == 3){
+                document.getElementById("tests").value = td.innerHTML;
+                
+              }
+
+              
+            });
+          });
+
+          var modal = document.getElementById("myModal");
+          // var title = document.getElementById("modal-title").innerHTML="Edit Requirement";
+          modal.style.display = "block";
+
+        
+        // Old Logic
+        // $('#main_table tr').filter(':has(:checkbox:checked)').find('td').each(function() {
+        //   console.log(this);
+          // document.getElementById("");
+          // if (this.innerHTML === '<input type="checkbox" id=\"check\">'){
+          //   count=count+1;
+          //   console.log(count);
+          // }
+        // }
+        // if (count > 1){
+        //   alert("Please select only one Requirement to edit at a time. Thank you.");
+          
+        // }
+        // else {
+        //   var modal = document.getElementById("myModal");
+        //   var title = document.getElementById("modal-title").innerHTML="Edit Requirement";
+        //   modal.style.display = "block";
+        // }
+        
+      }
+    
+
+    function cancel(){
+      // alert("Inside Cancel");
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+      // $('#top-menu').find('input, textarea, button, select').attr('disabled',false);
+    }
+
+    
+    // Disable Add and Edit Button if more then one Requirement is checked
+
+    // $(document).ready(function() {
+    // //set initial state.
+        
+        
+    //     $('#main_table input:checkbox').change(function() {
+    //       console.log(($('#main_table input:checkbox:checked')));
+    //         if($(this).is(":checked")) {
+              
+    //           req_checkbox_count = document.getElementById($('#main_table input:checkbox:checked').length)
+    //           if (req_checkbox_count > 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+    //           else if(req_checkbox_count < 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+              
+    //           else if (req_checkbox_count == 1){
+    //             document.getElementById("edit").disabled = false;
+    //             document.getElementById("delete").disabled = false;
+    //           }
+    //         }
+
+    //         if($(this).is(":checked")) {
+              
+    //           var check = document.getElementById($('#main_table input:checkbox:checked'));
+    //           req_checkbox_count = check.length;
+    //           if (req_checkbox_count > 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+    //           else if(req_checkbox_count < 1){
+    //             document.getElementById("edit").disabled = true;
+    //             document.getElementById("delete").disabled = true;
+    //           }
+              
+    //           else if (req_checkbox_count == 1){
+    //             document.getElementById("edit").disabled = false;
+    //             document.getElementById("delete").disabled = false;
+    //           }
+    //         }
+                   
+    //         });
+    //     });
+      
+      // $('#tbody input:checkbox').change(function(){
+        $('tbody').on('change', 'input[type="checkbox"]', function() {
+          var modal = document.getElementById('myModal');
+          modal.style.display = "none";
+          console.log("check box clicked");
+          test_checkbox_count = ($('#main_table input:checkbox:checked').length);
+          console.log(test_checkbox_count);
+          if (test_checkbox_count > 1){
+            // document.getElementById("delete").disabled = true;
+            document.getElementById("edit").disabled = true;
+            
+          }
+          else if(test_checkbox_count < 1){
+            document.getElementById("edit").disabled = true;
+            document.getElementById("delete").disabled = true;
+          }
+          
+          else if (test_checkbox_count == 1){
+            document.getElementById("edit").disabled = false;
+            document.getElementById("delete").disabled = false;
+          }
+
+        // $("#add").prop("disabled", $('#main_table input:checkbox:checked').length >1);
+        // $("#edit").prop("disabled", $('#main_table input:checkbox:checked').length >1);
+        // $("#edit").prop("disabled", $('#main_table input:checkbox:checked').length <1);
+        // $("#edit").prop("enabled", $('#main_table input:checkbox:checked').length ==1);
+      });
+
+
+      // ******** Filter the Reqs based on Severit Type **********
+      // const mySeverity= document.getElementById("severity");
+      // mySeverity.addEventListener("change", function() {
+      //   const table = document.getElementById("main_table");
+      
+      //   const selectedOption = mySeverity.value;
+      //   console.log("Selected option:", selectedOption);
+      //   // Get the table element
+      //   console.log(table.rows);
+
+      //   // Get all the rows in the table
+      //   // const rows = table.getElementsByTagName("tr");
+      //   // console.log(rows);
+
+      //   // Loop through each row and hide the ones that do not match the filter
+      //   for (let i = 1; i < table.rows.length; i++) {
+      //     const row = table.rows[i];
+      //     const severityCell = row.cells[1];
+      //     // console.log(severityCell.textContent);
+
+      //     if (selectedValue === "All" || selectedValue === severityCell.textContent) {
+      //       row.style.display = "";
+      //     } else {
+      //       row.style.display = "none";
+      //     }
+      //   }
+
+      // });
+
+      function save_test(){
+        req_id = '';
+        project_id = window.sessionStorage.getItem("project_id");
+
+        // title = document.getElementById('modal-title').innerHTML;
+        // console.log(title);
+        // if(title === 'Add New Requirement'){
+        //   console.log('New requirement');
+        //   req_id = 0;
+        //   // console.log(int(req_id));
+        // }
+        // else{
+        //     console.log('Update requirement');
+        //     titlecode = title.split('-')[1].replace(/\s+/g, '');
+        //     req_id = titlecode.substring(2);
+        //     console.log(req_id);
+        // }
+        
+
+        var name = document.getElementById('name').value;
+        var severity = $('#modal-severity').find(":selected").text();
+        var type = $('#modal-type').find(":selected").text();
+        var tests = document.getElementById('tests').innerHTML;
+
+        console.log(name);
+
+        
+
+        params = {
+          "project_id" : project_id,
+          "req_id" : req_id,
+          "Name" : name,
+          "Severity" : severity,
+          "Type" : type,
+          "Tests" : ["tc1", "tc2,", "tc3"]
+        };
+        console.log(params);
+
+        $.post('/add_new_req', 
+          {
+            jdata: params
+          }
+        ) .done( function(msg) { 
+            alert(msg);
+            console.log(msg);
+            if (msg === 'Test Case Added Successfully'){
+              // var modal = document.getElementById("myModal");
+              // document.getElementById("myModal").style.display = "none";
+              window.open('/tests', '_self');
+              
+            }
+
+          }
+          ).fail(function(xhr, textStatus, errorThrown) {
+              console.log(xhr.responseText);
+              // alert(xhr.responseText);
+              alert("Failed to save the req. Check if the connection...."+xhr.responseText);
+              return;
+        });
+      
+        // $.post( "/postmethod", {
+        //     jdata: params
+        // },
+        // function(data, status){
+        //   alert("Data: " + data + "\nStatus: " + status);
+        // });
+        
+      }
+
+      function filter_severity(){
+        
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("severity");
+        filter = input.value.toUpperCase();
+        console.log(filter);
+        table = document.getElementById("main_table");
+        tr = table.getElementsByTagName("tr");
+        // console.log(tr);
+
+        // Loop through all table rows, and hide those who don't match the search query
+        if (filter === 'ALL'){
+          // alert("Inside filter");
+          for (i = 1; i < tr.length; i++) {
+          
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+              // txtValue = td.textContent || td.innerText || td.innerHTML;
+              
+                tr[i].style.display = "";
+              
+            }
+            
+          }
+          return
+        }
+        
+        for (i = 1; i < tr.length; i++) {
+          
+          td = tr[i].getElementsByTagName("td")[3];
+          if (td) {
+            // txtValue = td.textContent || td.innerText || td.innerHTML;
+            txtValue = td.innerHTML;
+            console.log(txtValue);
+            if (txtValue.toUpperCase().indexOf(filter) > -1)  {
+              // console.log("Inside compare");
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+
+
+        // for (var i = 0, row; row = tbody.rows[i]; i++) {
+        //     //iterate through rows
+        //     //rows would be accessed using the "row" variable assigned in the for loop
+        //     // console.log('Severity is LOw');
+        //     // console.log(row);
+        //     for (var j = 0, col; col = row.cells[j]; j++) {
+              
+
+        //       // if (col[].innerHTML === "Low"){
+
+
+        //       if (col.innerHTML === filter){
+        //         console.log('Severity is: '+filter);
+        //         row.style.display = "";
+
+        //       }
+        //       else{
+        //         // row.style.display = 'none';
+        //         console.log("Inside else block");
+
+        //       }
+
+        //       //iterate through columns
+        //       //columns would be accessed using the "col" variable assigned in the for loop
+        //     }
+            
+
+            
+        //   }
+
+        
+        // for (let row of tbody.rows) 
+        //   {
+        //       // console.log(row);
+        //       for(let cell of row.cells) 
+        //       {
+        //         let val = cell.innerText; // your code below
+        //         // console.log(val);
+                
+        //         if (val === filter){
+        //           console.log(val);
+        //           row.style.display = 'none';
+        //           // console.log(row);
+        //         }
+        //         else{
+        //           // row.style.display = 'none';
+        //         }
+        //       }
+        //   }
+        // function filterTable() {
+        //   const selectedSeverity = filter.value;
+        //   const rows = Array.from(tbody.querySelectorAll('tr'));
+        //   rows.forEach(row => {
+        //     const cell = row.querySelector('td:nth-child(3)');
+        //     console.log(cell.innerHTML);
+        //     const showRow = selectedSeverity === '' || cell.textContent.trim() === selectedSeverity;
+        //     row.style.display = showRow ? '' : 'none';
+        //   });
+        // }
+
+        // filter.addEventListener('change', filterTable);
+        
+      //   cells.forEach( (cell) =>  {
+
+      //   if (cell.innerHTML === 'Critical'){
+
+      //     console.log(cell.innerHTML);
+      //   }
+        
+        
+      // });
+        
+
+        // data.forEach(item => {
+        //   const row = document.createElement('tr');
+        //   row.innerHTML = `
+        //     <td>${item.id}</td>
+        //     <td>${item.name}</td>
+        //     <td>${item.severity}</td>
+        //     <td>${item.type}</td>
+        //   `;
+        //   tbody.appendChild(row);
+        // });
+      }
+
+      function filter_table() {
+        var severityFilter = document.getElementById('severity').value;
+        var typeFilter = document.getElementById('type').value;
+        var runnerFilter = document.getElementById('runner').value;
+        var lastrunFilter = document.getElementById('lastrun').value;
+
+        var table = document.getElementById('tbody');
+        var rows = table.rows;
+        
+        for (var i = 0; i < rows.length; i++) {
+          var severity = rows[i].cells[3].innerHTML;
+          var type = rows[i].cells[4].innerHTML;
+          var runner = rows[i].cells[5].innerHTML;
+          var lastrun = rows[i].cells[6].innerHTML;
+
+          var shouldDisplay = true;
+          
+          if (severityFilter !== 'All' && severity.trim() !== severityFilter) {
+            shouldDisplay = false;
+          }
+          
+          if (typeFilter !== 'All' && type.trim() !== typeFilter) {
+            shouldDisplay = false;
+          }
+
+          if (runnerFilter !== 'All' && runner.trim() !== runnerFilter) {
+            shouldDisplay = false;
+          }
+
+          if (lastrunFilter !== 'All' && lastrun.trim() !== lastrunFilter) {
+            shouldDisplay = false;
+          }
+          
+          rows[i].style.display = shouldDisplay ? '' : 'none';
+        }
+      }
+
+      function filter_type(){
+        
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("type");
+        filter = input.value.toUpperCase();
+        console.log(filter);
+        table = document.getElementById("main_table");
+        tr = table.getElementsByTagName("tr");
+        // console.log(tr);
+        // alert("Inside filter");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        if (filter === 'ALL'){
+          // alert("Inside filter");
+          for (i = 1; i < tr.length; i++) {
+          
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+              // txtValue = td.textContent || td.innerText || td.innerHTML;
+              
+                tr[i].style.display = "";
+              
+            }
+            
+          }
+          return;
+        }
+        
+        for (i = 1; i < tr.length; i++) {
+          
+          td = tr[i].getElementsByTagName("td")[4];
+          if (td) {
+            // txtValue = td.textContent || td.innerText || td.innerHTML;
+            txtValue = td.innerHTML;
+            console.log(txtValue);
+            if (txtValue.toUpperCase().indexOf(filter) > -1)  {
+              // console.log("Inside compare");
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+
+      }
+
+      function add_step(){ 
+        // alert ("Add Step");
+        br = document.createElement('br');
+        step_box =  document.getElementById('step_box');
+        text_step = document.createElement('textarea');
+        text_step.setAttribute('id', 'steps');
+        text_step.setAttribute('name', 'steps');
+        text_step.setAttribute('rows', '2');
+        text_step.setAttribute('cols', '50');
+
+        text_result = document.createElement('textarea');
+        text_result.setAttribute('id', 'exp_results');
+        text_result.setAttribute('name', 'exp_results');
+        text_result.setAttribute('rows', '2');
+        text_result.setAttribute('cols', '50');
+        step_box.append(br);
+        step_box.append(text_step);
+        step_box.append(text_result);
+        step_box.append(br);
+
+
+      }
+
+      function del_step(){
+
+        alert ("Delete Step");
+
+      }
+
+
+      
+    </script>
+
+</body>
+</html>
